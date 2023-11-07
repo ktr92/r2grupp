@@ -486,6 +486,7 @@ body .is-layout-grid > * {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Opel Sans";
 }
 
 body {
@@ -494,7 +495,7 @@ body {
   margin: 0 auto;
   position: relative;
   color: #25343f;
-  font-family: Opel Sans, sans-serif;
+  font-family: "Opel Sans", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -560,7 +561,7 @@ a {
 }
 
 button {
-  font-family: Opel Sans, sans-serif;
+  font-family: "Opel Sans", sans-serif;
 }
 
 .lin:hover {
@@ -616,7 +617,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
   border-radius: 30px !important;
   border: 1px solid #d41d12 !important;
   color: var(--Grey, #25343f);
-  font-family: Opel Sans;
+  font-family: "Opel Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
