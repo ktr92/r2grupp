@@ -3,7 +3,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local("Opel Sans"), url("/fonts/Opel-Sans-Regular.woff") format("woff");
+  src: local("Opel Sans"), url("fonts/Opel-Sans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local("Opel Sans"), url("/fonts/Opel-Sans-Bold.woff") format("woff");
+  src: local("Opel Sans"), url("fonts/Opel-Sans-Bold.woff") format("woff");
 }
 
 .term:hover .sub-post {
@@ -171,7 +171,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
   background-position: 50% 50%;
   width: 18px;
   height: 19px;
-  background: url("/wp-content/themes/intentionally-blank/assets/img//btn-close-icon.svg");
+  background: url("wp-content/themes/intentionally-blank/assets/img//btn-close-icon.svg");
 }
 .show_video {
   text-decoration: none !important;
@@ -180,7 +180,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
   width: 30px;
   height: 30px;
   display: block;
-  background: url("/wp-content/themes/intentionally-blank/assets/img//play_video_icon.svg")
+  background: url("wp-content/themes/intentionally-blank/assets/img//play_video_icon.svg")
     no-repeat;
   background-position: 50% 50%;
 }
@@ -225,7 +225,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
 }
 
 .modal-exit-black-icon {
-  background: url("/img/modal-exit-black-icon.svg");
+  background: url("img/modal-exit-black-icon.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   width: 24px;
@@ -415,7 +415,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
 .icon-pogruz:before {
   display: block;
   content: "";
-  background-image: url("/wp-content/themes/intentionally-blank/assets/img/svg/pogruz.svg");
+  background-image: url("wp-content/themes/intentionally-blank/assets/img/svg/pogruz.svg");
   height: 19px;
   width: 26px;
 }
@@ -704,7 +704,7 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
   top: 0;
   z-index: 3;
   position: absolute;
-  background-image: url("/wp-content/themes/intentionally-blank/assets/img/mask-new.webp");
+  background-image: url("wp-content/themes/intentionally-blank/assets/img/mask-new.webp");
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1033,7 +1033,7 @@ main {
   width: 15px;
   display: inline-block;
   content: "";
-  background: url("/wp-content/themes/intentionally-blank/assets/img/svg/menu-arrow.svg")
+  background: url("wp-content/themes/intentionally-blank/assets/img/svg/menu-arrow.svg")
     no-repeat;
   transition: 0.3s ease-in-out;
 }
@@ -1449,7 +1449,7 @@ main {
   margin-bottom: 16px;
   width: fit-content;
   color: #fff;
-  background: url("/wp-content/themes/intentionally-blank/assets/img/num-back-1.webp")
+  background: url("wp-content/themes/intentionally-blank/assets/img/num-back-1.webp")
     no-repeat center center;
   background-size: cover;
   -webkit-background-clip: text;
@@ -1541,7 +1541,7 @@ main {
 }
 
 .head-advantages-left-down .head-advantages-left-down-item:nth-child(1) {
-  background-image: url("/wp-content/themes/intentionally-blank/assets/img/adv-deliv.webp");
+  background-image: url("wp-content/themes/intentionally-blank/assets/img/adv-deliv.webp");
   background-size: cover;
 }
 
@@ -1550,7 +1550,7 @@ main {
 }
 
 .down-items-foot .down-items-foot-item:nth-child(1) {
-  background-image: url("/wp-content/themes/intentionally-blank/assets/img/adv-fura.webp");
+  background-image: url("wp-content/themes/intentionally-blank/assets/img/adv-fura.webp");
   background-size: cover;
 }
 
@@ -1595,7 +1595,7 @@ main {
   font-weight: 700;
   font-size: 160px;
   line-height: 115px;
-  background: url("/wp-content/themes/intentionally-blank/assets/img/num-back-2.webp")
+  background: url("wp-content/themes/intentionally-blank/assets/img/num-back-2.webp")
     no-repeat center center;
   background-size: cover;
   -webkit-background-clip: text;
@@ -1645,7 +1645,7 @@ main {
 .head-advantages-right-down-item-long {
   width: 100%;
   height: 301px;
-  background-image: url("/wp-content/themes/intentionally-blank/assets/img/poezd-adv.webp");
+  background-image: url("wp-content/themes/intentionally-blank/assets/img/poezd-adv.webp");
   background-size: cover;
 }
 
@@ -1814,7 +1814,7 @@ main {
   transition: all 0.3s;
   display: inline-block;
   content: "";
-  background: url("/wp-content/themes/intentionally-blank/assets/img/select-red-opt.png");
+  background: url("wp-content/themes/intentionally-blank/assets/img/select-red-opt.png");
   height: 5px;
   width: 11px;
 }
@@ -1932,7 +1932,7 @@ select,
   top: calc(50% - 12px);
   display: inline-block;
   content: "";
-  background: url("/wp-content/themes/intentionally-blank/assets/img/svg/date-icon.svg")
+  background: url("wp-content/themes/intentionally-blank/assets/img/svg/date-icon.svg")
     no-repeat;
   height: 24px;
   width: 24px;
@@ -1950,7 +1950,7 @@ select,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("/wp-content/themes/intentionally-blank/assets/img/svg/select-icon.svg")
+  background: url("wp-content/themes/intentionally-blank/assets/img/svg/select-icon.svg")
     no-repeat calc(100% - 20px);
 }
 
@@ -1971,7 +1971,7 @@ select,
   display: inline-block;
   position: absolute;
   content: "";
-  background: url("/wp-content/themes/intentionally-blank/assets/img/svg/icon-file.svg")
+  background: url("wp-content/themes/intentionally-blank/assets/img/svg/icon-file.svg")
     no-repeat;
   width: 27px;
   height: 27px;
