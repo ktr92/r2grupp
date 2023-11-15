@@ -2840,11 +2840,11 @@ x:-o-prefocus {
 }
 @font-face {
   font-family: QIconSet;
-  src: url(/fonts/QIconSet.eot?32nq9y);
-  src: url(/fonts/QIconSet.eot?32nq9y#iefix) format("embedded-opentype"),
-    url(/fonts/QIconSet.ttf?32nq9y) format("truetype"),
-    url(/fonts/QIconSet.woff?32nq9y) format("woff"),
-    url(/fonts/QIconSet.svg?32nq9y#QIconSet) format("svg");
+  src: url(../fonts/QIconSet.eot?32nq9y);
+  src: url(../fonts/QIconSet.eot?32nq9y#iefix) format("embedded-opentype"),
+    url(../fonts/QIconSet.ttf?32nq9y) format("truetype"),
+    url(../fonts/QIconSet.woff?32nq9y) format("woff"),
+    url(../fonts/QIconSet.svg?32nq9y#QIconSet) format("svg");
   font-weight: 400;
   font-style: normal;
 }
