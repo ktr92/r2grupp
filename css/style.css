@@ -238,6 +238,26 @@ a:not(.header-wrap-img a, .footer-logo a, .menu a):focus:after {
 .d-flex {
   display: flex;
 }
+[data-tabcontent] {
+  position: absolute;
+  z-index: -2;
+  left: -99999px;
+  top: -99999px;
+  opacity: 0;
+}
+[data-tabcontent].active {
+  display: block;
+  position: static;
+  z-index: 1;
+  opacity: 1;
+}
+#response-little-slider {
+  margin-top: 0;
+}
+.tabcontent {
+  margin-top: 64px;
+}
+
 @media (max-width: 991px) {
   .popup {
     max-width: 350px;

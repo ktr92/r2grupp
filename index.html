@@ -570,15 +570,15 @@
         <form action="https://r2grupp.ru/wp-admin/admin-ajax.php" method="POST" id="slider" class="form-toggle">
           <div class="toggle-wrapper">
             <div class="toggle-overlay overlay-left"></div>
-            <div class="toggle-btn toggle-btn-text" data-post="uslugi">Услуги</div>
-            <div class="toggle-btn" data-post="services">Сервисы</div>
+            <div class="toggle-btn toggle-btn-text" data-post="uslugi" data-tab='tab1'>Услуги</div>
+            <div class="toggle-btn" data-post="services" data-tab='tab2'>Сервисы</div>
           </div>
           <input type="hidden" name="action" value="slider">
           <input class="inputTypePost" type="hidden" name="post-type" value="">
         </form>
-        <div id="response-little-slider">
+        <div id="response-little-slider" data-tabcontent='tab1' class='tabcontent active'>
 
-          <div class="swiper swiper-little">
+          <div class="swiper swiper-little swiper-tab1">
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
@@ -880,11 +880,359 @@
           <script>
 
             jQuery(function ($) {
-              var swiper = new Swiper(".swiper-little", {
+              var swiper = new Swiper(".swiper-tab1", {
                 slidesPerView: 4,
                 slidesPerGroup: 4,
                 pagination: {
-                  el: ".swiper-pagination",
+                  el: ".swiper-tab1 .swiper-pagination",
+                  clickable: true,
+                  renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + "</span>";
+                  },
+                },
+                breakpoints: {
+                  1440: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                  },
+                  320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30,
+                  }
+                }
+              });
+            })
+
+          </script>
+
+
+
+
+
+        </div>
+
+        <div class='tabcontent' data-tabcontent='tab2'>
+
+          <div class="swiper swiper-little swiper-tab2">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="img/sbor-tumb.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+
+                      <p class="sld-title">Перевозка сборных грузов</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/perevozka-sbornyh-gruzov/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="wp-content/uploads/2022/10/Rectangle-355.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+
+                      <p class="sld-title">Автомобильные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/avto-perevozki/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="wp-content/uploads/2022/10/Rectangle-335.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+
+                      <p class="sld-title">Авиационные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/avia/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+             
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="wp-content/uploads/2022/10/Rectangle-356.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+                      <ul class="sub-post">
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/tip/">Типы вагонов</a>
+                        </li>
+
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/perevozka-transportnyh/">Перевозка транспортных
+                            средств, спецтехники и негабаритного груза</a>
+                        </li>
+
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/opasnye-gruzy/">Опасные грузы</a>
+                        </li>
+
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/kontejnernye-perevozki/">Контейнерные
+                            перевозки</a>
+                        </li>
+
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/v-vagonah/">Железнодорожные перевозки в
+                            вагонах</a>
+                        </li>
+
+                      </ul>
+
+                      <p class="sld-title">Железнодорожные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/zhelez-perevozki/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+             
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="img/kont-head-img-1.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+                      <ul class="sub-post">
+
+                        <li>
+                          <a class="lin"
+                            href="https://r2grupp.ru/uslugi/avtomobilnaya-kontejnernaya-perevozka/">Автомобильная
+                            контейнерная перевозка</a>
+                        </li>
+
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/tipy-kontejnerov/">Типы контейнеров</a>
+                        </li>
+
+                      </ul>
+
+                      <p class="sld-title">Контейнерные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/konteiner-perevozki/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="wp-content/uploads/2022/10/Rectangle-337.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+                      <ul class="sub-post">
+
+                        <li>
+                          <a class="lin" href="https://r2grupp.ru/uslugi/perevozki-v-pryamom-smeshannom/">Перевозки в
+                            прямом смешанном железнодорожно-водном сообщении (ПСЖВС)</a>
+                        </li>
+
+                      </ul>
+
+                      <p class="sld-title">Мультимодальные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/multi-perevozki/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="slide-box">
+                  <img src="wp-content/uploads/2022/10/Rectangle-336.webp" alt="">
+                  <div class="slider-overlay"></div>
+                  <div class="slider-little-title">
+                    <div class="slider-little-title-info">
+
+                      <p class="sld-title">Экспортно-импортные перевозки</p>
+
+                      <div class="title-info-btn">
+                        <a class="link-sl lin" href="https://r2grupp.ru/uslugi-part/export-perevozki/">
+                          <svg width="47" height="44" viewBox="0 0 47 44" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46.3613 22C46.3613 33.8527 36.2941 43.5 23.8266 43.5C11.3592 43.5 1.29199 33.8527 1.29199 22C1.29199 10.1473 11.3592 0.5 23.8266 0.5C36.2941 0.5 46.3613 10.1473 46.3613 22Z"
+                              stroke="white" stroke-opacity="0.37" />
+                            <path
+                              d="M31.5093 22.3536C31.7046 22.1583 31.7046 21.8417 31.5093 21.6464L28.3274 18.4645C28.1321 18.2692 27.8155 18.2692 27.6203 18.4645C27.425 18.6597 27.425 18.9763 27.6203 19.1716L30.4487 22L27.6203 24.8284C27.425 25.0237 27.425 25.3403 27.6203 25.5355C27.8155 25.7308 28.1321 25.7308 28.3274 25.5355L31.5093 22.3536ZM14.4033 22.5L31.1558 22.5L31.1558 21.5L14.4033 21.5L14.4033 22.5Z"
+                              fill="white" />
+                          </svg>
+
+                          <p>Подробнее</p>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-pagination pagination-little"></div>
+
+
+          </div>
+
+
+          <script>
+
+            jQuery(function ($) {
+              var swiper = new Swiper(".swiper-tab2", {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                pagination: {
+                  el: ".swiper-tab2 .swiper-pagination",
                   clickable: true,
                   renderBullet: function (index, className) {
                     return '<span class="' + className + '">' + "</span>";

@@ -1084,4 +1084,12 @@ jQuery(function ($) {
       $(this).removeClass("d-flex") //.fadeOut();
     }
   })
+
+  $('[data-tab]').on('click', function(e) {
+    e.preventDefault()
+    let tab = $(this).data('tab')
+    $(`[data-tabcontent]`).removeClass('active')
+    $(`[data-tabcontent="${tab}"]`).addClass('active')
+  })
+
 })
