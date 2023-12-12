@@ -23,13 +23,15 @@
     <link rel='stylesheet' id='swiper-css' href='css/swiper-bundle.min.css?ver=6.3.2' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css' href='css/quform.css' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css' href='css/calc.css' type='text/css' media='all' />
-    <script type='text/javascript' src='js/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+    
+    <script type='text/javascript' src='js/jquery.min.js'></script>
     <script type='text/javascript' src='js/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
     <script type='text/javascript' src='js/script.js?ver=1696861625' id='script-js'></script>
     <script type='text/javascript' src='js/fancybox.umd.js?ver=6.3.2' id='fancy-js'></script>
     <script type='text/javascript' src='js/jquery-ui.js?ver=6.3.2' id='jq-ui-js'></script>
     <script type='text/javascript' src='js/swiper-bundle.min.js?ver=6.3.2' id='swiper-js'></script>
     <script type='text/javascript' src='js/calc.js'></script>
+
     <link rel="icon" href="img/cropped-faviconV2-32x32.png" sizes="32x32" />
     <link rel="icon" href="img/cropped-faviconV2-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="img/cropped-faviconV2-180x180.png" />
@@ -3048,12 +3050,13 @@
                 <div class="calcitem__header">
                   <div class="calcheader">
                     <div class="calcheader__title">
+                      
+                      <div class="calcheader__name">Ваш расчет</div>
                       <div class="calcheader__icon">
                         <div class="calcheader__image">
-                          <img src="/local/templates/azlog/public/images/info.svg" alt="">
+                          <img src="img/Cardboard_Carton_2_560 1.png" alt="">
                         </div>
                       </div>
-                      <div class="calcheader__name">Расчёт</div>
                     </div>
                   </div>
                 </div>
@@ -3061,31 +3064,83 @@
                   
                   <div class="step-1 ">
                     <div class="calcprice">
-                      <div class="calcprice__title">Услуги доставки</div>
                       <div class="calcprice__items">
                         <div class="calcprice__params">
                           <ul class="calcprice-params">
                             <li>
                               <span class="calcprice-params_left">
-                              <span><span id="auto-name">Автоперевозка</span></span>
+                                Стоимость доставки на терминал
                               </span>
-                              <span class="calcprice-params_right" id="auto-price">-</span>
+                              <span class="calcprice-params_right" >429 ₽ </span>
                             </li>
                             <li>
                               <span class="calcprice-params_left">
-                              <span><span>Страхование</span></span>
+                                Температурный режим
                               </span>
-                              <span class="calcprice-params_right" id="insurance-price">-</span>
+                              <span class="calcprice-params_right" >1 250 ₽ </span>
                             </li>
+                            <li>
+                              <span class="calcprice-params_left">
+                                Утепление в 1 слой
+                              </span>
+                              <span class="calcprice-params_right" >1 250 ₽ </span>
+                            </li>
+                            <li>
+                              <span class="calcprice-params_left">
+                                Забор груза
+                              </span>
+                              <span class="calcprice-params_right" >
+                                <a href="#">Обратитесь к менеджеру</a>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="calcprice-params_left">
+                                Тариф
+                              </span>
+                              <span class="calcprice-params_right" >
+                                <img src="img/InTransit.svg" alt="">
+                                Авто
+                              </span>
+                            </li>
+                            <li>
+                              <span class="calcprice-params_left">
+                                Тариф
+                              </span>
+                              <span class="calcprice-params_right" >
+                                <img src="img/Tracks.svg" alt="">
+                                Ж/Д
+                              </span>
+                            </li>
+                           
                           </ul>
                         </div>
                       </div>
                     </div>
                   </div>
-                 
-                
-                
                 </div>
+                <div class="calcitem__footer">
+                  <div class="calcitem__total">
+                    <div class="calcitem__subtitle">Итого</div><!-- /.calcitem__subtitle -->
+                    <div class="calcitem__pricetotal">5 684 ₽</div><!-- /.calcitem__pricetotal -->
+                  </div><!-- /.calcitem__total -->
+                  <div class="calcitem__button">
+                    <a href="#" class="btncalc">
+                      <span  class='btncalc__img btncalc__img_left'>
+                         <img src="img/btncalc__img_left.svg" alt="">
+                      </span>
+                      <span class='btncalc__text'>Оформить</span>
+                      <span  class='btncalc__img btncalc__img_right'>
+                        <img src="img/btncalc__img_right.svg" alt="">
+                     </span>
+                     
+                    </a>
+                  </div><!-- /.calcitem__button -->
+                  <div class="calcitem__info">
+                    <div class="calcitem__infomessage">
+                      * Расчет предварительный. Точный расчет производится при отправке груза
+                    </div><!-- /.calcitem__infomessage -->
+                  </div><!-- /.calcitem__info -->
+                </div><!-- /.calcitem__footer -->
               </div>
             </div>
           </div>
