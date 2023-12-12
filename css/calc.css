@@ -84,7 +84,7 @@
 .calcpage .inputLocation input,
 .page_calc h1 {
   color: #213540;
-margin-bottom: 37px;
+/* margin-bottom: 37px; */
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -585,8 +585,9 @@ span.formcheckbox__text:before {
 
 .inputLocation img {
   position: absolute;
-  right: 22px;
-  top: calc(50% - 7px);
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .calcform__date,
@@ -1757,12 +1758,12 @@ opacity: 0.6;
 }
 
 .calcform__items_two {
-	margin: 0 -7px;
+	margin: 0 -15px;
 }
 
 .calcform__items_two .calcform__item {
 	width: 50%;
-	padding: 0 7px;
+	padding: 0 15px;
 }
 
 .calcform__content input {
@@ -2256,6 +2257,46 @@ line-height: normal;
 .calcpage__aside .calcitem__content {
   background: #F7F8F8;
   padding: 18px 44px;
+}
+
+.calcform__items {
+  position: relative;
+}
+
+
+.switcher {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 30px;
+	height: 30px;
+	z-index: 2;
+	top: 50%;
+}
+
+.switcher a {
+  border: none !important;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: #FFFFFF;
+
+}
+.switcher a:after {
+  display: none !important
+}
+
+.calcpage__main .calcitem__content {
+  padding: 44px;
+}
+.calcpage__main .calcitem__header {
+  padding: 0;
 }
 
 @media (min-width: 1024px) {

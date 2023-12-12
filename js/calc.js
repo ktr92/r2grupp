@@ -1,4 +1,25 @@
-jQuery(function ($) {
+
+const appInit = () => {
+  switcher()
+  stickySidebar()
+}
+
+const switcher = () => {
+  $(".switcher a").on("click", function (e) {
+    e.preventDefault()
+    let input1 = $("#cityInput1").val()
+    let input2 = $("#cityInput2").val()
+    $("#cityInput1").val(input2)
+    $("#cityInput2").val(input1)
+
+    input1 = $('[name="from"]').val()
+    input2 = $('[name="to"]').val()
+    $('[name="from"]').val(input2)
+    $('[name="to"]').val(input1)
+  })
+}
+
+const stickySidebar = () => {
   if ($(document).width() > 1023) {
     if (document.querySelector(".calcpage__aside")) {
       var a = document.querySelector(".calcpage__aside"),
@@ -63,4 +84,9 @@ jQuery(function ($) {
       }
     }
   }
+}
+
+
+jQuery(function ($) {
+  appInit()
 })

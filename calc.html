@@ -314,30 +314,7 @@
               <div class="form-step" data-entity="form-step-1">
                 <div class="calcpage__block calcitem">
                   <div class="calcitem__header">
-                    <div class="calcheader">
-                      <div class="calcheader__title">
-                        <div class="calcheader__icon">
-                          <div class="calcheader__image">
-                            <img src="/local/templates/azlog/public/images/WaypointMap.svg" alt="">
-                          </div>
-                        </div>
-                        <span class="calcheader__name">
-                          Направление
-                          <span class="calcheader__help">
-                            <span class="help-call">?</span>
-                            <span class="help-tooltip">
-                              <span class="help-tooltip__content">
-                                <span class="help-tooltip__text"> Для более точного поиска укажите
-                                название населенного пункта: <br>
-                                Например: Нефтегорск, Самарская область</span>
-                                <!-- 	<span class="help-tooltip__info">+8 к защите груза</span> -->
-                              </span>
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                     
-                    </div>
+                   
                   </div>
                   <div class="calcitem__content">
                     <div class="calcform" data-stepvisible="anyway">
@@ -345,45 +322,34 @@
                         <div class="calcform__inputs">
                           <div class="calcform__items calcform__items_two">
                             <div class="switcher">
-                              <a href="">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <g clip-path="url(#clip0)">
-                                    <path d="M11.8699 0.0298504C11.6212 0.0536005 11.4087 0.2211 11.3274 0.457351C11.2449 0.69485 11.3087 0.95735 11.4899 1.12985L13.5599 3.19985H0.639929C0.619929 3.1986 0.599929 3.1986 0.579929 3.19985C0.226179 3.2161 -0.0463211 3.5161 -0.0300712 3.86985C-0.0138212 4.2236 0.286179 4.4961 0.639929 4.47985H13.5599L11.4899 6.54985C11.3224 6.70985 11.2537 6.94735 11.3112 7.17235C11.3687 7.3961 11.5424 7.57235 11.7662 7.63235C11.9899 7.69235 12.2287 7.6261 12.3899 7.45985L16.0099 3.83985L12.3899 0.21985C12.2549 0.0811003 12.0637 0.0111004 11.8699 0.0298504ZM3.99993 8.34985C3.85493 8.3686 3.72118 8.43485 3.61993 8.53985L-7.11493e-05 12.1598L3.61993 15.7798C3.78118 15.9461 4.01993 16.0123 4.24368 15.9523C4.46743 15.8923 4.64118 15.7161 4.69868 15.4923C4.75618 15.2673 4.68743 15.0298 4.51993 14.8698L2.44993 12.7998H15.3599C15.5912 12.8036 15.8049 12.6823 15.9212 12.4823C16.0387 12.2836 16.0387 12.0361 15.9212 11.8373C15.8049 11.6373 15.5912 11.5161 15.3599 11.5198H2.44993L4.51993 9.44985C4.72118 9.25985 4.77743 8.9611 4.65868 8.7111C4.53993 8.4611 4.27493 8.31485 3.99993 8.34985Z" fill="#323232" fill-opacity="0.5"></path>
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0">
-                                      <rect width="16" height="16" fill="white"></rect>
-                                    </clipPath>
-                                  </defs>
-                                </svg>
+                              <a href="#">
+                               <img src="img/swap_horiz.svg" alt="">
                               </a>
                             </div>
                             <div class="calcform__item">
-                              <div class="calcform__title">Откуда</div>
+                              <div class="calcform__title">Город отправки</div>
                               <div class="inputLocation">
-                                <input data-stepdata="f_otpravki" data-steptype="source" type="text" autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete" placeholder="Населенный пункт" name="from_text" value="">
+                                <img src="img/Tracking.svg">
+
+                                <input data-stepdata="f_otpravki" data-steptype="source" type="text" autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete" placeholder="" name="from_text" value="">
                                 <input type="hidden" name="from" value="" data-entity="city-kladr-id">
                                 <ul id="cityList1" class="cityList" style="display: none;">
                                   <div class="cityListContainer">
                                   </div>
                                 </ul>
-                                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z" fill="#C4C4C4"></path>
-                                </svg>
                               </div>
                             </div>
                             <div class="calcform__item">
-                              <div class="calcform__title">Куда</div>
+                              <div class="calcform__title">Город назначения</div>
                               <div class="inputLocation">
-                                <input data-stepdata="f_dostavki" data-steptype="source" type="text" autocomplete="off" name="to_text" id="cityInput2" class="cityInput" placeholder="Населенный пункт" data-entity="city-autocomplete" value="">
+                                <img src="img/Tracking.svg">
+
+                                <input data-stepdata="f_dostavki" data-steptype="source" type="text" autocomplete="off" name="to_text" id="cityInput2" class="cityInput" placeholder="" data-entity="city-autocomplete" value="">
                                 <input type="hidden" name="to" value="" data-entity="city-kladr-id">
                                 <ul id="cityList2" class="cityList" style="display: none;">
                                   <div class="cityListContainer">
                                   </div>
                                 </ul>
-                                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.99999 0.359863C2.82468 0.359863 0.23999 2.94455 0.23999 6.11986C0.23999 11.2006 5.5064 17.2602 5.72999 17.5161C5.7989 17.5949 5.89593 17.6399 5.99999 17.6399C6.11108 17.6328 6.20109 17.5949 6.26999 17.5161C6.49359 17.256 11.76 11.0924 11.76 6.11986C11.76 2.94455 9.1753 0.359863 5.99999 0.359863ZM5.99999 4.31986C7.19249 4.31986 8.15999 5.28736 8.15999 6.47986C8.15999 7.67236 7.19249 8.63986 5.99999 8.63986C4.80749 8.63986 3.83999 7.67236 3.83999 6.47986C3.83999 5.28736 4.80749 4.31986 5.99999 4.31986Z" fill="#C4C4C4"></path>
-                                </svg>
                               </div>
                             </div>
                           </div>
