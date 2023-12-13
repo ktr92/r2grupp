@@ -313,9 +313,7 @@
             <div class="calcpage__main">
               <div class="form-step" data-entity="form-step-1">
                 <div class="calcpage__block calcitem">
-                  <div class="calcitem__header">
-                   
-                  </div>
+                 
                   <div class="calcitem__content">
                     <div class="calcform" data-stepvisible="anyway">
                       <div class="calcform__content">
@@ -403,7 +401,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="calcpage__block">
+                <div class="calcpage__block calcselectblock calcitem " data-calcselect='from'>
                   <div class="calcitem__header">
                     <div class="calcheader">
                       <div class="calcheader__title">                      
@@ -414,9 +412,19 @@
                     </div>
                   </div>
                   <div class="calcitem__content">
-                    <div class="calcselect">
+                    <div class="calcselect " >
                       <div class="calcselect__wrapper">
-                        <div class="calcselect__select">
+                        <div class="selectresult">
+                          <div class="selectresult__icon">
+                            <img src="img/selectresult__icon.svg" alt="">
+                          </div><!-- /.selectresult__icon -->
+                          <div class="selectresult__content">
+                            <div class="selectresult__termname" data-ternimalresult="Москва, ул. Соколово-Мещерская, 29">Москва, ул. Соколово-Мещерская, 29</div>
+                            <div class="selectresult__termid" data-ternimalresult_id="Терминал MSK1438">Терминал MSK1438</div>
+                          </div><!-- /.selectresult__content -->
+                        </div>
+                        <div class="calcselect__select" >
+                          <input type="hidden" name='TERMINAL_FROM' data-input='terminal'>
                           <button type='button' class="calcselect__button">
                             <div class="calcselect__buttonicon">
                               <img src="img/target.svg" alt="">
@@ -452,7 +460,7 @@
                     </div><!-- /.calcselect -->
                   </div><!-- /.calcitem__content -->
                 </div><!-- /.calcpage__block -->
-                <div class="calcpage__block">
+                <div class="calcpage__block calcitem calcselectblock disabled" data-calcselect='to'>
                   <div class="calcitem__header">
                     <div class="calcheader">
                       <div class="calcheader__title">                      
@@ -463,9 +471,20 @@
                     </div>
                   </div>
                   <div class="calcitem__content">
-                    <div class="calcselect">
+                    <div class="calcselect " >
                       <div class="calcselect__wrapper">
-                        <div class="calcselect__select">
+                        <div class="selectresult">
+                          <div class="selectresult__icon">
+                            <img src="img/selectresult__icon.svg" alt="">
+                          </div><!-- /.selectresult__icon -->
+                          <div class="selectresult__content">
+                            <div class="selectresult__termname" data-ternimalresult=""></div>
+                            <div class="selectresult__termid" data-ternimalresult_id=""></div>
+                          </div><!-- /.selectresult__content -->
+                        </div>
+                        <div class="calcselect__select" >
+                          <input type="hidden" name='TERMINAL_TO' data-input='terminal'>
+
                           <button type='button' class="calcselect__button">
                             <div class="calcselect__buttonicon">
                               <img src="img/target.svg" alt="">

@@ -25,16 +25,29 @@ const fastBtn = () => {
   })
 }
 const termSelect = () => {
-  jQuery('.calcselect__button').on('click', function(e) {
+  jQuery(document).on('click', '.calcselectblock:not(.disabled) .calcselect__button', function(e) {
     e.preventDefault()
     jQuery(this).closest('.calcselect').find('.calcselect__list').addClass('active')
   })
   jQuery("[data-terminal]").on("click", function (e) {
     e.preventDefault()
-    let termname = jQuery(this).find('[data-terminalname]').data('terminalname')
-    let termid = jQuery(this).find('[data-terminalid]').data('terminalid')
+    const $element = jQuery(this)
+    const $wrapper =  $element.closest('[data-calcselect]')
+    let termname = $element.find('[data-terminalname]').data('terminalname')
+    let termid =  $element.find('[data-terminalid]').data('terminalid')
 
-    jQuery('')
+    $wrapper.addClass('selected')
+    $wrapper.find('[data-ternimalresult]').text(termname).attr('data-ternimalresult', termname)
+    $wrapper.find('[data-ternimalresult_id]').text(termid).attr('data-ternimalresult_id', termid)
+    $wrapper.find('.calcselect__list').removeClass('active')
+    $wrapper.find('.calcselect__buttontext').text("Другой терминал")
+
+    if (jQuery('[data-calcselect="from"]').hasClass('selected')) {
+      jQuery('[data-calcselect="to"]').removeClass('disabled')
+    }
+
+    // что подставлять в инпут
+    $wrapper.find('[data-input="terminal"]').val(termid)
   })
 }
 

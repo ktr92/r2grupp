@@ -2467,8 +2467,9 @@ font-weight: 400;
   background: #fff;
   position: absolute;
   display: none;
-  left: 0;
+z-index: 9;
   right: 0;
+  min-width: 320px;
   width: 100%;
   top: 100%;
   max-height: 300px;
@@ -2490,8 +2491,12 @@ font-weight: 400;
   border-bottom: 1px solid #ebebeb;
   cursor: pointer;
 }
-.calcselect__item:last-child {
+/* .calcselect__item:last-child {
   border: none;
+} */
+
+.calcselect__item:hover {
+ border-color: #E80000;
 }
 .calcselect__itemname {
   font-size: 16px;
@@ -2501,7 +2506,64 @@ font-weight: 400;
   font-size: 14px;
   opacity: 0.6;
 }
+.selectresult {
+  display: none;
 
+  align-items: center;
+  max-width: 380px;
+  min-width: 380px;
+}
+.selectresult__icon {
+}
+.selectresult__content {
+  margin-left: 13px;
+}
+.selectresult__termname {
+  color: #213540;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.selectresult__termid {
+  color: #213540;
+
+opacity: 0.6;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+}
+.calcselect__select {
+  display: flex;
+  align-items: center;
+  
+}
+
+.selected .calcselect__message {
+  display: none;
+}
+.selected .calcselect__select {
+  width: 200px;
+}
+.selected .calcselect__wrapper{
+justify-content: space-between;
+}
+.selected .selectresult{
+display: flex;
+}
+.calcselectblock.disabled .calcheader__name {
+  opacity: 0.4;
+}
+
+.calcitem__header + .calcitem__content {
+  padding-top: 0;
+}
+
+.calcselectblock.selected + .calcselectblock .calcheader__name{
+  opacity: 1;
+}
 
 @media (min-width: 1024px) {
 	.calcpage__aside .sticky {
