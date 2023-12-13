@@ -2,25 +2,44 @@
 const appInit = () => {
   switcher()
   stickySidebar()
+  fastBtn()
+  termSelect()
 }
 
 const switcher = () => {
-  $(".switcher a").on("click", function (e) {
+  jQuery(".switcher a").on("click", function (e) {
     e.preventDefault()
-    let input1 = $("#cityInput1").val()
-    let input2 = $("#cityInput2").val()
-    $("#cityInput1").val(input2)
-    $("#cityInput2").val(input1)
+    let input1 = jQuery("#cityInput1").val()
+    let input2 = jQuery("#cityInput2").val()
+    jQuery("#cityInput1").val(input2)
+    jQuery("#cityInput2").val(input1)
 
-    input1 = $('[name="from"]').val()
-    input2 = $('[name="to"]').val()
-    $('[name="from"]').val(input2)
-    $('[name="to"]').val(input1)
+  })
+}
+
+const fastBtn = () => {
+  jQuery("[data-fast] a").on("click", function (e) {
+    e.preventDefault()
+    let target = jQuery(this).parent().data('fast')
+    jQuery(`input[name=${target}]`).val(jQuery(this).text())
+  })
+}
+const termSelect = () => {
+  jQuery('.calcselect__button').on('click', function(e) {
+    e.preventDefault()
+    jQuery(this).closest('.calcselect').find('.calcselect__list').addClass('active')
+  })
+  jQuery("[data-terminal]").on("click", function (e) {
+    e.preventDefault()
+    let termname = jQuery(this).find('[data-terminalname]').data('terminalname')
+    let termid = jQuery(this).find('[data-terminalid]').data('terminalid')
+
+    jQuery('')
   })
 }
 
 const stickySidebar = () => {
-  if ($(document).width() > 1023) {
+  if (jQuery(document).width() > 1023) {
     if (document.querySelector(".calcpage__aside")) {
       var a = document.querySelector(".calcpage__aside"),
         b = null,
@@ -87,6 +106,6 @@ const stickySidebar = () => {
 }
 
 
-jQuery(function ($) {
+jQuery(function (jQuery) {
   appInit()
 })
