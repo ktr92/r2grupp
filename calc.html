@@ -16,20 +16,28 @@
     <meta property="og:url" content="https://r2grupp.ru/" />
     <meta property="og:site_name" content="Транспортная Компания Р2 ГРУПП Москва" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel='stylesheet' id='wp-block-library-css' href='css/style.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css' href='css/style.css?ver=1697813257' type='text/css' media='all' />
     <link rel='stylesheet' id='fancy-css' href='css/fancybox.css?ver=6.3.2' type='text/css' media='all' />
     <link rel='stylesheet' id='jq-ui-css' href='css/jquery-ui.css?ver=6.3.2' type='text/css' media='all' />
     <link rel='stylesheet' id='swiper-css' href='css/swiper-bundle.min.css?ver=6.3.2' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css' href='css/quform.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='css/jQuery.inputSliderRange.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='css/nouislider.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css' href='css/calc.css' type='text/css' media='all' />
     
     <script type='text/javascript' src='js/jquery.min.js'></script>
-    <script type='text/javascript' src='js/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
-    <script type='text/javascript' src='js/script.js?ver=1696861625' id='script-js'></script>
+<!--     <script type='text/javascript' src='js/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
+ -->    <script type='text/javascript' src='js/script.js?ver=1696861625' id='script-js'></script>
     <script type='text/javascript' src='js/fancybox.umd.js?ver=6.3.2' id='fancy-js'></script>
     <script type='text/javascript' src='js/jquery-ui.js?ver=6.3.2' id='jq-ui-js'></script>
     <script type='text/javascript' src='js/swiper-bundle.min.js?ver=6.3.2' id='swiper-js'></script>
+    <script type='text/javascript' src='js/jQuery.inputSliderRange.min.js'></script>
+    <script type='text/javascript' src='js/nouislider.min.js'></script>
     <script type='text/javascript' src='js/calc.js'></script>
 
     <link rel="icon" href="img/cropped-faviconV2-32x32.png" sizes="32x32" />
@@ -526,55 +534,28 @@
                   <div class="calcitem__header">
                     <div class="calcheader">
                       <div class="calcheader__title">
-                        <div class="calcheader__icon">
-                          <div class="calcheader__image">
-                            <img src="/local/templates/azlog/public/images/WoodenBox.svg" alt="">
-                          </div>
-                        </div>
                         <span class="calcheader__name">
                           Информация о грузе
-                          <span class="calcheader__help">
-                            <span class="help-call">?</span>
-                            <span class="help-tooltip">
-                              <span class="help-tooltip__content">
-                                <span class="help-tooltip__text">Для точного расчета стоимости перевозки
-                                и дополнительных услуг заполните габариты каждого грузового места,
-                                или введите общий вес и объем для быстрого предварительного расчета.
-                                </span>
-                                <!-- 												<span class="help-tooltip__info">+8 к защите груза</span>
-                                  -->                                            
-                              </span>
-                            </span>
-                          </span>
                         </span>
                       </div>
-                     
                     </div>
                     <div class="calctabs-js">
                       <ul>
-                        <label class="active" for="set_weight">Указать общий вес и объём <input data-radiotab="tab" type="radio" value="Y" id="set_weight" name="infogruztab" checked="">
+                        <label class="active" for="set_weight"><span class='calctabs__name'>Общие данные</span>  <input data-radiotab="tab" type="radio" value="Y" id="set_weight" name="infogruztab" checked="">
                         </label>
-                        <label class="" for="set_size">Указать с габаритами <input data-radiotab="tab" type="radio" id="set_size" value="N" name="infogruztab"></label>
-                      </ul>
-                    </div>
-                    <div class="calctabs__actions calctabs__actions-js">
-                      <div class="calctabs__action">
-                        <!-- у первого нет кнопок но блок нужен -->
-                      </div>
-                      <div class="calctabs__action">
-                        <div class="calctabs__items">
-                          <div class="calctabs__item js-calcspot calctabs__item-1 active">
-                            <span class="calctabs__itemplace">1 место</span>
-                          </div>
-                          <div class="calctabs__add">
-                            <span>
-                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M4.58579 4.58579V0H7.41421V4.58579H12V7.41421H7.41421V12H4.58579V7.41421H5.05053e-07L0 4.58579H4.58579Z" fill="#373737"></path>
-                              </svg>
+                        <label class="" for="set_size"> <span class='calctabs__name'>Указать габариты</span>  <input data-radiotab="tab" type="radio" id="set_size" value="N" name="infogruztab">
+                          <span class="calcheader__help">
+                            <span class="help-call"><img src="img/i.svg" alt=""></span>
+                            <span class="help-tooltip">
+                              <span class="help-tooltip__content">
+                                <span class="help-tooltip__text">Груз считается негабаритным если: вес одного неделимого грузового места более 500 кг либо сумма измерений 3х сторон более 4х метров</span>
+                                <!-- 	<span class="help-tooltip__info">+8 к защите груза</span> -->
+                              </span>
                             </span>
-                          </div>
-                        </div>
-                      </div>
+                          </span>
+
+                        </label>
+                      </ul>
                     </div>
                   </div>
                   <div class="calcitem__content">
@@ -584,145 +565,34 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">Общий вес</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="weight" data-range-slider-index="0">
-                                <input data-stepdata="ob_weight" data-steptype="source" class="form-control range-slider__control" data-max="30000" data-min="1" data-weight-format="" name="weight" placeholder="Вес груза, кг" type="text" inputmode="decimal" value="1">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="30000.0" aria-valuenow="1.0" aria-valuetext="1.00">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                              <div class="form-control__wrapper range-slider"
+                              data-range-slider-type="weight">
+                              <input data-stepdata="ob_weight" data-steptype="source"
+                                      class="form-control range-slider__control" data-max="30000"
+                                      data-min="1"
+                                      data-weight-format="" name="weight" placeholder="Вес груза, кг"
+                                      type="text"
+                                      inputmode="decimal"
+                                      value="30">
+                              <div class="range-slider__ui"></div>
+                            </div>
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Объем груза</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="volume" data-range-slider-index="1">
-                                <input data-stepdata="ob_vol" data-steptype="source" class="form-control range-slider__control" data-max="30" data-min="0.01" data-volume-format="" name="volume" placeholder="Объём груза, м³" type="text" inputmode="decimal" value="0.01">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="30.0" aria-valuenow="0.0" aria-valuetext="0.01">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                              <div class="form-control__wrapper range-slider"
+                                  data-range-slider-type="volume">
+                                <input data-stepdata="ob_vol" data-steptype="source"
+                                      class="form-control range-slider__control" data-max="30"
+                                      data-min="0.01"
+                                      data-volume-format="" name="volume" placeholder="Объём груза, м³"
+                                      type="text"
+                                      inputmode="decimal"
+                                      value="0.01">
+                                <div class="range-slider__ui"></div>
                               </div>
                             </div>
                           </div>
-                          <div class="calcform__items calcform__items_three">
-                            <div class="calcform__item">
-                              <div class="calcform__title">Самое длинное</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="size" data-range-slider-index="2">
-                                <input data-stepdata="ob_len" data-steptype="source" class="form-control range-slider__control" data-max="1000" data-min="1" data-size-format="" name="size1" placeholder="Самое длинное" type="text" inputmode="decimal" value="1">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="1000.0" aria-valuenow="1.0" aria-valuetext="1.00">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="calcform__item">
-                              <div class="calcform__title">Самое широкое</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="size" data-range-slider-index="3">
-                                <input data-stepdata="ob_shir" data-steptype="source" class="form-control range-slider__control" data-max="500" data-min="1" data-size-format="" name="size2" placeholder="Самое широкое" type="text" inputmode="decimal" value="1">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="500.0" aria-valuenow="1.0" aria-valuetext="1.00">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="calcform__item">
-                              <div class="calcform__title">Самое высокое</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="size" data-range-slider-index="4">
-                                <input data-stepdata="ob_h" data-steptype="source" class="form-control range-slider__control" data-max="500" data-min="1" data-size-format="" name="size3" placeholder="Самое высокое" type="text" inputmode="decimal" value="1">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="500.0" aria-valuenow="1.0" aria-valuetext="1.00">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcform__items calcform__items_three">
-                            <div class="calcform__item">
-                              <div class="calcform__title">Самое тяжелое</div>
-                              <div class="form-control__wrapper range-slider" data-range-slider-type="weight" data-range-slider-index="5">
-                                <input data-stepdata="ob_w" data-steptype="source" class="form-control range-slider__control" data-max="5000" data-min="1" data-weight-format="" name="max_weight" placeholder="Самое длинное" type="text" inputmode="decimal" value="1">
-                                <div class="range-slider__ui noUi-target noUi-ltr noUi-horizontal">
-                                  <div class="noUi-base">
-                                    <div class="noUi-connects">
-                                      <div class="noUi-connect" style="transform: translate(0%, 0px) scale(0, 1);"></div>
-                                    </div>
-                                    <div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 4;">
-                                      <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="5000.0" aria-valuenow="1.0" aria-valuetext="1.00">
-                                        <div class="noUi-touch-area"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="calcform__item">
-                              <div class="calcform__title">Количество мест/паллет</div>
-                              <div class="form-control__wrapper">
-                                <div class="quantity">
-                                  <input type="button" value="" class="quantity-minus" data-field="quantity">
-                                  <input data-stepdata="ob_count" data-steptype="source" type="text" step="1" min="1" max="999" value="1" name="quantity" class="quantity-field" placeholder="1">
-                                  <input type="button" value="" class="quantity-plus" data-field="quantity">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="calcform__item">
-                              <div class="calcform__title">
-                                &nbsp;
-                                <!--убираем пустоту-->
-                              </div>
-                              <!-- <div class="formcheckbox">
-                                <div class="formcheckbox__item">
-                                    <label for="check1-1" class="formcheckbox__label"><span>
-                                            <input data-stepdata="ob_equal" data-steptype="source"
-                                                   type="checkbox" id="check1-1" name="check1" value="Y"
-                                                   checked>
-                                            <span class="formcheckbox__text" data-text="checkboxtext"
-                                                  data-text="checkboxtext">Все места одинаковые</span>
-                                        </span>
-                                    </label>
-                                </div>
-                                </div> -->
-                            </div>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>

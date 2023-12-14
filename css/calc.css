@@ -121,24 +121,29 @@ input.form-control.range-slider__control.error {
 }
 
 .help-tooltip__text {
-  font-style: normal;
-  font-weight: 500;
+  color: #213540;
+text-align: left;
   font-size: 14px;
-  line-height: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
   display: block;
-  color: #373737;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 .help-tooltip__content {
-  padding: 15px 24px;
+  padding: 14px 6px 13px 22px;
   position: relative;
   display: block;
   font-size: 14px;
   line-height: 17px;
+  border-radius: 6px;
+
 }
 
 .help-tooltip__content:after {
-  content: url(/local/templates/azlog/public/css/../images/tooltip.svg);
+  content: url(../img/tooltip.svg);
   position: absolute;
   top: 100%;
   left: 25px;
@@ -162,7 +167,7 @@ input.form-control.range-slider__control.error {
   transition: 0.4s all ease !important;
   bottom: calc(100% + 22px);
   left: calc(50% - 25px);
-  width: 355px;
+  width: 319px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 10px 10px 40px rgba(55, 55, 55, 0.15);
@@ -719,7 +724,7 @@ hr {
 span.calcheader__help {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 5px;
+/*   margin-left: 5px; */
 }
 
 .formcheckbox__label_type2 span.formcheckbox__text:before {
@@ -1710,9 +1715,18 @@ opacity: 0.6;
   display: flex;
 }
 
-
+.calctabs__name {
+  color: #213540;
+  position: relative;
+  opacity: 0.6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+ display: inline-block;
+}
 .calctabs-js label {
-	background: #f5f5f5;
+/* 	background: #f5f5f5;
 	box-sizing: border-box;
 	border-radius: 5px;
 	font-style: normal;
@@ -1728,13 +1742,38 @@ opacity: 0.6;
 	align-items: center;
 	cursor: pointer;
 	color: rgba(55, 55, 55, .5);
-	justify-content: center;
+	justify-content: center; */
+  position: relative;
+padding-left: 26px;
+cursor: pointer;
+margin-right: 19px;
+}
+.calctabs-js label:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 18px;
+height: 18px;
+box-sizing: border-box;
+border: 1px solid rgba(66, 82, 92, 0.15);
+border-radius: 50%;
 }
 
-.calctabs label.active {
-	background: #f23f34;
-	border: 1px solid #f23f34;
-	color: #fff;
+.calctabs label.active:before {
+	border-width: 3px;
+  border-color: #E80000;
+}
+.calctabs label.active:after {
+	content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  background: #E80000;
+  position: absolute;
+  top: 6px;
+  left: 6px;
 }
 
 .calctabs-js input {
@@ -2331,7 +2370,7 @@ line-height: normal;
   cursor: pointer;
 }
 
-.calcheader {
+.calcitem__header {
   padding: 0 44px 23px 44px;
 }
 
@@ -2355,9 +2394,7 @@ line-height: normal;
 .calcpage__main .calcitem__content {
   padding: 44px;
 }
-.calcpage__main .calcitem__header {
-  padding: 0;
-}
+
 
 .inputLocation {
   position: relative;
@@ -2563,6 +2600,18 @@ display: flex;
 
 .calcselectblock.selected + .calcselectblock .calcheader__name{
   opacity: 1;
+}
+.noUi-horizontal {
+  height: 2px;
+}
+.noUi-connect {
+  background: #E80000;
+}
+.noUi-horizontal .noUi-handle {
+  box-shadow: none;
+  border: none;
+  width: 19px;height: 23px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23" fill="none"><path d="M9.00064 1.64921L9.35693 1.28732L9.71323 1.64921L15.461 7.48735C17.1479 9.01622 18.2139 11.1732 18.2139 13.5778C18.2139 18.254 14.2231 21.9995 9.35693 21.9995C4.49073 21.9995 0.5 18.254 0.5 13.5778C0.5 11.1732 1.56594 9.01622 3.25282 7.48735L9.00064 1.64921Z" fill="%23D41D12" stroke="white" style="fill:%23D41D12;fill:color(display-p3 0.8314 0.1137 0.0706);fill-opacity:1;stroke:white;stroke-opacity:1;"/><circle cx="4.17847" cy="4.17847" r="4.17847" transform="matrix(1 0 0 -1 5.17871 17.321)" fill="white" style="fill:white;fill-opacity:1;"/></svg>');
 }
 
 @media (min-width: 1024px) {
