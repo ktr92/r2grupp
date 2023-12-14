@@ -10,11 +10,13 @@
 }
 
 .calcpage__main {
-  width: calc(100% - 445px)
+  width: calc(100% - 445px);
+  margin-bottom: 52px;
 }
 
 .calcpage__aside {
   width: 445px;
+  
 }
 
 .calcitem {
@@ -61,16 +63,24 @@
 
 .help-call {
   border: 1px solid rgba(50, 50, 50, 0.3);
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   text-align: center;
-  line-height: 16px;
+  line-height: 18px;
   background: #fff;
   border-radius: 50%;
   font-weight: 500;
   cursor: pointer;
-  font-size: 10px;
   display: block;
+  background-image: url(../img/i.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.help-call_red {
+  background-color: #E80000;
+  border-color: #E80000;
+  background-image: url(../img/i_white.svg);
 }
 
 .calcinfo {
@@ -249,6 +259,16 @@ input.quantity-field {
   width: 33.3333%;
 }
 
+.calcform__items_four .calcform__item {
+  width: 100%;
+  max-width: calc(100% / 4);
+}
+
+.calcform__item_xl {
+  min-width: 255px;
+  max-width: 100%;
+}
+
 .quantity {
   background: #eef0f1;
   display: inline-block;
@@ -387,7 +407,21 @@ span.formcheckbox__text:before {
 }
 
 .calctabs__add {
+  display: flex;
+  align-items: center;
+  margin: 29px 0;
+  background: none;
+  border: none;
+}
+
+.calctabs__add span {
   margin-left: 8px;
+color: #213540;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
 }
 
 .calctabs__item a.calctabs__itemplace {
@@ -913,18 +947,19 @@ input.numberarrows::-webkit-inner-spin-button {
 .switches li {
   position: relative;
   counter-increment: switchCounter;
+  margin-bottom: 18px;
 }
 
 .switches label {
   justify-content: space-between;
-  margin-left: 22px;
+  margin-left: 16px;
   margin-bottom: 0;
 }
 
 .switches label span:last-child {
   position: relative;
-  width: 48px;
-  height: 28px;
+  width: 47px;
+  height: 26px;
   background: #e9e9e9;
   border-radius: 555px;
   transition: all 0.3s;
@@ -938,8 +973,8 @@ input.numberarrows::-webkit-inner-spin-button {
 }
 
 .switches label span:last-child::before {
-  left: 4px;
-  top: 4px;
+  left: 3px;
+  top: 3px;
   width: 20px;
   height: 20px;
   background: #fff;
@@ -959,7 +994,7 @@ input.numberarrows::-webkit-inner-spin-button {
 }
 
 .switches [type="checkbox"]:checked + label span:last-child {
-  background: #f23f34;
+  background: rgba(55, 184, 138, 1)
 }
 
 .switches [type="checkbox"]:checked + label span:last-child::before {
@@ -999,7 +1034,19 @@ input.numberarrows::-webkit-inner-spin-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
-  color: rgba(55, 55, 55, 0.5);
+  color: #213540;
+
+
+  display: flex;
+  align-items: center;
+}
+
+.switches__name img + span[data-text] {
+  padding-left: 8px;
+}
+
+.switches__name .calcheader__help {
+  margin-left: 6px;
 }
 
 .calctotal__title b,
@@ -1818,7 +1865,7 @@ border-radius: 50%;
 	line-height: 44px;
   border-radius: 6px;
   background: #F2F4F5;
- 
+  outline: none !important;
   
 	border: 1px solid #F2F4F5;
 	box-sizing: border-box;
@@ -1828,6 +1875,37 @@ border-radius: 50%;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
+}
+
+.form-control__wrapper input {
+  padding-left: 22px;
+  padding-right: 50px;
+}
+.form-control__wrapper {
+  position: relative;
+}
+.form-control__wrapper:after {
+  content: "";
+  color: #213540;
+opacity: 0.4;
+position: absolute;
+right: 15px;
+top: 50%;
+z-index: 2;
+transform: translateY(-50%);
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+}
+[data-range-slider-type="weight"]:after {
+  content: "кг";
+}
+[data-range-slider-type="volume"]:after {
+  content: "м3";
+}
+[data-range-slider-type="size"]:after {
+  content: "см";
 }
 
 .calcform__content input::-webkit-input-placeholder {
@@ -2042,132 +2120,10 @@ input.error {
 	cursor: pointer;
 }
 
-.InputSliderRange-Handler {
-	margin-left: -8px;
-	margin-right: -8px;
-	width: 22px;
-	height: 22px;
-	top: calc(50% + 3px);
-	border-radius: 50%;
-	border: none;
-	background-image: url(/local/templates/azlog/public/css/../images/Group37.svg);
-	background-color: #FFFFFF;
-	background-position: center;
-	background-repeat: no-repeat;
-	box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.15);
-}
-
-.InputSliderRange-Fill {
-	background: #F23F34;
-}
-
-
-
-.switches label,
-.switches li {
-  display: flex;
-  align-items: center;
-}
-
-.switches li {
-  position: relative;
-  counter-increment: switchCounter;
-}
-
-.switches label {
-  justify-content: space-between;
-  margin-left: 22px;
-  margin-bottom: 0;
-}
-
-.switches label span:last-child {
-  position: relative;
-  width: 48px;
-  height: 28px;
-  background: #e9e9e9;
-  border-radius: 555px;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.switches label span:last-child::after,
-.switches label span:last-child::before {
-  content: "";
-  position: absolute;
-}
-
-.switches label span:last-child::before {
-  left: 4px;
-  top: 4px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  z-index: 1;
-  transition: transform 0.3s;
-}
-
-.switches label span:last-child::after {
-  top: 50%;
-  right: 8px;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-50%);
-  background: url(/local/templates/azlog/public/css/swoff.svg);
-  background-size: 12px 12px;
-}
-
-.switches [type="checkbox"]:checked + label span:last-child {
-  background: #f23f34;
-}
-
-.switches [type="checkbox"]:checked + label span:last-child::before {
-  transform: translateX(20px);
-}
-
-.switches [type="checkbox"]:checked + label span:last-child::after {
-  width: 14px;
-  height: 14px;
-  left: 8px;
-  background: url(/local/templates/azlog/public/css/swon.svg);
-  background-size: 14px 14px;
-}
-
-.switches [type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-}
 
 .calcprice .radiotype label,
 .switches {
   width: 100%;
-}
-
-.switches ol {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 0;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.switches__name {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-  color: rgba(55, 55, 55, 0.5);
-}
-
-.calctotal__title b,
-.switches__name.active {
-  color: #373737;
-}
-
-.switches__name .help-tooltip__text {
-  text-align: left;
 }
 
 .breadcrumbs {
@@ -2310,10 +2266,17 @@ line-height: normal;
   color: #213540;
   opacity: 0.6;
 }
+.calcaside {
+  background: #fff;
+  box-shadow: 8px 8px 60px color(display-p3 0.1451 0.2039 0.2471 / 0.15);
 
+}
 .calcpage__aside .calcitem__content {
   background: #F7F8F8;
   padding: 18px 44px;
+}
+.calcaside .calcitem__header {
+  padding-top: 23px;
 }
 
 .calcform__items {
@@ -2613,6 +2576,48 @@ display: flex;
   width: 19px;height: 23px;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23" fill="none"><path d="M9.00064 1.64921L9.35693 1.28732L9.71323 1.64921L15.461 7.48735C17.1479 9.01622 18.2139 11.1732 18.2139 13.5778C18.2139 18.254 14.2231 21.9995 9.35693 21.9995C4.49073 21.9995 0.5 18.254 0.5 13.5778C0.5 11.1732 1.56594 9.01622 3.25282 7.48735L9.00064 1.64921Z" fill="%23D41D12" stroke="white" style="fill:%23D41D12;fill:color(display-p3 0.8314 0.1137 0.0706);fill-opacity:1;stroke:white;stroke-opacity:1;"/><circle cx="4.17847" cy="4.17847" r="4.17847" transform="matrix(1 0 0 -1 5.17871 17.321)" fill="white" style="fill:white;fill-opacity:1;"/></svg>');
 }
+
+.calcform + .calcform__switches {
+  margin-top: 50px;
+}
+
+.delivery_auto .for_zhd {
+  display: none !important;
+}
+
+.delivery_zhd .for_auto {
+  display: none !important;
+}
+
+.calcform__titlespot {
+  margin-bottom: 24px;
+  color: #213540;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; 
+}
+.calctabs__add {
+  cursor: pointer;
+}
+a.calctabs__remove {
+  color: #213540;
+  opacity: 0.4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.calcform_spot .calcform__inputs{
+  border-bottom: 3px solid #F2F4F5;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
 
 @media (min-width: 1024px) {
 	.calcpage__aside .sticky {
