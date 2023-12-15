@@ -11,31 +11,78 @@ const feInit = () => {
 }
 
 const autoCalc = () => {
+
+  const calcOver = function (e) {
+
+
+    $('.calcform__inputs_spot').each(function() {
+      let isover = false
+      let len = +$(this).find('.calc_length').val().replace(/\s/g, '').match(/\d+/)[0]
+      let wid = +$(this).find('.calc_width').val().replace(/\s/g, '').match(/\d+/)[0]
+      let hei = +$(this).find('.calc_height').val().replace(/\s/g, '').match(/\d+/)[0]
+      let weight  =
+      (+$(this).find('.calc_weight').val().replace(/\s/g, '').match(/\d+/)[0])
+
+      
+      let weiover = $('input[name=delivery_type]:checked').data('overweight')
+      let sizeover = $('input[name=delivery_type]:checked').data('oversize')
+
+    
+
+      let size = len + wid + hei
+      console.log(size/100)
+      if (size/100 > sizeover) {
+        isover = true
+      }
+
+
+      if (weight > weiover) {
+        isover = true
+      }
+
+      if (isover) {
+        $(this).find('.warn_over').addClass('active')
+      } else {
+        $(this).find('.warn_over').removeClass('active')
+      }
+    })
+  }
+
+
   const calcVolume = function (e) {
 
     let resVolume = 0 
-
+   
     $('.calcform__inputs_spot').each(function() {
-      let result =
-      (+$(this).closest('.calcform__inputs').find('.calc_length').val().replace(/\s/g, '').match(/\d+/)[0])
-      * (+$(this).closest('.calcform__inputs').find('.calc_width').val().replace(/\s/g, '').match(/\d+/)[0])
-      * (+$(this).closest('.calcform__inputs').find('.calc_height').val().replace(/\s/g, '').match(/\d+/)[0]) 
-      resVolume += result
+
+      let len = +$(this).find('.calc_length').val().replace(/\s/g, '').match(/\d+/)[0]
+      let wid = +$(this).find('.calc_width').val().replace(/\s/g, '').match(/\d+/)[0]
+      let hei = +$(this).find('.calc_height').val().replace(/\s/g, '').match(/\d+/)[0]
+
+    
+      let volume = len * wid * hei
+      calcOver()
+      resVolume += volume
     })
  
     $('.auto_volume').val(resVolume / 1000000)
 
+  
+
   }
   const calcWeight = function (e) {
     let resWeigth = 0 
+
     $('.calcform__inputs_spot').each(function() {
       let result =
-      (+$(this).closest('.calcform__inputs').find('.calc_weight').val().replace(/\s/g, '').match(/\d+/)[0])
+      (+$(this).find('.calc_weight').val().replace(/\s/g, '').match(/\d+/)[0])
+      calcOver()
+      
       resWeigth += result
     })
    
     $('.auto_weight').val(resWeigth)
-
+   
   }
 
     $(document).on("change", ".calc_length", calcVolume)
@@ -102,7 +149,16 @@ const addSpot = () => {
                 <div class="range-slider__ui"></div>
               </div>
             </div>
+           
             </div>
+            <div class="calcform__warn warn_over">
+            <div class="warnmessage warnmessage_type2">
+              <div class="warnmessage__icon">
+                <img src="img/warnmessage.svg" alt="">
+              </div>
+              <div class="warnmessage__text">Данные размеры груза превышают максимально допустимые габариты и груз будет оценен как “Негабартиный” </div>
+            </div>
+          </div>
           </div>
         </div>
         </div>

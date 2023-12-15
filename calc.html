@@ -327,7 +327,7 @@
                             <div class="calcform__item">
                               <div class="calcitem__button">
                                 <label class="active" for="delivery_auto">
-                                  <input type="radio" value="" id="delivery_auto" name="delivery_type" checked="">
+                                  <input type="radio" value="" id="delivery_auto" data-overweight='500' data-oversize='4' name="delivery_type" checked="">
                                   <div class='btncalc btncalc_type2'>
                                     <span class="btncalc__img btncalc__img_left">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -345,7 +345,7 @@
                             <div class="calcform__item">
                               <div class="calcitem__button">
                                 <label class="active" for="delivery_zhd">
-                                  <input type="radio" value="" id="delivery_zhd" name="delivery_type" >
+                                  <input type="radio" value="" id="delivery_zhd" data-overweight='1000' data-oversize='3.5' name="delivery_type" >
                                   <div class='btncalc btncalc_type2'>
                                     <span class="btncalc__img btncalc__img_left">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -587,7 +587,7 @@
                                 <input data-stepdata="ob_weight" data-steptype="source"
                                   class="form-control range-slider__control" data-max="30000"
                                   data-min="1"
-                                  data-over='20000'
+                                  
                                   data-weight-format="" name="weight" placeholder="Вес груза, кг"
                                   type="text"
                                   inputmode="decimal"
@@ -602,7 +602,7 @@
                                 <input data-stepdata="ob_vol" data-steptype="source"
                                   class="form-control range-slider__control" data-max="30"
                                   data-min="0.01"
-                                  data-over='20000'
+                                 
                                   data-volume-format="" name="volume" placeholder="Объём груза, м³"
                                   type="text"
                                   inputmode="decimal"
@@ -660,6 +660,7 @@
                                        data-steptype="source_set"
                                        class="calc_length form-control range-slider__control"
                                        data-max="1000"
+                                       
                                        data-min="1" data-size-format="" name="boxLength[]"
                                        placeholder="Самое длинное" type="text" inputmode="decimal"
                                        value="1">
@@ -705,6 +706,15 @@
                               </div>
                             </div>
                           </div>
+
+                          <div class="calcform__warn warn_over">
+                            <div class="warnmessage warnmessage_type2">
+                              <div class="warnmessage__icon">
+                                <img src="img/warnmessage.svg" alt="">
+                              </div>
+                              <div class="warnmessage__text">Данные размеры груза превышают максимально допустимые габариты и груз будет оценен как “Негабартиный” </div>
+                            </div>
+                          </div><!-- /.calcform__warn -->
                         </div>
                       </div>
 

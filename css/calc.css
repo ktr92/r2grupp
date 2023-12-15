@@ -1215,6 +1215,9 @@ input.numberarrows::-webkit-inner-spin-button {
   padding-bottom: 0;
   border-bottom: none;
 }
+.calcprice-params li:first-child {
+  padding-top: 16px;
+}
 
 .calcprice-params span {
   font-size: 16px;
@@ -2458,6 +2461,32 @@ font-style: normal;
 font-weight: 400;
 
 }
+
+.warnmessage_type2 {
+ background:linear-gradient(90deg, rgb(255, 179, 0, 0.15) 0%, rgb(255, 179, 0, 0) 100%);
+ padding: 10px 16px;
+ border-radius: 6px;
+}
+.warnmessage_type2 .warnmessage__text {
+margin-left: 10px;
+color: #213540;
+
+
+font-family: Opel Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+
+}
+
+.warn_over {
+  display: none;
+}
+.warn_over.active {
+  display: block;
+}
+
 .calcselect__select{
   position: relative;
 }
