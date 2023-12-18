@@ -360,8 +360,10 @@ const switcher = () => {
 const fastBtn = () => {
   jQuery("[data-fast] a").on("click", function (e) {
     e.preventDefault()
+    jQuery(this).closest('.calcform__item').find("[data-fast] a").removeClass('active')
     let target = jQuery(this).parent().data('fast')
     jQuery(`input[name=${target}]`).val(jQuery(this).text())
+    jQuery(this).addClass('active')
   })
 }
 const termSelect = () => {
