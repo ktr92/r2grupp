@@ -710,27 +710,35 @@ hr {
 }
 
 .radiotype span.radiotype__text:before {
-  content: "";
-  display: block;
   position: absolute;
   left: 0;
   top: 0;
+  content: "";
   width: 18px;
   height: 18px;
-  border: 2px solid #d7d7d7;
   box-sizing: border-box;
-  border-radius: 100px;
+  border: 1px solid rgba(66, 82, 92, 0.15);
+  border-radius: 50%;
 }
 
 .radiotype label:hover .radiotype__text:before {
-  border: 2px solid #f23f34;
+  border-color: #E80000;
 }
 
 .radiotype input[type="radio"]:checked + .radiotype__text:before {
-  border: 2px solid #f23f34;
-  background-image: url(/local/templates/azlog/public/css/../images/Rectangle219.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  border-color: #E80000;
+  border-width: 3px;
+}
+.radiotype input[type="radio"]:checked + .radiotype__text:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  background: #E80000;
+  position: absolute;
+  top: 6px;
+  left: 6px;
 }
 
 .radiotype span.radiotype__text {
@@ -1059,10 +1067,6 @@ input.numberarrows::-webkit-inner-spin-button {
   margin-left: 6px;
 }
 
-.calctotal__title b,
-.switches__name.active {
-  color: #373737;
-}
 
 .switches__name .help-tooltip__text {
   text-align: left;
@@ -1493,61 +1497,18 @@ a.link.link_blue:after {
   border-bottom: none;
 }
 
-.fromto__cols {
-  display: flex;
-  margin: 0 -28px;
-}
-
-.fromto__col {
-  width: 50%;
-}
-
-.fromto__descr p,
-.fromto__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  color: #373737;
-}
-
-.fromto__descr p {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  opacity: 0.7;
-}
-
-.fromto__item {
-  display: flex;
-}
-
-.fromto__img {
-  width: 22px;
-}
-
-.fromto__content {
-  padding-left: 13px;
-  padding-right: 28px;
-}
-
-.fromto__col {
-  position: relative;
-  padding: 0 28px;
-}
-
-.fromto__cols .fromto__col:first-child:after {
-  content: "";
-  position: absolute;
-  height: calc(100% + 25px);
-  width: 2px;
-  background: #f3f3f3;
-  right: 0;
-  top: -25px;
-}
-
 .calctotal {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.calctotal__value ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calctotal:last-child {
+  margin-bottom: 0;
 }
 
 .calctotal__title,
@@ -1559,12 +1520,25 @@ a.link.link_blue:after {
 }
 
 .calctotal__title {
-  color: rgba(55, 55, 55, 0.5);
+  max-width: 250px;
+  min-width: 250px;
+  color: #213540;
+opacity: 0.6;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
 }
 
 .calctotal__value {
-  text-align: right;
-  color: #373737;
+  width: calc(100% - 250px);
+  color: #213540;
+padding-left: 30px;
+ 
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .calcform__multipleInput {
@@ -1718,27 +1692,14 @@ opacity: 0.6;
   max-width: 100%;
 }
 
-.calcitem__totals_multiple .calctotal {
-  margin-bottom: 22px;
-}
-
-.calcitem__totals_multiple {
-  padding-bottom: 0;
-  margin-bottom: 22px;
-  border-bottom: 2px dotted #b6b6b6;
-}
-
 .calctotal__value li {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
-
-.calcitem__totals_multiple .calctotal__title {
-  width: 50%;
-  max-width: 222px;
+.calcform .calctotal__value li {
+  margin-bottom: 0;
 }
-
-.calcitem__totals_multiple .calctotal__value {
-  width: 50%;
+.calcitem_total {
+  margin-bottom: 26px;
 }
 
 .calctotal__valueName {
@@ -2582,7 +2543,7 @@ z-index: 99;
   font-size: 14px;
   opacity: 0.6;
 }
-.selectresult {
+.calcselectblock  .selectresult {
   display: none;
 
   align-items: center;
@@ -2626,7 +2587,7 @@ line-height: 100%;
 .selected .calcselect__wrapper{
 justify-content: space-between;
 }
-.selected .selectresult{
+.calcselectblock.selected .selectresult{
 display: flex;
 }
 .calcselectblock.disabled .calcheader__name {
@@ -2861,6 +2822,198 @@ line-height: normal;
 [data-calchidden] .calcform__inputs {
   margin-top: 40px;
 }
+
+
+.fromto__cols {
+  display: flex;
+  margin: 0 -15px;
+}
+
+.fromto__col {
+  width: 50%;
+}
+
+.fromto__descr p,
+.fromto__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #373737;
+}
+
+.fromto__descr p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  opacity: 0.7;
+}
+
+.fromto__item {
+  display: flex;
+}
+
+.fromto__img {
+  width: 22px;
+}
+
+.fromto__content {
+  padding-left: 13px;
+  padding-right: 28px;
+}
+
+.fromto__col {
+  position: relative;
+  padding: 0 15px;
+}
+
+.fromto__cols .fromto__col:first-child:after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"><path d="M7.09091 12L5.43636 10.29L8.47955 7.2H0V4.8H8.47955L5.43636 1.71L7.09091 0L13 6L7.09091 12Z" fill="%2325343F" style="fill:%2325343F;fill:color(display-p3 0.1451 0.2039 0.2471);fill-opacity:1;"/></svg>');
+  position: absolute;
+
+right: -7px;
+margin: auto;
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+.calcform__fromto .selectresult {
+  border-radius: 6px;
+  background: #F2F4F5;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.calctotal__value li {
+
+  line-height: 1.2;
+}
+.calctotal__value li.checkicon {
+padding-left: 19px;
+background-image: url(../img/checkicon.svg);
+background-position: left center;
+background-repeat: no-repeat;
+}
+
+.calcitem_total .calcitem__content  {
+  padding-top: 0;
+  padding-bottom: 26px;
+}
+
+.calcform__fromto  {
+  margin-bottom: 30px;
+}
+
+.calctotal__value li .light {
+  opacity: 0.5;
+  font-weight: 400;
+  display: block;
+  margin-top: 2px;
+}
+.calcrow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.calcrow .radiotype {
+  display: flex;
+  align-items: center;
+  min-height: 22px;
+}
+.calcrow .radiotype__item {
+margin-left: 19px;
+}
+.calcrow .radiotype label {
+margin-bottom: 0;
+}
+.calcrow .radiotype label span {
+  line-height: 18px;
+  display: block;
+}
+
+.calcrow__title {
+  color: #213540;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%
+}
+
+.warnmessage_light .warnmessage__text {
+  color: #213540;
+
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+}
+
+.calcrow .calcform__radiobuttons {
+  margin-bottom: 0;
+}
+.checkbox {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #213540;
+position: relative;
+padding-left: 24px;
+cursor: pointer;
+
+}
+
+.checkbox__box,
+.form-group label.checkbox__box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border: 1px solid #EBEBEB;
+	box-sizing: border-box;
+	border-radius: 2px;
+	transition: all .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+}
+
+.checkbox input[type=checkbox],
+.form-group label.checkbox input[type=checkbox] {
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	width: 1px;
+	height: 1px;
+	outline: none;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+}
+
+
+.checkbox input[type=checkbox]:checked+.checkbox__box:after{
+	content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="4" fill="%23D41D12" style="fill:%23D41D12;fill:color(display-p3 0.8314 0.1137 0.0706);fill-opacity:1;"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.95154 9.21857L10.565 4.83075L12.2013 6.17823L7.19937 12.252L3.91602 9.37902L5.31182 7.78381L6.95154 9.21857Z" fill="white" style="fill:white;fill-opacity:1;"/></svg>');
+}
+
+
+
+.checkbox a {
+	color: #E80000;
+  
+	font-weight: bold;
+}
+
+.checkbox a:hover {
+	text-decoration: none;
+}
+
 
 @media (min-width: 1024px) {
 	.calcpage__aside .sticky {
@@ -3191,5 +3344,12 @@ span.calcheader__help {
 }
 .calcpage__aside {
   margin-top: 30px;
+}
+.calcform_spot .calcform__inputs {
+  margin-bottom: 19px;padding-bottom: 9px;
+}
+.calcform__items_three .calcform__item {
+width: calc(100% / 3);
+padding: 0 4px;
 }
 }
