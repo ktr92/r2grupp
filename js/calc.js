@@ -3,11 +3,13 @@ const feInit = () => {
   stickySidebar()
   fastBtn()
   termSelect()
+  customSelect()
   changeTab()
   rangeSliderLoad()
   deliveryTypeChange()
   addSpot()
   autoCalc()
+  switchDepend()
 }
 
 const autoCalc = () => {
@@ -346,6 +348,17 @@ const changeTab = () => {
   })
 }
 
+const switchDepend = () => {
+  $('input[data-depend]').on('change', function(e) {
+    let depend = $(this).data('depend')
+    if ($(this).is(':checked')) {
+      $(`[data-dependfrom=${depend}]`).addClass('active')
+    } else {
+      $(`[data-dependfrom=${depend}]`).removeClass('active')
+    }
+  })
+}
+
 const switcher = () => {
   jQuery(".switcher a").on("click", function (e) {
     e.preventDefault()
@@ -366,12 +379,36 @@ const fastBtn = () => {
     jQuery(this).addClass('active')
   })
 }
+
+
+
+const customSelect = () => {
+  jQuery(document).on('click', '.customselect .customselect__button', function (e) {
+    e.preventDefault()
+    jQuery(this).closest('.customselect').find('.calcselect__list').addClass('active')
+    jQuery(this).addClass('active')
+  })
+  jQuery(document).on('click', '.customselect li', function (e) {
+    e.preventDefault()
+    const $wrapper = $(this).closest('.customselect')
+    let value = $(this).text()
+    let code = $(this).data('value')
+    $wrapper.find(`[data-calchidden]`).removeClass('active')
+    $wrapper.find(`[data-calchidden=${code}]`).addClass('active')
+    $wrapper.find('[data-customselect]').text(value)
+    // что подставлять в инпут
+    $wrapper.find('[data-input]').val(value)
+    $wrapper.find('.calcselect__list').removeClass('active')
+    $wrapper.find('.customselect__button').removeClass('active')
+   
+  })
+}
 const termSelect = () => {
   jQuery(document).on('click', '.calcselectblock:not(.disabled) .calcselect__button', function (e) {
     e.preventDefault()
     jQuery(this).closest('.calcselect').find('.calcselect__list').addClass('active')
   })
-  jQuery("[data-terminal]").on("click", function (e) {
+  jQuery(".calcselect__list li").on("click", function (e) {
     e.preventDefault()
     const $element = jQuery(this)
     const $wrapper = $element.closest('[data-calcselect]')

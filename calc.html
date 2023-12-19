@@ -317,7 +317,7 @@
         <div class="container">
           <div class="calcpage">
             <div class="calcpage__main delivery_auto">
-              <div class="form-step" data-entity="form-step-1">
+              <div class="form-step" data-entity="form-step-1" style="display:none;">
                 <div class="calcpage__block calcitem">
                   <div class="calcitem__content">
                     <div class="calcform" data-stepvisible="anyway">
@@ -587,7 +587,6 @@
                                 <input data-stepdata="ob_weight" data-steptype="source"
                                   class="form-control range-slider__control" data-max="30000"
                                   data-min="1"
-                                  
                                   data-weight-format="" name="weight" placeholder="Вес груза, кг"
                                   type="text"
                                   inputmode="decimal"
@@ -602,7 +601,6 @@
                                 <input data-stepdata="ob_vol" data-steptype="source"
                                   class="form-control range-slider__control" data-max="30"
                                   data-min="0.01"
-                                 
                                   data-volume-format="" name="volume" placeholder="Объём груза, м³"
                                   type="text"
                                   inputmode="decimal"
@@ -618,7 +616,6 @@
                       <div class="calcform__content ">
                         <div class="calcform__inputs">
                           <div class="calcform__items calcform__items_two">
-                           
                             <div class="calcform__item">
                               <div class="calcform__title">Общий обьем</div>
                               <div class="form-control__wrapper "
@@ -655,58 +652,56 @@
                             <div class="calcform__item">
                               <div class="calcform__title">Длина</div>
                               <div class="form-control__wrapper"
-                                   data-range-slider-type="size">
+                                data-range-slider-type="size">
                                 <input data-stepdata="ob_len-1" data-stepset="1"
-                                       data-steptype="source_set"
-                                       class="calc_length form-control range-slider__control"
-                                       data-max="1000"
-                                       
-                                       data-min="1" data-size-format="" name="boxLength[]"
-                                       placeholder="Самое длинное" type="text" inputmode="decimal"
-                                       value="1">
+                                  data-steptype="source_set"
+                                  class="calc_length form-control range-slider__control"
+                                  data-max="1000"
+                                  data-min="1" data-size-format="" name="boxLength[]"
+                                  placeholder="Самое длинное" type="text" inputmode="decimal"
+                                  value="1">
                               </div>
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Ширина</div>
                               <div class="form-control__wrapper"
-                                   data-range-slider-type="size">
+                                data-range-slider-type="size">
                                 <input data-stepdata="ob_shir-1" data-stepset="1"
-                                       data-steptype="source_set"
-                                       class="calc_width form-control range-slider__control"
-                                       data-max="1000"
-                                       data-min="1"
-                                       data-size-format="" name="boxWidth[]" placeholder="Самое широкое"
-                                       type="text" inputmode="decimal" value="1">
+                                  data-steptype="source_set"
+                                  class="calc_width form-control range-slider__control"
+                                  data-max="1000"
+                                  data-min="1"
+                                  data-size-format="" name="boxWidth[]" placeholder="Самое широкое"
+                                  type="text" inputmode="decimal" value="1">
                               </div>
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Высота</div>
                               <div class=" form-control__wrapper"
-                              data-range-slider-type="size">
+                                data-range-slider-type="size">
                                 <input data-stepdata="ob_h-1" data-stepset="1"
-                                       data-steptype="source_set"
-                                       class="calc_height form-control range-slider__control"
-                                       data-max="1000"
-                                       data-min="1" data-size-format="" name="boxHeight[]"
-                                       placeholder="Самое высокое" type="text" inputmode="decimal"
-                                       value="1">
+                                  data-steptype="source_set"
+                                  class="calc_height form-control range-slider__control"
+                                  data-max="1000"
+                                  data-min="1" data-size-format="" name="boxHeight[]"
+                                  placeholder="Самое высокое" type="text" inputmode="decimal"
+                                  value="1">
                               </div>
                             </div>
                             <div class="calcform__item calcform__item_xl">
                               <div class="calcform__title">Вес места</div>
                               <div class="form-control__wrapper range-slider"
-                                   data-range-slider-type="weight">
+                                data-range-slider-type="weight">
                                 <input data-stepdata="ob_w-1" data-stepset="1"
-                                       data-steptype="source_set"
-                                       class="form-control range-slider__control calc_weight" data-max="5000"
-                                       data-min="1" data-weight-format="" name="boxWeight[]"
-                                       placeholder="Вес груза, кг" type="text" inputmode="decimal"
-                                       value="30">
+                                  data-steptype="source_set"
+                                  class="form-control range-slider__control calc_weight" data-max="5000"
+                                  data-min="1" data-weight-format="" name="boxWeight[]"
+                                  placeholder="Вес груза, кг" type="text" inputmode="decimal"
+                                  value="30">
                                 <div class="range-slider__ui"></div>
                               </div>
                             </div>
                           </div>
-
                           <div class="calcform__warn warn_over">
                             <div class="warnmessage warnmessage_type2">
                               <div class="warnmessage__icon">
@@ -714,13 +709,13 @@
                               </div>
                               <div class="warnmessage__text">Данные размеры груза превышают максимально допустимые габариты и груз будет оценен как “Негабартиный” </div>
                             </div>
-                          </div><!-- /.calcform__warn -->
+                          </div>
+                          <!-- /.calcform__warn -->
                         </div>
                       </div>
-
                       <button type='button' class="calctabs__add">
-                        <img src="img/calctabs__add.svg" alt="">
-                        <span>Добавить место</span>
+                      <img src="img/calctabs__add.svg" alt="">
+                      <span>Добавить место</span>
                       </button>
                     </div>
                     <div class="calcform__switches">
@@ -857,1488 +852,1097 @@
                   </div>
                 </div>
               </div>
-         
-         
-          <div class="form-step" data-entity="form-step-2" style="display:none;">
-            <div class="calcpage__block calcitem calcitem_edit">
-              <div class="calcitem__header">
-                <div class="calcheader">
-                  <div class="calcheader__title">
-                    <div class="calcheader__icon">
-                      <div class="calcheader__image">
-                        <img src="/local/templates/azlog/public/images/info.svg" alt="">
-                      </div>
-                    </div>
-                    <span class="calcheader__name">Данные перевозки и параметры груза</span>
-                  </div>
-                  <div class="calcheader__info calcheader__info_edit">
-                    <div class="calcinfo">
-                      <div class="calcinfo__icon">
-                        <div class="calcinfo__img"><img src="/local/templates/azlog/public/images/edit.svg" alt="">
-                        </div>
-                      </div>
-                      <div class="calcinfo__edit"><a href="#"> Изменить</a></div>
-                      <!-- /.calcinfo__edit -->
-                    </div>
-                  </div>
+              <div class="form-step" data-entity="form-step-2" >
+                <div class="calcback">
+                  <a href="#" data-stepback='form-step-1'>
+                  <img src="img/calcback.svg" alt="">
+                  <span>Вернуться назад</span>
+                  </a>
                 </div>
-              </div>
-              <div class="calcitem__content">
-                <div class="calcform">
-                  <div class="calcform__content">
-                    <div class="calcform__fromto fromto">
-                      <div class="fromto__cols">
-                        <div class="fromto__col">
-                          <div class="fromto__item fromto__item_from">
-                            <div class="fromto__icon">
-                              <div class="fromto__img">
-                                <img src="/images/fromto.svg" alt="">
-                              </div>
-                              <!-- /.fromto__img -->
-                            </div>
-                            <!-- /.fromto__icon -->
-                            <div class="fromto__content">
-                              <div class="fromto__title" data-stepdata="f_otpravki" data-steptype="result"></div>
-                              <!-- /.fromto__title -->
-                              <div class="fromto__descr">
-                                <p data-stepdata="p_otpravki" data-steptype="result"></p>
-                                <p>Филиал - <span data-stepdata="f_otpravki" data-steptype="result"></span></p>
-                              </div>
-                              <!-- /.fromto__descr -->
-                            </div>
-                            <!-- /.fromto__content -->
-                          </div>
-                          <!-- /.fromto__from -->
-                        </div>
-                        <!-- /.fromto__col -->
-                        <div class="fromto__col">
-                          <div class="fromto__item fromto__item_to">
-                            <div class="fromto__icon">
-                              <div class="fromto__img">
-                                <img src="/images/fromto.svg" alt="">
-                              </div>
-                              <!-- /.fromto__img -->
-                            </div>
-                            <!-- /.fromto__icon -->
-                            <div class="fromto__content">
-                              <div class="fromto__title" data-stepdata="f_dostavki" data-steptype="result"></div>
-                              <!-- /.fromto__title -->
-                              <div class="fromto__descr">
-                                <p data-stepdata="p_dostavki" data-steptype="result"></p>
-                                <p>Филиал - <span data-stepdata="f_dostavki" data-steptype="result"></span></p>
-                              </div>
-                              <!-- /.fromto__descr -->
-                            </div>
-                            <!-- /.fromto__content -->
-                          </div>
-                          <!-- /.fromto__from -->
-                        </div>
-                      </div>
-                      <!-- /.calcitem__totals -->
-                      <!-- /.fromto__cols -->
-                    </div>
-                    <!-- /.calcform__fromto -->
-                    <hr>
-                    <!-- <div class="calcitem__totals">
-                      <div class="calctotal">
-                      	<div class="calctotal__title">Общие параметры груза:</div>
-                      	<div class="calctotal__value" data-stepdata="f_dostavki" data-steptype="result">
-                      		Мест 1,
-                      		вес 1 кг,
-                      		обьем 0.01 м2</div>
-                      </div>
-                      </div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="calcpage__block calcitem calctabs calcitem_tabs-js">
-              <div class="calcitem__header">
-                <div class="calcheader">
-                  <div class="calcheader__title">
-                    <div class="calcheader__icon">
-                      <div class="calcheader__image">
-                        <img src="/local/templates/azlog/public/images/userform.svg" alt="">
+                <!-- /.calcback -->
+                <div class="calcpage__block calcitem calctabs calcitem_tabs-js" >
+                  <div class="calcitem__header">
+                    <div class="calcheader">
+                      <div class="calcheader__title">                      
+                        <span class="calcheader__name">
+                        Отправитель
+                        </span>
                       </div>
                     </div>
-                    <span class="calcheader__name">Отправитель</span>
-                  </div>
-                </div>
-                <div class="calctabs-js">
-                  <ul>
-                    <label class="active" for="send_yur">Юридическое лицо <input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="Y" id="send_yur" checked="" name="sendfizyur"></label>
-                    <label class="" for="send_fiz">Физическое лицо <input data-radiotab="tab" type="radio" value="N" id="send_fiz" name="sendfizyur">
-                    </label>
-                  </ul>
-                </div>
-              </div>
-              <div class="calcitem__content">
-                <div class="calcform calcform-js  active " data-stepvisible="send_yur">
-                  <div class="calcform__content">
-                    <div class="calcform__inputs">
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item calcform__item_small">
-                          <div class="calcform__title">Правовая форма</div>
-                          <select name="U_FORM" id="" data-stepdata="send_yurform" data-steptype="source">
-                            <option value="ООО" selected="">ООО</option>
-                            <option value="ОАО">ОАО</option>
-                            <option value="ЗАО">ЗАО</option>
-                            <option value="ИП">ИП</option>
-                          </select>
-                          <!-- /# -->
-                        </div>
-                        <div class="calcform__item calcform__item_notsmall">
-                          <div class="calcform__title">Название компании</div>
-                          <input type="text" name="U_COMPANY" placeholder="Название компании" data-stepdata="send_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300">
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">ИНН</div>
-                          <input type="text" name="U_INN" placeholder="ИНН" data-stepdata="send_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            КПП
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="text" name="U_KPP" placeholder="КПП" data-stepdata="send_kpp" data-steptype="source" data-min="1" data-max="9">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item ">
-                          <div class="calcform__title">Контактное лицо</div>
-                          <input type="text" name="U_FIO" placeholder="ФИО лица" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            Телефон
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="tel" name="U_PHONE[]" placeholder="Телефон" data-stepdata="send_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">Email</div>
-                          <input type="email" name="U_EMAIL" placeholder="Emal" data-stepdata="send_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title"></div>
-                          <div class="calcitem__info calcitem__info_red">
-                            <img src="/images/info2.svg" alt=""><br><span>Обязательно нужна <a href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf" target="_blank">доверенность</a> <br> на
-                            отправку или получение груза</span>
-                          </div>
-                          <!-- /.calcitem__info -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="calcform calcform-js " data-stepvisible="send_fiz">
-                  <div class="calcform__content">
-                    <div class="calcform__inputs">
-                      <div class="calcform__items calcform__items_full">
-                        <div class="calcform__item">
-                          <div class="calcform__title">ФИО</div>
-                          <input type="text" placeholder="" name="F_FIO" data-stepdata="send_fio" data-steptype="source" data-required="required" data-min="2" data-max="300">
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">Документ</div>
-                          <select name="F_DOCTYPE" id="" data-select=" $sendParams['INFO_TEXT']oc" data-stepdata="send_doc" data-steptype="source">
-                            <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
-                            <option value="Водительское удостоверение" data-select="doc">
-                              Водительское удостоверение
-                            </option>
-                            <option value="Иностранный паспорт" data-select="doc">Иностранный
-                              паспорт
-                            </option>
-                            <option value="Удостоверение личности офицера" data-select="doc">
-                              Удостоверение личности офицера
-                            </option>
-                            <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
-                            <option value="Загран. паспорт" data-select="doc">Загран. паспорт
-                            </option>
-                            <option value="Военный билет" data-select="doc">Военный билет</option>
-                          </select>
-                          <!-- /# -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">Номер документа</div>
-                          <div class="calcform__multipleInput" data-select="input_doc">
-                            <div class="inputDoc calcform__multipleInput" data-select="passport">
-                              <input type="text" name="F_PASS_1" placeholder="СССС" class="inputPassport1" data-steptype="source" data-stepdata="send_pasp1" data-required="required" data-min="4" data-max="4">
-                              <input type="text" name="F_PASS_2" placeholder="000000" class="inputPassport2" data-steptype="source" data-stepdata="send_pasp2" data-required="required" data-min="6" data-max="6">
-                            </div>
-                            <div class="inputDoc " data-select="doc" style="display: none; width: 100%;">
-                              <input type="text" name="F_DOC" placeholder="" class="inputDocument" style="width: 100%;" data-steptype="source" data-stepdata="send_anotherdoc" data-required="required" data-min="3" data-max="30">
-                            </div>
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item calcform__item_phones">
-                          <div class="calcform__title">Телефон</div>
-                          <input type="tel" name="F_PHONE[]" data-stepdata="send_tel" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          <span data-click="newtel" class="calcform__addTel">
-                          <img src="/images/addTel.svg" alt=""><span>Добавить номер
-                          телефона</span>
-                          </span>
-                          <div class="tel2">
-                            <input type="tel" name="F_PHONE[]" data-stepdata="send_tel2" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          </div>
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            E-mail <span class="notreq">(необязательно)</span>
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="text" name="F_EMAIL" data-stepdata="send_email" data-steptype="source">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.calcitem__content -->
-            </div>
-            <div class="calcpage__block calcitem calctabs calcitem_tabs-js">
-              <div class="calcitem__header">
-                <div class="calcheader">
-                  <div class="calcheader__title">
-                    <div class="calcheader__icon">
-                      <div class="calcheader__image">
-                        <img src="/local/templates/azlog/public/images/userform.svg" alt="">
-                      </div>
-                    </div>
-                    <span class="calcheader__name">Получатель</span>
-                  </div>
-                </div>
-                <div class="calctabs-js">
-                  <ul>
-                    <label class="active" for="receive_yur">Юридическое лицо <input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="Y" id="receive_yur" checked="" name="receivefizyur"></label>
-                    <label class="" for="receive_fiz">Физическое лицо <input data-radiotab="tab" type="radio" value="N" id="receive_fiz" name="receivefizyur">
-                    </label>
-                  </ul>
-                </div>
-              </div>
-              <div class="calcitem__content">
-                <div class="calcform calcform-js active" data-stepvisible="receive_yur">
-                  <div class="calcform__content">
-                    <div class="calcform__inputs">
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item calcform__item_small">
-                          <div class="calcform__title">Правовая форма</div>
-                          <select name="R_U_FORM" id="" data-stepdata="receive_yurform" data-steptype="source">
-                            <option value="ООО" selected="">ООО</option>
-                            <option value="ОАО">ОАО</option>
-                            <option value="ЗАО">ЗАО</option>
-                            <option value="ИП">ИП</option>
-                          </select>
-                          <!-- /# -->
-                        </div>
-                        <div class="calcform__item calcform__item_notsmall">
-                          <div class="calcform__title">Название компании</div>
-                          <input type="text" name="R_U_COMPANY" placeholder="Название компании" data-stepdata="receive_yurname" data-steptype="source" data-required="required" data-min="3" data-max="300">
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">ИНН</div>
-                          <input type="text" name="R_U_INN" placeholder="ИНН" data-stepdata="receive_yurinn" data-steptype="source" data-required="required" data-min="13" data-max="13">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            КПП
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="text" name="R_U_KPP" placeholder="КПП" data-stepdata="receive_yurkpp" data-steptype="source" data-min="9" data-max="9">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item ">
-                          <div class="calcform__title">Контактное лицо</div>
-                          <input type="text" name="R_U_FIO" placeholder="ФИО лица" data-stepdata="receive_yurfio" data-steptype="source" data-min="3" data-max="300">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            Телефон
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="tel" name="R_U_PHONE[]" placeholder="Телефон" data-stepdata="receive_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">Email</div>
-                          <input type="email" name="R_U_EMAIL" placeholder="Email" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="13" data-max="13">
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title"></div>
-                          <div class="calcitem__info calcitem__info_red">
-                            <img src="/images/info2.svg" alt=""><br><span>Обязательно нужна <a href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf" target="_blank">доверенность</a> <br> на
-                            отправку или получение груза</span>
-                          </div>
-                          <!-- /.calcitem__info -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="calcform calcform-js " data-stepvisible="receive_fiz">
-                  <div class="calcform__content">
-                    <div class="calcform__inputs">
-                      <div class="calcform__items calcform__items_full">
-                        <div class="calcform__item">
-                          <div class="calcform__title">ФИО</div>
-                          <input type="text" name="R_F_FIO" placeholder="" data-stepdata="receive_fio" data-steptype="source" data-required="required" data-min="3" data-max="300">
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item">
-                          <div class="calcform__title">Документ</div>
-                          <select name="R_F_DOCTYPE" id="" data-select="select_doc" data-stepdata="receive_selectdoc" data-steptype="source">
-                            <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
-                            <option value="Водительское удостоверение" data-select="doc">
-                              Водительское удостоверение
-                            </option>
-                            <option value="Иностранный паспорт" data-select="doc">Иностранный
-                              паспорт
-                            </option>
-                            <option value="Удостоверение личности офицера" data-select="doc">
-                              Удостоверение личности офицера
-                            </option>
-                            <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
-                            <option value="Загран. паспорт" data-select="doc">Загран. паспорт
-                            </option>
-                            <option value="Военный билет" data-select="doc">Военный билет</option>
-                          </select>
-                          <!-- /# -->
-                          <br>
-                          <div class="formcheckbox">
-                            <div class="formcheckbox__item">
-                              <label for="R_F_LATER" class="formcheckbox__label"><span>
-                              <input type="checkbox" id="R_F_LATER" name="R_F_LATER" value="Y" data-stepdata="payer_check" data-required="required" data-steptype="source">
-                              <span class="formcheckbox__text" data-text="checkboxtext" style="white-space: initial;">Данные документа
-                              будут предоставлены при отправке груза</span>
-                              </span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">Номер документа</div>
-                          <div class="calcform__multipleInput" data-select="input_doc">
-                            <div class="inputDoc calcform__multipleInput" data-select="passport">
-                              <input type="text" placeholder="СССС" name="R_F_PASS_1" class="inputPassport1" data-stepdata="receive_pasp1" data-steptype="source" data-required="required" data-min="4" data-max="4">
-                              <input type="text" placeholder="000000" name="R_F_PASS_2" class="inputPassport2" data-stepdata="receive_pasp2" data-steptype="source" data-required="required" data-min="6" data-max="6">
-                            </div>
-                            <div class="inputDoc " data-select="doc" style="display: none; width: 100%;">
-                              <input type="text" name="R_F_DOC" placeholder="" class="inputDocument" style="width: 100%;" data-stepdata="receive_anotherdoc" data-steptype="source" data-required="required" data-min="3" data-max="30">
-                            </div>
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                      <div class="calcform__items calcform__items_two">
-                        <div class="calcform__item calcform__item_phones">
-                          <div class="calcform__title">Телефон</div>
-                          <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          <span data-click="newtel" class="calcform__addTel">
-                          <img src="/images/addTel.svg" alt=""><span>Добавить номер
-                          телефона</span>
-                          </span>
-                          <div class="tel2">
-                            <input type="tel" name="R_F_PHONE[]" data-stepdata="receive_tel2" data-steptype="source" data-required="required" data-min="18" data-max="18">
-                          </div>
-                          <!-- /.calcform__addTel -->
-                        </div>
-                        <div class="calcform__item">
-                          <div class="calcform__title">
-                            E-mail <span class="notreq">(необязательно)</span>
-                            <!-- /.notreq -->
-                          </div>
-                          <div class="calcform__multipleInput">
-                            <input type="text" name="R_F_EMAIL" data-stepdata="receive_fio" data-steptype="source">
-                          </div>
-                          <!-- /.calcform__multipleInput -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.calcitem__content -->
-            </div>
-            <div class="calcpage__block calcitem calctabs calcitem_tabs-js">
-              <div class="calcitem__header">
-                <div class="calcheader">
-                  <div class="calcheader__title">
-                    <div class="calcheader__icon">
-                      <div class="calcheader__image">
-                        <img src="/local/templates/azlog/public/images/CardPayment.svg" alt="">
-                      </div>
-                    </div>
-                    <span class="calcheader__name">Платеж</span>
-                  </div>
-                </div>
-                <!--  <div class="calctabs calctabs-js">
-                  <ul>
-                    <li class="active">Один плательщик</li>
-                    <li class="">Несколько плательщиков</li>
-                  </ul>
-                  </div> -->
-              </div>
-              <div class="calcitem__content">
-                <div class="calcform calcform-js active" data-stepvisible="anyway">
-                  <div class="calcform__content">
-                    <!-- <div class="calcform__services">
-                      <div class="calcservices">
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Забор груза</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Услуги терминала-отправителя</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Доставка груза</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                        </div>
-                      </div>
-                      </div> -->
-                    <!-- /.calcform__services -->
-                    <!--  <hr> -->
-                    <div class="calcform__items calcform__items_full">
-                      <div class="calcform__item">
-                        <div class="calcform__title">Плательщик</div>
-                        <select name="PAYER" id="" data-payer="payer" data-stepdata="payeer" data-steptype="source">
-                          <option value="Отправитель" data-payer="1">Отправитель</option>
-                          <option value="Получатель" data-payer="2">Получатель</option>
-                          <option value="Третье лицо" data-payer="3">Третье лицо</option>
-                        </select>
-                        <!-- /# -->
-                      </div>
-                    </div>
-                    <div data-payerform="3" style="display: none;">
-                      <div class="calcitem__content">
-                        <div class="calcform__content">
-                          <div class="calcform__inputs">
-                            <div class="calcform__items calcform__items_two">
-                              <div class="calcform__item calcform__item_small">
-                                <div class="calcform__title">Правовая форма</div>
-                                <select name="P_DOCTYPE" id="" data-stepdata="receive_yurform" data-steptype="source">
-                                  <option value="ООО">ООО</option>
-                                  <option value="ОАО">ОАО</option>
-                                  <option value="ЗАО">ЗАО</option>
-                                  <option value="ИП">ИП</option>
-                                </select>
-                                <!-- /# -->
-                              </div>
-                              <div class="calcform__item calcform__item_notsmall">
-                                <div class="calcform__title">Название компании</div>
-                                <input type="text" name="P_COMPANY" placeholder="Название компании" data-stepdata="receive_yurname" data-steptype="source" data-required="required" data-min="3" data-max="300" class="error">
-                              </div>
-                            </div>
-                            <div class="calcform__items calcform__items_two">
-                              <div class="calcform__item">
-                                <div class="calcform__title">ИНН</div>
-                                <input type="text" name="P_INN" placeholder="ИНН" data-stepdata="receive_yurinn" data-steptype="source" data-required="required" data-min="13" data-max="13" class="error">
-                                <!-- /.calcform__addTel -->
-                              </div>
-                              <div class="calcform__item">
-                                <div class="calcform__title">
-                                  КПП
-                                  <!-- /.notreq -->
-                                </div>
-                                <div class="calcform__multipleInput">
-                                  <input type="text" name="P_KPP" placeholder="КПП" data-stepdata="receive_yurkpp" data-steptype="source" data-min="9" data-max="9" class="error">
-                                </div>
-                                <!-- /.calcform__multipleInput -->
-                              </div>
-                            </div>
-                            <div class="calcform__items calcform__items_two">
-                              <div class="calcform__item ">
-                                <div class="calcform__title">Контактное лицо</div>
-                                <input type="text" name="P_FIO" placeholder="ФИО лица" data-stepdata="receive_yurfio" data-steptype="source" data-min="3" data-max="300" class="error">
-                                <!-- /.calcform__addTel -->
-                              </div>
-                              <div class="calcform__item">
-                                <div class="calcform__title">
-                                  Телефон
-                                  <!-- /.notreq -->
-                                </div>
-                                <div class="calcform__multipleInput">
-                                  <input type="tel" name="P_PHONE[]" placeholder="Телефон" data-stepdata="receive_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18" class="error">
-                                </div>
-                                <!-- /.calcform__multipleInput -->
-                              </div>
-                            </div>
-                            <div class="calcform__items calcform__items_two">
-                              <div class="calcform__item">
-                                <div class="calcform__title">Email</div>
-                                <input type="email" name="P_EMAIL" placeholder="Email" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="3" class="error" <!--="" .calcform__addtel="" --="">
-                                  </div>
-                                  <div class="calcform__item">
-                                  <div class="calcform__title"></div>
-                                  <div class="calcitem__info calcitem__info_red">
-                                  <img src="/images/info2.svg" alt=""><br><span>Обязательно нужна <a href="https://azlog.ru/documents/%D0%94%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D1%83%20%D0%B8%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2.pdf" target="_blank">доверенность</a> <br>
-                                  на
-                                  отправку или получение груза</span>
-                                  </div>
-                                  <!-- /.calcitem__info -->
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="calcform__content">
-                        <div class="calcform__inputs">
-                            <div class="calcform__items calcform__items_full">
-                                <div class="calcform__item">
-                                    <div class="calcform__title">ФИО</div>
-                                    <input type="text"
-                                           name="P_FIO"
-                                           placeholder="" data-stepdata="payer_fio"
-                                           data-required="required" data-steptype="source" data-min="2"
-                                           data-max="300">
-                                </div>
-                            </div>
-                        
-                            <div class="calcform__items calcform__items_two">
-                                <div class="calcform__item">
-                                    <div class="calcform__title">Документ</div>
-                                    <select name="P_DOCTYPE" id="" data-select="select_doc"
-                                            data-stepdata="payer_doc" data-steptype="source">
-                                        <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
-                                        <option value="Водительское удостоверение" data-select="doc">Водительское удостоверение
-                                        </option>
-                                        <option value="Иностранный паспорт" data-select="doc">Иностранный паспорт</option>
-                                        <option value="Удостоверение личности
-                                            офицера" data-select="doc">Удостоверение личности
-                                            офицера
-                                        </option>
-                                        <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
-                                        <option value="Загран. паспорт" data-select="doc">Загран. паспорт</option>
-                                        <option value="Военный билет" data-select="doc">Военный билет</option>
-                        
-                                    </select>
-                                </div>
-                        
-                                <div class="calcform__item">
-                                    <div class="calcform__title">Номер документа</div>
-                                    <div class="calcform__multipleInput" data-select="input_doc">
-                                        <div class="inputDoc calcform__multipleInput"
-                                             data-select="passport">
-                                            <input type="text"
-                                                   name="P_PASS_1"
-                                                   placeholder="СССС" class="inputPassport1"
-                                                   data-stepdata="payer_pasp1" data-steptype="source"
-                                                   data-required="required" data-min="4" data-max="4">
-                                            <input type="text"
-                                                   name="P_PASS_2"
-                                                   placeholder="0000000" class="inputPassport2"
-                                                   data-stepdata="payer_pasp2" data-steptype="source"
-                                                   data-required="required" data-min="6" data-max="6">
-                                        </div>
-                                        <div class="inputDoc " data-select="doc"
-                                             style="display: none; width: 100%;">
-                                            <input type="text"
-                                                   name="P_DOC"
-                                                   placeholder="" class="inputDocument"
-                                                   style="width: 100%;" data-stepdata="payer_anotherdoc"
-                                                   data-steptype="source" data-required="required"
-                                                   data-min="3" data-max="30">
-                                        </div>
-                                    </div>
-                        
-                                </div>
-                            </div>
-                        
-                            <div class="calcform__items calcform__items_two"
-                                 style="align-items: center;">
-                                <div class="calcform__item calcform__item_phones">
-                                    <div class="calcform__title">Телефон</div>
-                                    <input type="tel"
-                                           name="P_PHONE[]"
-                                           data-stepdata="payer_tel" data-required="required"
-                                           data-steptype="source" data-min="18" data-max="18">
-                                    <span data-click="newtel" class="calcform__addTel">
-                                        <img src="/images/addTel.svg" alt=""><span>Добавить номер
-                                            телефона</span>
-                                    </span>
-                                    <div class="tel2">
-                                        <input type="tel"
-                                               name="P_PHONE[]"
-                                               data-stepdata="payer_tel2" data-steptype="source"
-                                               data-required="required" data-min="18" data-max="18">
-                                    </div>
-                                </div>
-                        
-                                <div class="calcform__item">
-                                    <div class="formcheckbox">
-                                        <div class="formcheckbox__item">
-                                            <label for="check1-payer" class="formcheckbox__label"><span>
-                                                    <input type="checkbox" id="check1-payer"
-                                                           name="check1-payer"
-                                                           data-stepdata="payer_check"
-                                                           data-required="required"
-                                                           data-steptype="source">
-                                                    <span class="formcheckbox__text"
-                                                          data-text="checkboxtext"
-                                                          style="white-space: initial;"
-                                                          data-text="checkboxtext">Данные документа
-                                                        будут предоставлены при отправке груза</span>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                        
-                            </div>
-                        </div>
-                        </div> -->
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="calcform calcform-js">
-                  <div class="calcform__content">
-                    <div class="calcform__services">
-                      <div class="calcservices">
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Забор груза</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                          <div class="calcform__items calcform__items_full">
-                            <div class="calcform__item">
-                              <div class="calcform__title">Плательщик</div>
-                              <select name="" id="">
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                  
-                  
-                              </select>
-                            </div>
-                  
-                  
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Услуги терминала-отправителя</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                          <div class="calcform__items calcform__items_full">
-                            <div class="calcform__item">
-                              <div class="calcform__title">Плательщик</div>
-                              <select name="" id="">
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                  
-                  
-                              </select>
-                            </div>
-                  
-                  
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="calcservices__item">
-                          <div class="calcservices__row">
-                            <div class="calcprice calcprice_type2">
-                              <div class="calcprice__items">
-                                <div class="calcprice__params">
-                                  <ul class="calcprice-params">
-                                    <li>
-                                      <span class="calcprice-params_left">
-                                        <span><span>Доставка груза</span></span>
-                                      </span>
-                                      <span class="calcprice-params_right ">1 022 Р </span>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="calcservices__info">
-                            <p>Стоимость межтерминальной перевозки по основному направлению, стоимость упаковки
-                              груза и стоимость груза и стоимость страховки</p>
-                          </div>
-                          <div class="calcform__items calcform__items_full">
-                            <div class="calcform__item">
-                              <div class="calcform__title">Плательщик</div>
-                              <select name="" id="">
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                                <option value="">Получатель</option>
-                  
-                  
-                              </select>
-                            </div>
-                  
-                  
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  
-                  </div>
-                  </div> -->
-              </div>
-            </div>
-            <!--  <div class="calcpage__block calcitem">
-              <div class="calcitem__content">
-                  <div class="calcpage__navs">
-                      <div class="calcpage__nav">
-                          <a href="#" data-entity="step-prev" class="btn_main btn_main_gray btn_submit">Назад</a>
-                      </div>
-              
-                      <div class="calcpage__nav">
-                          <a href="#" data-entity="step-next" class="btn_main btn_main_blue btn_submit">Последний
-                              шаг</a>
-                      </div>
-                  </div>
-              </div>
-              </div> -->
-          </div>
-          <div class="form-step" data-entity="form-step-3" style="display: none" ;="">
-            <div class="calcpage__block calcitem calcitem_edit">
-              <div class="calcitem__header">
-                <div class="calcheader">
-                  <div class="calcheader__title">
-                    <div class="calcheader__icon">
-                      <div class="calcheader__image">
-                        <img src="/local/templates/azlog/public/images/info.svg" alt="">
-                      </div>
-                    </div>
-                    <span class="calcheader__name">Расчет и оформление заказа</span>
-                  </div>
-                </div>
-              </div>
-              <div class="calcitem__content">
-                <div class="calcform">
-                  <div class="calcform__content">
-                    <div class="calcform__fromto fromto">
-                      <div class="calcheader__info calcheader__info_edit">
-                        <div class="calcinfo">
-                          <div class="calcinfo__icon">
-                            <div class="calcinfo__img"><img src="/local/templates/azlog/public/images/edit.svg" alt=""></div>
-                          </div>
-                          <div class="calcinfo__edit"><a href="#"> Изменить</a></div>
-                          <!-- /.calcinfo__edit -->
-                        </div>
-                      </div>
-                      <div class="fromto__cols">
-                        <div class="fromto__col">
-                          <div class="fromto__item fromto__item_from">
-                            <div class="fromto__icon">
-                              <div class="fromto__img">
-                                <img src="/images/fromto.svg" alt="">
-                              </div>
-                              <!-- /.fromto__img -->
-                            </div>
-                            <!-- /.fromto__icon -->
-                            <div class="fromto__content">
-                              <div class="fromto__title" data-stepdata="f_otpravki" data-steptype="result"></div>
-                              <!-- /.fromto__title -->
-                              <div class="fromto__descr">
-                                <p data-stepdata="p_otpravki" data-steptype="result"></p>
-                                <p>Филиал - <span data-stepdata="f_otpravki" data-steptype="result"></span></p>
-                              </div>
-                              <!-- /.fromto__descr -->
-                            </div>
-                            <!-- /.fromto__content -->
-                          </div>
-                          <!-- /.fromto__from -->
-                        </div>
-                        <!-- /.fromto__col -->
-                        <div class="fromto__col">
-                          <div class="fromto__item fromto__item_to">
-                            <div class="fromto__icon">
-                              <div class="fromto__img">
-                                <img src="/images/fromto.svg" alt="">
-                              </div>
-                              <!-- /.fromto__img -->
-                            </div>
-                            <!-- /.fromto__icon -->
-                            <div class="fromto__content">
-                              <div class="fromto__title" data-stepdata="f_dostavki" data-steptype="result"></div>
-                              <!-- /.fromto__title -->
-                              <div class="fromto__descr">
-                                <p data-stepdata="p_dostavki" data-steptype="result"></p>
-                                <p>Филиал - <span data-stepdata="f_dostavki" data-steptype="result"></span></p>
-                              </div>
-                              <!-- /.fromto__descr -->
-                            </div>
-                            <!-- /.fromto__content -->
-                          </div>
-                          <!-- /.fromto__from -->
-                        </div>
-                      </div>
-                      <!-- /.calcitem__totals -->
-                      <!-- /.fromto__cols -->
-                    </div>
-                    <!-- /.calcform__fromto -->
-                    <hr>
-                    <!-- 	<div class="calcitem__totals calcitem__totals_multiple">
-                      <div class="calctotal">
-                      	<div class="calctotal__title"><b>Сборным грузом</b></div>
-                      	<div class="calctotal__value">Cпособ перевозки</div>
-                      </div>
-                      <div class="calctotal">
-                      	<div class="calctotal__title"><b>Автоперевозка</b></div>
-                      	<div class="calctotal__value">Параметры перевозки</div>
-                      </div>
-                      </div> -->
-                    <div class="calcitem__totals calcitem__totals_multiple">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Габариты груза</b></div>
-                        <div class="calctotal__value">
-                          <span data-steptype="result" data-stepdata="ob_len"></span> x
-                          <span data-steptype="result" data-stepdata="ob_shir"></span> x
-                          <span data-steptype="result" data-stepdata="ob_h"></span>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Вес груза</b></div>
-                        <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_w"></span></div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Количество мест/паллет</b></div>
-                        <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_count"></span></div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Обьем груза</b></div>
-                        <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_vol"></span></div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Дата отправки</b></div>
-                        <div class="calctotal__value">
-                          <ul>
-                            <li data-if="date_otpravki">Дата: <span data-steptype="result" data-stepdata="date_otpravki"></span>
-                            </li>
-                            <li data-if="time_otpravki1">Днем: <span data-steptype="result" data-stepdata="time_otpravki1"></span>
-                            </li>
-                            <li data-if="time_otpravki2">Утром: <span data-steptype="result" data-stepdata="time_otpravki2"></span>
-                            </li>
-                            <li data-if="time_otpravki3">Вечером: <span data-steptype="result" data-stepdata="time_otpravki3"></span>
-                            </li>
-                            <li data-if="time_otpravki4">Указанное время: <span data-steptype="result" data-stepdata="time_otpravki4"></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Услуги на терминале отправителя</b></div>
-                        <div class="calctotal__value">
-                          <ul>
-                            <li><span data-steptype="result" data-stepdata="dop_prr"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_bok"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_verh"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_full"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_bort"></span></li>
-                            <li data-if="dop_floor">Этаж: <span data-steptype="result" data-stepdata="dop_floor"></span>
-                              <span data-steptype="result" data-stepdata="dop_lift"></span>
-                            </li>
-                            <li data-if="dop_sved">Дополнительные сведения: <span data-steptype="result" data-stepdata="dop_sved"></span></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Услуги на терминале получателя</b></div>
-                        <div class="calctotal__value">
-                          <ul>
-                            <li data-if="time_otpravki1">Днем: <span data-steptype="result" data-stepdata="time_otpravki1"></span>
-                            </li>
-                            <li data-if="time_otpravki2">Утром: <span data-steptype="result" data-stepdata="time_otpravki2"></span>
-                            </li>
-                            <li data-if="time_otpravki3">Вечером: <span data-steptype="result" data-stepdata="time_otpravki3"></span>
-                            </li>
-                            <li data-if="time_otpravki4">Указанное время: <span data-steptype="result" data-stepdata="time_otpravki4"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_prr"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_bok"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_verh"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_full"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_bort"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_doc"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_return"></span></li>
-                            <li data-if="dop_dost_floor">Этаж: <span data-steptype="result" data-stepdata="dop_dost_floor"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="dop_dost_lift"></span>
-                            </li>
-                            <li data-if="dop_dost_sved">Дополнительные сведения: <span data-steptype="result" data-stepdata="dop_dost_sved"></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Дополнительные сведения</b></div>
-                        <div class="calctotal__value">
-                          <ul>
-                            <li data-if="tip_gruza">Тип груза: <span data-steptype="result" data-stepdata="tip_gruza"></span>
-                            </li>
-                            <li data-if="cost">Объявленная стоимость: <span data-steptype="result" data-stepdata="cost"></span>
-                              ₽
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="teplo"></span></li>
-                            <li><span data-steptype="result" data-stepdata="fragileCargo"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="liquidCargo"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_nopack"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_wooden"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_bubble"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_stretch"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_gofro"></span></li>
-                            <li><span data-steptype="result" data-stepdata="pack_meshkotara"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_recalc"></span>
-                            </li>
-                            <li><span data-steptype="result" data-stepdata="pack_mark"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_doc"></span></li>
-                            <li><span data-steptype="result" data-stepdata="dop_return"></span></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Отправитель </b></div>
-                        <div class="calctotal__value">
-                          <!-- <ul>
-                            <li>
-                            	<div>
-                            		<span data-stepdata="send_fiz" data-totaltype="fizyur">Физическое лицо</span>
-                            		<span data-stepdata="send_yur" data-totaltype="fizyur">Юридическое лицо</span>
-                            	</div>
-                            </li>
-                            </ul> -->
-                          <div data-if="send_fio" data-stepdata="send_fiz" data-totaltype="fizyur">
-                            <ul>
-                              <li>
-                                <span data-stepdata="send_fiz" data-totaltype="fizyur">Физическое
-                                лицо</span>
-                              </li>
-                              <li>
-                                <span data-steptype="result" data-stepdata="send_fio"></span>
-                              </li>
-                              <li data-if="send_pasp1">
-                                <span data-steptype="result" data-stepdata="send_doc"></span>:&nbsp;
-                                <span data-steptype="result" data-stepdata="send_pasp1"></span>&nbsp;
-                                <span data-steptype="result" data-stepdata="send_pasp2"></span>
-                              </li>
-                              <li data-if="send_anotherdoc">
-                                <span data-steptype="result" data-stepdata="send_doc"></span>:&nbsp;
-                                <span data-steptype="result" data-stepdata="send_anotherdoc"></span>&nbsp;
-                              </li>
-                              <li>
-                                <span data-steptype="result" data-stepdata="send_tel"></span>
-                              </li>
-                              <li data-if="send_tel2">
-                                <span data-steptype="result" data-stepdata="send_tel2"></span>
-                              </li>
-                              <li data-if="send_email">
-                                <span data-steptype="result" data-stepdata="send_email"></span>
-                              </li>
-                            </ul>
-                          </div>
-                          <div data-if="send_yurname" data-stepdata="send_yur" data-totaltype="fizyur">
-                            <ul>
-                              <li>
-                                <span data-steptype="result" data-stepdata="send_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="send_yurname"></span>
-                              </li>
-                              <li data-if="send_inn">
-                                ИНН: <span data-steptype="result" data-stepdata="send_inn"></span>
-                              </li>
-                              <li data-if="send_kpp">
-                                КПП: <span data-steptype="result" data-stepdata="send_kpp"></span>
-                              </li>
-                              <li data-if="send_yurfio">
-                                Контакное лицо: <span data-steptype="result" data-stepdata="send_yurfio"></span>
-                              </li>
-                              <li data-if="send_yurtel">
-                                Телефон: <span data-steptype="result" data-stepdata="send_yurtel"></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Получатель </b></div>
-                        <div class="calctotal__value">
-                          <div data-if="receive_fio" data-stepdata="receive_fiz" data-totaltype="fizyur">
-                            <ul>
-                              <li>
-                                <span data-stepdata="receive_fiz" data-totaltype="fizyur">Физическое
-                                лицо</span>
-                              </li>
-                              <li>
-                                <span data-steptype="result" data-stepdata="receive_fio"></span>
-                              </li>
-                              <li data-if="receive_pasp1">
-                                <span data-steptype="result" data-stepdata="receive_selectdoc"></span>:&nbsp;
-                                <span data-steptype="result" data-stepdata="receive_pasp1"></span>&nbsp;
-                                <span data-steptype="result" data-stepdata="receive_pasp2"></span>
-                              </li>
-                              <li data-if="receive_anotherdoc">
-                                <span data-steptype="result" data-stepdata="receive_doc"></span>:&nbsp;
-                                <span data-steptype="result" data-stepdata="receive_anotherdoc"></span>&nbsp;
-                              </li>
-                              <li>
-                                <span data-steptype="result" data-stepdata="receive_tel"></span>
-                              </li>
-                              <li data-if="receive_tel2">
-                                <span data-steptype="result" data-stepdata="receive_tel2"></span>
-                              </li>
-                              <li data-if="receive_email">
-                                <span data-steptype="result" data-stepdata="receive_email"></span>
-                              </li>
-                            </ul>
-                          </div>
-                          <div data-if="receive_yurname" data-stepdata="receive_yur" data-totaltype="fizyur">
-                            <ul>
-                              <li>
-                                <span data-stepdata="receive_yur" data-totaltype="fizyur">Юридическое
-                                лицо</span>
-                              </li>
-                              <li>
-                                <span data-steptype="result" data-stepdata="receive_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="receive_yurname"></span>
-                              </li>
-                              <li data-if="receive_yurinn">
-                                ИНН: <span data-steptype="result" data-stepdata="receive_yurinn"></span>
-                              </li>
-                              <li data-if="receive_yurkpp">
-                                КПП: <span data-steptype="result" data-stepdata="receive_yurkpp"></span>
-                              </li>
-                              <li data-if="receive_yurfio">
-                                Контакное лицо: <span data-steptype="result" data-stepdata="receive_yurfio"></span>
-                              </li>
-                              <li data-if="receive_yurtel">
-                                Телефон: <span data-steptype="result" data-stepdata="receive_yurtel"></span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Плательщик </b></div>
-                        <div class="calctotal__value">
-                          <ul>
-                            <li>
-                              <span data-steptype="result" data-stepdata="payeer"></span>
-                            </li>
-                            <li data-if="payer_fio">
-                              <span data-steptype="result" data-stepdata="payer_fio"></span>
-                            </li>
-                            <li data-if="payer_pasp1">
-                              <span data-steptype="result" data-stepdata="payer_doc"></span>
-                              <span data-steptype="result" data-stepdata="payer_pasp1"></span>
-                              <span data-steptype="result" data-stepdata="payer_pasp2"></span>
-                            </li>
-                            <li data-if="payer_anotherdoc">
-                              <span data-steptype="result" data-stepdata="payer_doc"></span>
-                              <span data-steptype="result" data-stepdata="payer_anotherdoc"></span>
-                            </li>
-                            <li data-if="payer_tel">
-                              <span data-steptype="result" data-stepdata="payer_tel"></span>
-                            </li>
-                            <li data-if="payer_tel2">
-                              <span data-steptype="result" data-stepdata="payer_tel2"></span>
-                            </li>
-                            <li data-if="payer_check">
-                              <span data-steptype="result" data-stepdata="payer_check"></span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                      	<div class="calctotal__title"><b>Оплата услуг </b></div>
-                      	<div class="calctotal__value calctotal__value_multiple">
-                      		<ul>
-                      			<li>
-                      				<span class="calctotal__valueName">Межрегиональная перевозка</span>
-                      				<span class="calctotal__valueInfo">получатель</span>
-                      			</li>
-                      
-                      			<li>
-                      				<span class="calctotal__valueName">Страховка</span>
-                      				<span class="calctotal__valueInfo">получатель</span>
-                      			</li>
-                      
-                      			<li>
-                      				<span class="calctotal__valueName">Палетный борт</span>
-                      				<span class="calctotal__valueInfo">получатель</span>
-                      			</li>
-                      
-                      		</ul>
-                      	</div>
-                      </div>
-                      </div> -->
-                    <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>E-mail для связи <br> и отправки
-                          уведомлений</b>
-                        </div>
-                        <div class="calctotal__value">
-                          <input type="text" name="NOTIFY_EMAIL" placeholder="E-mail" data-stepdata="contact_phone" data-steptype="source">
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Телефон для связи <br> и уведомления по SMS</b>
-                        </div>
-                        <div class="calctotal__value">
-                          <input type="tel" name="NOTIFY_PHONE" placeholder="Телефон" data-stepdata="contact_phone" data-steptype="source" data-required="required">
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Промокод</b>
-                        </div>
-                        <div class="calctotal__value">
-                          <input type="text" name="NOTIFY_PROMO" placeholder="Промокод" data-stepdata="contact_promo" data-steptype="source">
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                      <div class="calctotal">
-                        <div class="calctotal__title"><b>Вы (заказчик)</b></div>
-                        <div class="calctotal__value">
-                          <div class="calcform__radiobuttons">
-                            <div class="radiobuttons">
-                              <div class="radiotype ">
-                                <div class="radiotype__item">
-                                  <label for="radio2-1" class="radiotype__label">
-                                  <span>
-                                  <input type="radio" name="NOTIFY_TYPE" checked="checked" value="Отправитель" id="radio2-1" data-stepdata="contact_type1" data-steptype="source">
-                                  <span class="radiotype__text" data-text="checkboxtext">Отправитель</span>
-                                  </span>
-                                  </label>
-                                </div>
-                                <div class="radiotype__item">
-                                  <label for="radio2-2" class="radiotype__label">
-                                  <span>
-                                  <input type="radio" name="NOTIFY_TYPE" value="Получатель" id="radio2-2" data-stepdata="contact_type2" data-steptype="source">
-                                  <span class="radiotype__text" data-text="checkboxtext">Получатель</span>
-                                  </span>
-                                  </label>
-                                </div>
-                                <div class="radiotype__item">
-                                  <label for="radio2-3" class="radiotype__label">
-                                  <span>
-                                  <input type="radio" name="NOTIFY_TYPE" value="Третье лицо" id="radio2-3" data-stepdata="contact_type3" data-steptype="source">
-                                  <span class="radiotype__text" data-text="checkboxtext">Третье лицо</span>
-                                  </span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- /.calctotal -->
-                    </div>
-                    <!-- .calcitem__totals -->
-                  </div>
-                </div>
-                <div class="pageform__check">
-                  <div class="manager-form__privacy">
-                    <label class="checkbox">
-                    <input required="" data-required="required" type="checkbox" name="privacy" value="Y">
-                    <span class="checkbox__box"></span>
-                    Я ознакомлен и согласен с
-                    <a href="/trebovaniya-k-gruzu/" target="_blank" class="link_underline">правилами
-                    оказания услуг</a> и
-                    <a href="/privacy/" target="_blank" class="link_underline">ПОЛИТИКОЙ
-                    КОНФИДЕНЦИАЛЬНОСТИ</a>
-                    </label>
-                  </div>
-                </div>
-                <div class="calcpage__navs">
-                  <!-- <div class="calcpage__nav">
-                    <a href="#" data-entity="step-prev" class="btn_main  btn_submit">Назад</a>
-                    </div> -->
-                  <!-- /.calcpage__nav -->
-                  <div class="calcpage__nav">
-                    <!--								data-entity="step-finish"-->
-                    <a href="#" data-entity="step-next" class="btn_main btn_main_blue btn_submit">Подтвердить
-                    <span class="hideThisOnMobile">заказ</span> </a>
-                  </div>
-                  <!-- /.calcpage__nav -->
-                </div>
-                <!-- /.calcpage__navs -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="calcpage__aside">
-          <div class="calcaside">
-          <div class="calcresults calcitem">
-            <div class="calcitem__header">
-              <div class="calcheader">
-                <div class="calcheader__title">
-                  <div class="calcheader__name">Ваш расчет</div>
-                  <div class="calcheader__icon">
-                    <div class="calcheader__image">
-                      <img src="img/Cardboard_Carton_2_560 1.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="calcitem__content">
-              <div class="step-1 ">
-                <div class="calcprice">
-                  <div class="calcprice__items">
-                    <div class="calcprice__params">
-                      <ul class="calcprice-params">
-                        <li>
-                          <span class="calcprice-params_left">
-                          Стоимость доставки на терминал
-                          </span>
-                          <span class="calcprice-params_right" >429 ₽ </span>
-                        </li>
-                        <li>
-                          <span class="calcprice-params_left">
-                          Температурный режим
-                          </span>
-                          <span class="calcprice-params_right" >1 250 ₽ </span>
-                        </li>
-                        <li>
-                          <span class="calcprice-params_left">
-                          Утепление в 1 слой
-                          </span>
-                          <span class="calcprice-params_right" >1 250 ₽ </span>
-                        </li>
-                        <li>
-                          <span class="calcprice-params_left">
-                          Забор груза
-                          </span>
-                          <span class="calcprice-params_right" >
-                          <a href="#">Обратитесь к менеджеру</a>
-                          </span>
-                        </li>
-                        <li>
-                          <span class="calcprice-params_left">
-                          Тариф
-                          </span>
-                          <span class="calcprice-params_right" >
-                          <img src="img/InTransit.svg" alt="">
-                          Авто
-                          </span>
-                        </li>
-                        <li>
-                          <span class="calcprice-params_left">
-                          Тариф
-                          </span>
-                          <span class="calcprice-params_right" >
-                          <img src="img/Tracks.svg" alt="">
-                          Ж/Д
-                          </span>
-                        </li>
+                    <div class="calctabs-js">
+                      <ul>
+                        <label class="active" for="send_fiz"><span class='calctabs__name'>Физ. лицо</span> 
+                        <input data-radiotab="tab" type="radio" value="Y" id="send_fiz" name="sendfizyur">
+                        </label>
+                        <label class="" for="send_yur"><span class='calctabs__name'>Юр. лицо</span><input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="N" id="send_yur" checked="" name="sendfizyur"></label>
                       </ul>
                     </div>
+                    <div class="calcform__warn  calcform__warn_aside">
+                      <div class="warnmessage warnmessage_type2">
+                        <div class="warnmessage__icon">
+                          <img src="img/warnmessage.svg" alt="">
+                        </div>
+                        <div class="warnmessage__text">Обязательно нужна <a href="#">ДОВЕРЕННОСТЬ</a>  на отправку груза</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__content">
+                    <div class="calcform calcform-js active" data-stepvisible="send_fiz">
+                      <div class="calcform__content">
+                        <div class="calcform__inputs">
+                          <div class="calcform__items calcform__items_full">
+                            <div class="calcform__item">
+                              <div class="calcform__title">ФИО</div>
+                              <input type="text" placeholder="" name="F_FIO" data-stepdata="send_fio" data-steptype="source" data-required="required" data-min="2" data-max="300" value='Константинопольский Константин Константинович'>
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">Документ</div>
+                              <select name="F_DOCTYPE" id="" data-select=" $sendParams['INFO_TEXT']oc" data-stepdata="send_doc" data-steptype="source">
+                                <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
+                                <option value="Водительское удостоверение" data-select="doc">
+                                  Водительское удостоверение
+                                </option>
+                                <option value="Иностранный паспорт" data-select="doc">Иностранный
+                                  паспорт
+                                </option>
+                                <option value="Удостоверение личности офицера" data-select="doc">
+                                  Удостоверение личности офицера
+                                </option>
+                                <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
+                                <option value="Загран. паспорт" data-select="doc">Загран. паспорт
+                                </option>
+                                <option value="Военный билет" data-select="doc">Военный билет</option>
+                              </select>
+                              <!-- /# -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">Серия и номер документа</div>
+                              <div class="calcform__multipleInput" data-select="input_doc">
+                                <div class="inputDoc calcform__multipleInput" data-select="passport">
+                                  <input type="text" name="F_PASS_1" placeholder="" class="inputPassport1" data-steptype="source" data-stepdata="send_pasp1" data-required="required" data-min="4" data-max="4">
+                                  <input type="text" name="F_PASS_2" placeholder="" class="inputPassport2" data-steptype="source" data-stepdata="send_pasp2" data-required="required" data-min="6" data-max="6">
+                                </div>
+                                <div class="inputDoc " data-select="doc" style="display: none; width: 100%;">
+                                  <input type="text" name="F_DOC" placeholder="" class="inputDocument" style="width: 100%;" data-steptype="source" data-stepdata="send_anotherdoc" data-required="required" data-min="3" data-max="30">
+                                </div>
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item calcform__item_phones">
+                              <div class="calcform__title">Телефон</div>
+                              <input type="tel" name="F_PHONE" data-stepdata="send_tel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">E-mail 
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="text" name="F_EMAIL" data-stepdata="send_email" data-steptype="source">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calcform calcform-js " data-stepvisible="send_yur">
+                      <div class="calcform__content">
+                        <div class="calcform__inputs">
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item calcform__item_small">
+                              <div class="calcform__title">Правовая форма</div>
+                              <select name="U_FORM" id="" data-stepdata="send_yurform" data-steptype="source">
+                                <option value="ООО" selected="">ООО</option>
+                                <option value="ОАО">ОАО</option>
+                                <option value="ЗАО">ЗАО</option>
+                                <option value="ИП">ИП</option>
+                              </select>
+                              <!-- /# -->
+                            </div>
+                            <div class="calcform__item ">
+                              <div class="calcform__title">Название компании</div>
+                              <input type="text" name="U_COMPANY" placeholder="" data-stepdata="send_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300">
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">ИНН</div>
+                              <input type="text" name="U_INN" placeholder="" data-stepdata="send_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">
+                                КПП
+                                <!-- /.notreq -->
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="text" name="U_KPP" placeholder="" data-stepdata="send_kpp" data-steptype="source" data-min="1" data-max="9">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_full">
+                            <div class="calcform__item ">
+                              <div class="calcform__title">Контактное лицо</div>
+                              <input type="text" name="U_FIO" placeholder="" data-stepdata="send_yurfio" data-steptype="source" data-min="3" data-max="300">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">
+                                Телефон
+                                <!-- /.notreq -->
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="tel" name="U_PHONE" placeholder="" data-stepdata="send_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">Email</div>
+                              <input type="email" name="U_EMAIL" placeholder="" data-stepdata="send_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calcform__switches">
+                      <ol class="switches">
+                        <li>
+                          <span class="switches__name"> 
+                          <img src="img/zabor.svg" alt="">
+                          <span data-text="checkboxtext">Забор груза</span>
+                          <span class="calcheader__help">
+                          <span class="help-call"></span>
+                          <span class="help-tooltip">
+                          <span class="help-tooltip__content">
+                          <span class="help-tooltip__text">Температурный режим доступен только для тарифа “Железнодорожные&nbsp;пути”
+                          </span>
+                          </span>
+                          </span>
+                          </span></span>
+                          <input type="checkbox" id="switches_2_1" name="ZABOR_SEND" value="" data-stepdata="zabor_send" data-steptype="source" data-depend="ZABOR_SEND">
+                          <label for="switches_2_1">
+                          <span></span>
+                          </label>
+                        </li>
+                      </ol>
+                    </div>
+                    <div class="calcform__items calcform__items_full" data-dependfrom='ZABOR_SEND'>
+                      <div class="calcform__item ">
+                        <div class="calcform__title">Откуда забрать груз?</div>
+                        <input type="text" name="FROM_PLACE" data-stepdata="send_tel" data-steptype="source">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calcpage__block calcitem calctabs calcitem_tabs-js" >
+                  <div class="calcitem__header">
+                    <div class="calcheader">
+                      <div class="calcheader__title">                      
+                        <span class="calcheader__name">
+                        Получатель
+                        </span>
+                      </div>
+                    </div>
+                    <div class="calctabs-js">
+                      <ul>
+                        <label class="active" for="receive_fiz"><span class='calctabs__name'>Физ. лицо</span> 
+                        <input data-radiotab="tab" type="radio" value="Y" id="receive_fiz" name="receivefizyur">
+                        </label>
+                        <label class="" for="receive_yur"><span class='calctabs__name'>Юр. лицо</span><input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="N" id="receive_yur" checked="" name="receivefizyur"></label>
+                      </ul>
+                    </div>
+                    <div class="calcform__warn  calcform__warn_aside">
+                      <div class="warnmessage warnmessage_type2">
+                        <div class="warnmessage__icon">
+                          <img src="img/warnmessage.svg" alt="">
+                        </div>
+                        <div class="warnmessage__text">Обязательно нужна <a href="#">ДОВЕРЕННОСТЬ</a>  на отправку груза</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__content">
+                    <div class="calcform calcform-js active" data-stepvisible="receive_fiz">
+                      <div class="calcform__content">
+                        <div class="calcform__inputs">
+                          <div class="calcform__items calcform__items_full">
+                            <div class="calcform__item">
+                              <div class="calcform__title">ФИО</div>
+                              <input type="text" placeholder="" name="R_F_FIO" data-stepdata="receive_fio" data-steptype="source" data-required="required" data-min="2" data-max="300" value='Константинопольский Константин Константинович'>
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">Документ</div>
+                              <select name="R_F_DOCTYPE" id="" data-select=" $receiveParams['INFO_TEXT']oc" data-stepdata="receive_doc" data-steptype="source">
+                                <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
+                                <option value="Водительское удостоверение" data-select="doc">
+                                  Водительское удостоверение
+                                </option>
+                                <option value="Иностранный паспорт" data-select="doc">Иностранный
+                                  паспорт
+                                </option>
+                                <option value="Удостоверение личности офицера" data-select="doc">
+                                  Удостоверение личности офицера
+                                </option>
+                                <option value="Паспорт моряка" data-select="doc">Паспорт моряка</option>
+                                <option value="Загран. паспорт" data-select="doc">Загран. паспорт
+                                </option>
+                                <option value="Военный билет" data-select="doc">Военный билет</option>
+                              </select>
+                              <!-- /# -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">Серия и номер документа</div>
+                              <div class="calcform__multipleInput" data-select="input_doc">
+                                <div class="inputDoc calcform__multipleInput" data-select="passport">
+                                  <input type="text" name="R_F_PASS_1" placeholder="" class="inputPassport1" data-steptype="source" data-stepdata="receive_pasp1" data-required="required" data-min="4" data-max="4">
+                                  <input type="text" name="R_F_PASS_2" placeholder="" class="inputPassport2" data-steptype="source" data-stepdata="receive_pasp2" data-required="required" data-min="6" data-max="6">
+                                </div>
+                                <div class="inputDoc " data-select="doc" style="display: none; width: 100%;">
+                                  <input type="text" name="R_F_DOC" placeholder="" class="inputDocument" style="width: 100%;" data-steptype="source" data-stepdata="receive_anotherdoc" data-required="required" data-min="3" data-max="30">
+                                </div>
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item calcform__item_phones">
+                              <div class="calcform__title">Телефон</div>
+                              <input type="tel" name="R_F_PHONE" data-stepdata="receive_tel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">E-mail 
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="text" name="R_F_EMAIL" data-stepdata="receive_email" data-steptype="source">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calcform calcform-js " data-stepvisible="receive_yur">
+                      <div class="calcform__content">
+                        <div class="calcform__inputs">
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item calcform__item_small">
+                              <div class="calcform__title">Правовая форма</div>
+                              <select name="R_U_FORM" id="" data-stepdata="receive_yurform" data-steptype="source">
+                                <option value="ООО" selected="">ООО</option>
+                                <option value="ОАО">ОАО</option>
+                                <option value="ЗАО">ЗАО</option>
+                                <option value="ИП">ИП</option>
+                              </select>
+                              <!-- /# -->
+                            </div>
+                            <div class="calcform__item ">
+                              <div class="calcform__title">Название компании</div>
+                              <input type="text" name="R_U_COMPANY" placeholder="" data-stepdata="receive_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300">
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">ИНН</div>
+                              <input type="text" name="R_U_INN" placeholder="" data-stepdata="receive_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">
+                                КПП
+                                <!-- /.notreq -->
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="text" name="R_U_KPP" placeholder="" data-stepdata="receive_kpp" data-steptype="source" data-min="1" data-max="9">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_full">
+                            <div class="calcform__item ">
+                              <div class="calcform__title">Контактное лицо</div>
+                              <input type="text" name="R_U_FIO" placeholder="" data-stepdata="receive_yurfio" data-steptype="source" data-min="3" data-max="300">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                          </div>
+                          <div class="calcform__items calcform__items_two">
+                            <div class="calcform__item">
+                              <div class="calcform__title">
+                                Телефон
+                                <!-- /.notreq -->
+                              </div>
+                              <div class="calcform__multipleInput">
+                                <input type="tel" name="R_U_PHONE" placeholder="" data-stepdata="receive_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                              </div>
+                              <!-- /.calcform__multipleInput -->
+                            </div>
+                            <div class="calcform__item">
+                              <div class="calcform__title">Email</div>
+                              <input type="email" name="R_U_EMAIL" placeholder="" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                              <!-- /.calcform__addTel -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calcform__switches">
+                      <ol class="switches">
+                        <li>
+                          <span class="switches__name"> 
+                          <img src="img/zabor.svg" alt="">
+                          <span data-text="checkboxtext">Доставка груза</span>
+                          <span class="calcheader__help">
+                          <span class="help-call"></span>
+                          <span class="help-tooltip">
+                          <span class="help-tooltip__content">
+                          <span class="help-tooltip__text">Температурный режим доступен только для тарифа “Железнодорожные&nbsp;пути”
+                          </span>
+                          </span>
+                          </span>
+                          </span></span>
+                          <input type="checkbox" id="switches_3_1" name="DELIVERY_receive" value="" data-stepdata="delivery_receive" data-steptype="source" >
+                          <label for="switches_3_1">
+                          <span></span>
+                          </label>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <div class="calcpage__block  calcitem  " >
+                  <div class="calcitem__header">
+                    <div class="calcheader">
+                      <div class="calcheader__title">                      
+                        <span class="calcheader__name">
+                        Платеж
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__content">
+                    <div class="calcselect customselect calcform">
+                      <div class="customselect__wrapper">
+                        <div class="customselect__select">
+                          <input type="hidden" name="PAYER" data-input="customselect" value="Получатель">
+                          <button type="button" class="customselect__button ">
+                            <div class="customselect__buttonicon">
+                              <img src="img/credit_score_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                            </div>
+                            <div class="customselect__buttontext">
+                              <div class="customselect__button_title">Посылку оплатит</div>
+                              <div class="customselect__button_subtitle" data-customselect='Получатель'>Получатель</div>
+                            </div>
+                          </button>
+                          <!-- /.calcselect__button -->
+                          <div class="calcselect__list ">
+                            <ul>
+                              <li class="calcselect__item" data-value="receiver">
+                                Получатель
+                              </li>
+                              <li class="calcselect__item" data-value="sender">
+                                Отправитель
+                              </li>
+                              <li class="calcselect__item" data-value="thirdperson">
+                                Третье лицо
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- /.calcselect__list -->
+                        </div>
+                        <!-- /.calcselect__select -->
+                      </div>
+                      <!-- /.calcselect__wrapper -->
+                   
+                    <div class="calcform__content" data-calchidden="thirdperson">
+                      <div class="calcform__inputs">
+                        <div class="calcform__items calcform__items_two">
+                          <div class="calcform__item calcform__item_small">
+                            <div class="calcform__title">Правовая форма</div>
+                            <select name="R_U_FORM_THIRD" id="" data-stepdata="receive_yurform" data-steptype="source">
+                              <option value="ООО" selected="">ООО</option>
+                              <option value="ОАО">ОАО</option>
+                              <option value="ЗАО">ЗАО</option>
+                              <option value="ИП">ИП</option>
+                            </select>
+                            <!-- /# -->
+                          </div>
+                          <div class="calcform__item ">
+                            <div class="calcform__title">Название компании</div>
+                            <input type="text" name="R_U_COMPANY_THIRD" placeholder="" data-stepdata="receive_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300">
+                          </div>
+                        </div>
+                        <div class="calcform__items calcform__items_two">
+                          <div class="calcform__item">
+                            <div class="calcform__title">ИНН</div>
+                            <input type="text" name="R_U_INN_THIRD" placeholder="" data-stepdata="receive_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                            <!-- /.calcform__addTel -->
+                          </div>
+                          <div class="calcform__item">
+                            <div class="calcform__title">
+                              КПП
+                              <!-- /.notreq -->
+                            </div>
+                            <div class="calcform__multipleInput">
+                              <input type="text" name="R_U_KPP_THIRD" placeholder="" data-stepdata="receive_kpp" data-steptype="source" data-min="1" data-max="9">
+                            </div>
+                            <!-- /.calcform__multipleInput -->
+                          </div>
+                        </div>
+                        <div class="calcform__items calcform__items_full">
+                          <div class="calcform__item ">
+                            <div class="calcform__title">Контактное лицо</div>
+                            <input type="text" name="R_U_FIO_THIRD" placeholder="" data-stepdata="receive_yurfio" data-steptype="source" data-min="3" data-max="300">
+                            <!-- /.calcform__addTel -->
+                          </div>
+                        </div>
+                        <div class="calcform__items calcform__items_two">
+                          <div class="calcform__item">
+                            <div class="calcform__title">
+                              Телефон
+                              <!-- /.notreq -->
+                            </div>
+                            <div class="calcform__multipleInput">
+                              <input type="tel" name="R_U_PHONE_THIRD" placeholder="" data-stepdata="receive_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                            </div>
+                            <!-- /.calcform__multipleInput -->
+                          </div>
+                          <div class="calcform__item">
+                            <div class="calcform__title">Email</div>
+                            <input type="email" name="R_U_EMAIL_THIRD" placeholder="" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                            <!-- /.calcform__addTel -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> </div>
+                  <!-- /.calcitem__content -->
+                </div>
+              </div>
+              <div class="form-step" data-entity="form-step-3" style="display: none" ;="">
+                <div class="calcpage__block calcitem calcitem_edit">
+                  <div class="calcitem__header">
+                    <div class="calcheader">
+                      <div class="calcheader__title">
+                        <div class="calcheader__icon">
+                          <div class="calcheader__image">
+                            <img src="/local/templates/azlog/public/images/info.svg" alt="">
+                          </div>
+                        </div>
+                        <span class="calcheader__name">Расчет и оформление заказа</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__content">
+                    <div class="calcform">
+                      <div class="calcform__content">
+                        <div class="calcform__fromto fromto">
+                          <div class="calcheader__info calcheader__info_edit">
+                            <div class="calcinfo">
+                              <div class="calcinfo__icon">
+                                <div class="calcinfo__img"><img src="/local/templates/azlog/public/images/edit.svg" alt=""></div>
+                              </div>
+                              <div class="calcinfo__edit"><a href="#"> Изменить</a></div>
+                              <!-- /.calcinfo__edit -->
+                            </div>
+                          </div>
+                          <div class="fromto__cols">
+                            <div class="fromto__col">
+                              <div class="fromto__item fromto__item_from">
+                                <div class="fromto__icon">
+                                  <div class="fromto__img">
+                                    <img src="/images/fromto.svg" alt="">
+                                  </div>
+                                  <!-- /.fromto__img -->
+                                </div>
+                                <!-- /.fromto__icon -->
+                                <div class="fromto__content">
+                                  <div class="fromto__title" data-stepdata="f_otpravki" data-steptype="result"></div>
+                                  <!-- /.fromto__title -->
+                                  <div class="fromto__descr">
+                                    <p data-stepdata="p_otpravki" data-steptype="result"></p>
+                                    <p>Филиал - <span data-stepdata="f_otpravki" data-steptype="result"></span></p>
+                                  </div>
+                                  <!-- /.fromto__descr -->
+                                </div>
+                                <!-- /.fromto__content -->
+                              </div>
+                              <!-- /.fromto__from -->
+                            </div>
+                            <!-- /.fromto__col -->
+                            <div class="fromto__col">
+                              <div class="fromto__item fromto__item_to">
+                                <div class="fromto__icon">
+                                  <div class="fromto__img">
+                                    <img src="/images/fromto.svg" alt="">
+                                  </div>
+                                  <!-- /.fromto__img -->
+                                </div>
+                                <!-- /.fromto__icon -->
+                                <div class="fromto__content">
+                                  <div class="fromto__title" data-stepdata="f_dostavki" data-steptype="result"></div>
+                                  <!-- /.fromto__title -->
+                                  <div class="fromto__descr">
+                                    <p data-stepdata="p_dostavki" data-steptype="result"></p>
+                                    <p>Филиал - <span data-stepdata="f_dostavki" data-steptype="result"></span></p>
+                                  </div>
+                                  <!-- /.fromto__descr -->
+                                </div>
+                                <!-- /.fromto__content -->
+                              </div>
+                              <!-- /.fromto__from -->
+                            </div>
+                          </div>
+                          <!-- /.calcitem__totals -->
+                          <!-- /.fromto__cols -->
+                        </div>
+                        <!-- /.calcform__fromto -->
+                        <hr>
+                        <!-- 	<div class="calcitem__totals calcitem__totals_multiple">
+                          <div class="calctotal">
+                          	<div class="calctotal__title"><b>Сборным грузом</b></div>
+                          	<div class="calctotal__value">Cпособ перевозки</div>
+                          </div>
+                          <div class="calctotal">
+                          	<div class="calctotal__title"><b>Автоперевозка</b></div>
+                          	<div class="calctotal__value">Параметры перевозки</div>
+                          </div>
+                          </div> -->
+                        <div class="calcitem__totals calcitem__totals_multiple">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Габариты груза</b></div>
+                            <div class="calctotal__value">
+                              <span data-steptype="result" data-stepdata="ob_len"></span> x
+                              <span data-steptype="result" data-stepdata="ob_shir"></span> x
+                              <span data-steptype="result" data-stepdata="ob_h"></span>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Вес груза</b></div>
+                            <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_w"></span></div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Количество мест/паллет</b></div>
+                            <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_count"></span></div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Обьем груза</b></div>
+                            <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_vol"></span></div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Дата отправки</b></div>
+                            <div class="calctotal__value">
+                              <ul>
+                                <li data-if="date_otpravki">Дата: <span data-steptype="result" data-stepdata="date_otpravki"></span>
+                                </li>
+                                <li data-if="time_otpravki1">Днем: <span data-steptype="result" data-stepdata="time_otpravki1"></span>
+                                </li>
+                                <li data-if="time_otpravki2">Утром: <span data-steptype="result" data-stepdata="time_otpravki2"></span>
+                                </li>
+                                <li data-if="time_otpravki3">Вечером: <span data-steptype="result" data-stepdata="time_otpravki3"></span>
+                                </li>
+                                <li data-if="time_otpravki4">Указанное время: <span data-steptype="result" data-stepdata="time_otpravki4"></span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Услуги на терминале отправителя</b></div>
+                            <div class="calctotal__value">
+                              <ul>
+                                <li><span data-steptype="result" data-stepdata="dop_prr"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_bok"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_verh"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_full"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_bort"></span></li>
+                                <li data-if="dop_floor">Этаж: <span data-steptype="result" data-stepdata="dop_floor"></span>
+                                  <span data-steptype="result" data-stepdata="dop_lift"></span>
+                                </li>
+                                <li data-if="dop_sved">Дополнительные сведения: <span data-steptype="result" data-stepdata="dop_sved"></span></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Услуги на терминале получателя</b></div>
+                            <div class="calctotal__value">
+                              <ul>
+                                <li data-if="time_otpravki1">Днем: <span data-steptype="result" data-stepdata="time_otpravki1"></span>
+                                </li>
+                                <li data-if="time_otpravki2">Утром: <span data-steptype="result" data-stepdata="time_otpravki2"></span>
+                                </li>
+                                <li data-if="time_otpravki3">Вечером: <span data-steptype="result" data-stepdata="time_otpravki3"></span>
+                                </li>
+                                <li data-if="time_otpravki4">Указанное время: <span data-steptype="result" data-stepdata="time_otpravki4"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_prr"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_bok"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_verh"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_full"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_bort"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_doc"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_return"></span></li>
+                                <li data-if="dop_dost_floor">Этаж: <span data-steptype="result" data-stepdata="dop_dost_floor"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="dop_dost_lift"></span>
+                                </li>
+                                <li data-if="dop_dost_sved">Дополнительные сведения: <span data-steptype="result" data-stepdata="dop_dost_sved"></span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Дополнительные сведения</b></div>
+                            <div class="calctotal__value">
+                              <ul>
+                                <li data-if="tip_gruza">Тип груза: <span data-steptype="result" data-stepdata="tip_gruza"></span>
+                                </li>
+                                <li data-if="cost">Объявленная стоимость: <span data-steptype="result" data-stepdata="cost"></span>
+                                  ₽
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="teplo"></span></li>
+                                <li><span data-steptype="result" data-stepdata="fragileCargo"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="liquidCargo"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_nopack"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_wooden"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_bubble"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_stretch"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_gofro"></span></li>
+                                <li><span data-steptype="result" data-stepdata="pack_meshkotara"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_recalc"></span>
+                                </li>
+                                <li><span data-steptype="result" data-stepdata="pack_mark"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_doc"></span></li>
+                                <li><span data-steptype="result" data-stepdata="dop_return"></span></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Отправитель </b></div>
+                            <div class="calctotal__value">
+                              <!-- <ul>
+                                <li>
+                                	<div>
+                                		<span data-stepdata="send_fiz" data-totaltype="fizyur">Физическое лицо</span>
+                                		<span data-stepdata="send_yur" data-totaltype="fizyur">Юридическое лицо</span>
+                                	</div>
+                                </li>
+                                </ul> -->
+                              <div data-if="send_fio" data-stepdata="send_fiz" data-totaltype="fizyur">
+                                <ul>
+                                  <li>
+                                    <span data-stepdata="send_fiz" data-totaltype="fizyur">Физическое
+                                    лицо</span>
+                                  </li>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="send_fio"></span>
+                                  </li>
+                                  <li data-if="send_pasp1">
+                                    <span data-steptype="result" data-stepdata="send_doc"></span>:&nbsp;
+                                    <span data-steptype="result" data-stepdata="send_pasp1"></span>&nbsp;
+                                    <span data-steptype="result" data-stepdata="send_pasp2"></span>
+                                  </li>
+                                  <li data-if="send_anotherdoc">
+                                    <span data-steptype="result" data-stepdata="send_doc"></span>:&nbsp;
+                                    <span data-steptype="result" data-stepdata="send_anotherdoc"></span>&nbsp;
+                                  </li>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="send_tel"></span>
+                                  </li>
+                                  <li data-if="send_tel2">
+                                    <span data-steptype="result" data-stepdata="send_tel2"></span>
+                                  </li>
+                                  <li data-if="send_email">
+                                    <span data-steptype="result" data-stepdata="send_email"></span>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div data-if="send_yurname" data-stepdata="send_yur" data-totaltype="fizyur">
+                                <ul>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="send_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="send_yurname"></span>
+                                  </li>
+                                  <li data-if="send_inn">
+                                    ИНН: <span data-steptype="result" data-stepdata="send_inn"></span>
+                                  </li>
+                                  <li data-if="send_kpp">
+                                    КПП: <span data-steptype="result" data-stepdata="send_kpp"></span>
+                                  </li>
+                                  <li data-if="send_yurfio">
+                                    Контакное лицо: <span data-steptype="result" data-stepdata="send_yurfio"></span>
+                                  </li>
+                                  <li data-if="send_yurtel">
+                                    Телефон: <span data-steptype="result" data-stepdata="send_yurtel"></span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Получатель </b></div>
+                            <div class="calctotal__value">
+                              <div data-if="receive_fio" data-stepdata="receive_fiz" data-totaltype="fizyur">
+                                <ul>
+                                  <li>
+                                    <span data-stepdata="receive_fiz" data-totaltype="fizyur">Физическое
+                                    лицо</span>
+                                  </li>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="receive_fio"></span>
+                                  </li>
+                                  <li data-if="receive_pasp1">
+                                    <span data-steptype="result" data-stepdata="receive_selectdoc"></span>:&nbsp;
+                                    <span data-steptype="result" data-stepdata="receive_pasp1"></span>&nbsp;
+                                    <span data-steptype="result" data-stepdata="receive_pasp2"></span>
+                                  </li>
+                                  <li data-if="receive_anotherdoc">
+                                    <span data-steptype="result" data-stepdata="receive_doc"></span>:&nbsp;
+                                    <span data-steptype="result" data-stepdata="receive_anotherdoc"></span>&nbsp;
+                                  </li>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="receive_tel"></span>
+                                  </li>
+                                  <li data-if="receive_tel2">
+                                    <span data-steptype="result" data-stepdata="receive_tel2"></span>
+                                  </li>
+                                  <li data-if="receive_email">
+                                    <span data-steptype="result" data-stepdata="receive_email"></span>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div data-if="receive_yurname" data-stepdata="receive_yur" data-totaltype="fizyur">
+                                <ul>
+                                  <li>
+                                    <span data-stepdata="receive_yur" data-totaltype="fizyur">Юридическое
+                                    лицо</span>
+                                  </li>
+                                  <li>
+                                    <span data-steptype="result" data-stepdata="receive_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="receive_yurname"></span>
+                                  </li>
+                                  <li data-if="receive_yurinn">
+                                    ИНН: <span data-steptype="result" data-stepdata="receive_yurinn"></span>
+                                  </li>
+                                  <li data-if="receive_yurkpp">
+                                    КПП: <span data-steptype="result" data-stepdata="receive_yurkpp"></span>
+                                  </li>
+                                  <li data-if="receive_yurfio">
+                                    Контакное лицо: <span data-steptype="result" data-stepdata="receive_yurfio"></span>
+                                  </li>
+                                  <li data-if="receive_yurtel">
+                                    Телефон: <span data-steptype="result" data-stepdata="receive_yurtel"></span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Плательщик </b></div>
+                            <div class="calctotal__value">
+                              <ul>
+                                <li>
+                                  <span data-steptype="result" data-stepdata="payeer"></span>
+                                </li>
+                                <li data-if="payer_fio">
+                                  <span data-steptype="result" data-stepdata="payer_fio"></span>
+                                </li>
+                                <li data-if="payer_pasp1">
+                                  <span data-steptype="result" data-stepdata="payer_doc"></span>
+                                  <span data-steptype="result" data-stepdata="payer_pasp1"></span>
+                                  <span data-steptype="result" data-stepdata="payer_pasp2"></span>
+                                </li>
+                                <li data-if="payer_anotherdoc">
+                                  <span data-steptype="result" data-stepdata="payer_doc"></span>
+                                  <span data-steptype="result" data-stepdata="payer_anotherdoc"></span>
+                                </li>
+                                <li data-if="payer_tel">
+                                  <span data-steptype="result" data-stepdata="payer_tel"></span>
+                                </li>
+                                <li data-if="payer_tel2">
+                                  <span data-steptype="result" data-stepdata="payer_tel2"></span>
+                                </li>
+                                <li data-if="payer_check">
+                                  <span data-steptype="result" data-stepdata="payer_check"></span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                          	<div class="calctotal__title"><b>Оплата услуг </b></div>
+                          	<div class="calctotal__value calctotal__value_multiple">
+                          		<ul>
+                          			<li>
+                          				<span class="calctotal__valueName">Межрегиональная перевозка</span>
+                          				<span class="calctotal__valueInfo">получатель</span>
+                          			</li>
+                          
+                          			<li>
+                          				<span class="calctotal__valueName">Страховка</span>
+                          				<span class="calctotal__valueInfo">получатель</span>
+                          			</li>
+                          
+                          			<li>
+                          				<span class="calctotal__valueName">Палетный борт</span>
+                          				<span class="calctotal__valueInfo">получатель</span>
+                          			</li>
+                          
+                          		</ul>
+                          	</div>
+                          </div>
+                          </div> -->
+                        <div class="calcitem__totals calcitem__totals_multiple calcitem__totals_large">
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>E-mail для связи <br> и отправки
+                              уведомлений</b>
+                            </div>
+                            <div class="calctotal__value">
+                              <input type="text" name="NOTIFY_EMAIL" placeholder="E-mail" data-stepdata="contact_phone" data-steptype="source">
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Телефон для связи <br> и уведомления по SMS</b>
+                            </div>
+                            <div class="calctotal__value">
+                              <input type="tel" name="NOTIFY_PHONE" placeholder="Телефон" data-stepdata="contact_phone" data-steptype="source" data-required="required">
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Промокод</b>
+                            </div>
+                            <div class="calctotal__value">
+                              <input type="text" name="NOTIFY_PROMO" placeholder="Промокод" data-stepdata="contact_promo" data-steptype="source">
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                          <div class="calctotal">
+                            <div class="calctotal__title"><b>Вы (заказчик)</b></div>
+                            <div class="calctotal__value">
+                              <div class="calcform__radiobuttons">
+                                <div class="radiobuttons">
+                                  <div class="radiotype ">
+                                    <div class="radiotype__item">
+                                      <label for="radio2-1" class="radiotype__label">
+                                      <span>
+                                      <input type="radio" name="NOTIFY_TYPE" checked="checked" value="Отправитель" id="radio2-1" data-stepdata="contact_type1" data-steptype="source">
+                                      <span class="radiotype__text" data-text="checkboxtext">Отправитель</span>
+                                      </span>
+                                      </label>
+                                    </div>
+                                    <div class="radiotype__item">
+                                      <label for="radio2-2" class="radiotype__label">
+                                      <span>
+                                      <input type="radio" name="NOTIFY_TYPE" value="Получатель" id="radio2-2" data-stepdata="contact_type2" data-steptype="source">
+                                      <span class="radiotype__text" data-text="checkboxtext">Получатель</span>
+                                      </span>
+                                      </label>
+                                    </div>
+                                    <div class="radiotype__item">
+                                      <label for="radio2-3" class="radiotype__label">
+                                      <span>
+                                      <input type="radio" name="NOTIFY_TYPE" value="Третье лицо" id="radio2-3" data-stepdata="contact_type3" data-steptype="source">
+                                      <span class="radiotype__text" data-text="checkboxtext">Третье лицо</span>
+                                      </span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.calctotal -->
+                        </div>
+                        <!-- .calcitem__totals -->
+                      </div>
+                    </div>
+                    <div class="pageform__check">
+                      <div class="manager-form__privacy">
+                        <label class="checkbox">
+                        <input required="" data-required="required" type="checkbox" name="privacy" value="Y">
+                        <span class="checkbox__box"></span>
+                        Я ознакомлен и согласен с
+                        <a href="/trebovaniya-k-gruzu/" target="_blank" class="link_underline">правилами
+                        оказания услуг</a> и
+                        <a href="/privacy/" target="_blank" class="link_underline">ПОЛИТИКОЙ
+                        КОНФИДЕНЦИАЛЬНОСТИ</a>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="calcpage__navs">
+                      <!-- <div class="calcpage__nav">
+                        <a href="#" data-entity="step-prev" class="btn_main  btn_submit">Назад</a>
+                        </div> -->
+                      <!-- /.calcpage__nav -->
+                      <div class="calcpage__nav">
+                        <!--								data-entity="step-finish"-->
+                        <a href="#" data-entity="step-next" class="btn_main btn_main_blue btn_submit">Подтвердить
+                        <span class="hideThisOnMobile">заказ</span> </a>
+                      </div>
+                      <!-- /.calcpage__nav -->
+                    </div>
+                    <!-- /.calcpage__navs -->
                   </div>
                 </div>
               </div>
             </div>
-            <div class="calcitem__footer">
-              <div class="calcitem__total">
-                <div class="calcitem__subtitle">Итого</div>
-                <!-- /.calcitem__subtitle -->
-                <div class="calcitem__pricetotal">5 684 ₽</div>
-                <!-- /.calcitem__pricetotal -->
-              </div>
-              <!-- /.calcitem__total -->
-              <div class="calcitem__button">
-                <a href="#" class="btncalc">
-                <span  class='btncalc__img btncalc__img_left'>
-                <img src="img/btncalc__img_left.svg" alt="">
-                </span>
-                <span class='btncalc__text'>Оформить</span>
-                <span  class='btncalc__img btncalc__img_right'>
-                <img src="img/btncalc__img_right.svg" alt="">
-                </span>
-                </a>
-              </div>
-              <!-- /.calcitem__button -->
-              <div class="calcitem__info">
-                <div class="calcitem__infomessage">
-                  * Расчет предварительный. Точный расчет производится при отправке груза
+            <div class="calcpage__aside">
+              <div class="calcaside">
+                <div class="calcresults calcitem">
+                  <div class="calcitem__header">
+                    <div class="calcheader">
+                      <div class="calcheader__title">
+                        <div class="calcheader__name">Ваш расчет</div>
+                        <div class="calcheader__icon">
+                          <div class="calcheader__image">
+                            <img src="img/Cardboard_Carton_2_560 1.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__content">
+                    <div class="step-1 ">
+                      <div class="calcprice">
+                        <div class="calcprice__items">
+                          <div class="calcprice__params">
+                            <ul class="calcprice-params">
+                              <li>
+                                <span class="calcprice-params_left">
+                                Стоимость доставки на терминал
+                                </span>
+                                <span class="calcprice-params_right" >429 ₽ </span>
+                              </li>
+                              <li>
+                                <span class="calcprice-params_left">
+                                Температурный режим
+                                </span>
+                                <span class="calcprice-params_right" >1 250 ₽ </span>
+                              </li>
+                              <li>
+                                <span class="calcprice-params_left">
+                                Утепление в 1 слой
+                                </span>
+                                <span class="calcprice-params_right" >1 250 ₽ </span>
+                              </li>
+                              <li>
+                                <span class="calcprice-params_left">
+                                Забор груза
+                                </span>
+                                <span class="calcprice-params_right" >
+                                <a href="#">Обратитесь к менеджеру</a>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="calcprice-params_left">
+                                Тариф
+                                </span>
+                                <span class="calcprice-params_right" >
+                                <img src="img/InTransit.svg" alt="">
+                                Авто
+                                </span>
+                              </li>
+                              <li>
+                                <span class="calcprice-params_left">
+                                Тариф
+                                </span>
+                                <span class="calcprice-params_right" >
+                                <img src="img/Tracks.svg" alt="">
+                                Ж/Д
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calcitem__footer">
+                    <div class="calcitem__total">
+                      <div class="calcitem__subtitle">Итого</div>
+                      <!-- /.calcitem__subtitle -->
+                      <div class="calcitem__pricetotal">5 684 ₽</div>
+                      <!-- /.calcitem__pricetotal -->
+                    </div>
+                    <!-- /.calcitem__total -->
+                    <div class="calcitem__button">
+                      <a href="#" class="btncalc">
+                      <span  class='btncalc__img btncalc__img_left'>
+                      <img src="img/btncalc__img_left.svg" alt="">
+                      </span>
+                      <span class='btncalc__text'>Оформить</span>
+                      <span  class='btncalc__img btncalc__img_right'>
+                      <img src="img/btncalc__img_right.svg" alt="">
+                      </span>
+                      </a>
+                    </div>
+                    <!-- /.calcitem__button -->
+                    <div class="calcitem__info">
+                      <div class="calcitem__infomessage">
+                        * Расчет предварительный. Точный расчет производится при отправке груза
+                      </div>
+                      <!-- /.calcitem__infomessage -->
+                    </div>
+                    <!-- /.calcitem__info -->
+                  </div>
+                  <!-- /.calcitem__footer -->
                 </div>
-                <!-- /.calcitem__infomessage -->
               </div>
-              <!-- /.calcitem__info -->
             </div>
-            <!-- /.calcitem__footer -->
+            <!-- /.calcaside -->
           </div>
         </div>
-      </div><!-- /.calcaside -->
       </div>
-    </div>
-    </div>
     </div>
   </main>
   <footer class="footer">
