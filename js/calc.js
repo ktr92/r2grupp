@@ -10,12 +10,40 @@ const feInit = () => {
   addSpot()
   autoCalc()
   switchDepend()
+  initMask()
+  clearError()
+  
+  stepForm()
 }
-
+let currentStep = 1
 const stepitems = {
   properties: [],
   radio: [],
   set: [],
+}
+
+function initMask() {
+  $('[type="tel"]').inputmask({
+    showMaskOnHover: true,
+    showMaskOnFocus: true,
+    mask: "+7 (999) 999-99-99"
+  })
+  $('[data-mask="inn"]').inputmask({
+    showMaskOnHover: true,
+    showMaskOnFocus: true,
+    mask: "9999999999"
+  })
+  $('[data-mask="kpp"]').inputmask({
+    showMaskOnHover: true,
+    showMaskOnFocus: true,
+    mask: "999999999"
+  })
+}
+
+function clearError() {
+  $('input[data-required="required"]').on('input', function() {
+    $(this).removeClass('error')
+  })
 }
 
 function checkExist(obj) {
@@ -48,7 +76,7 @@ function checkExistRadio(obj) {
 function getInputData(selector) {
   $(`[data-stepvisible="${selector}"]`)
       .find(
-          'input[type="text"][data-steptype="source"], input[type="tel"][data-steptype="source"], input[type="email"][data-steptype="source"]'
+          'input[type="text"][data-steptype="source"], input[type="tel"][data-steptype="source"], input[type="email"][data-steptype="source"],  input[type="hidden"][data-steptype="source"]' 
       )
       .each(function (index) {
           var obj = {}
@@ -103,14 +131,28 @@ function getSpanData(selector) {
       })
 }
 
+function getSelectData(selector) {
+  $(`[data-stepvisible="${selector}"]`)
+      .find('select[data-steptype="source"]:visible option:selected')
+      .each(function (index) {
+          var obj = {}
+          obj.property = $(this).closest("select").data("stepdata")
+          obj.value = $(this).text().replace(/\s+/g, " ")
+          obj.text = ""
+          obj.type = "select"
+          checkExist(obj)
+      })
+}
+
 function initData() {
-  selectInit()
   getInputData("anyway")
   getCheckboxData("anyway")
   getSpanData("anyway")
-  getSelectData("anyway")
   getRadioData("anyway")
+  getSelectData("anyway")
 
+
+  stepitems.radio = []
   $('input[type="radio"][data-radiotab="tab"]:checked').each(function (
       index
   ) {
@@ -123,18 +165,139 @@ function initData() {
           checkExistRadio(obj)
       }
   })
+  
 
   stepitems.radio.forEach((item) => {
       getInputData(item.property)
       getCheckboxData(item.property)
       getSpanData(item.property)
-      getSelectData(item.property)
       getRadioData(item.property)
+      getSelectData(item.property)
   })
 
-  /*  console.log(stepitems) */
 }
+function isSizeSet() {
 
+  const isSize = stepitems.radio.filter(
+      (item) => item.property === "set_size"
+  )[0]
+
+  if (isSize) {
+      $("[data-inputset]").each(function () {
+          stepitems.set.push({
+              set: $(this).data("inputset"),
+              text: `${$(this).data("inputset")}`,
+              values: $(this)
+                  .find('[data-steptype="source_set"]')
+                  .toArray()
+                  .map((item) => {
+                      return {
+                          property: item.dataset.stepdata,
+                          value: item.value,
+                      }
+                  }),
+          })
+      })
+
+      /* const MathUtils = {
+          roundToPrecision: function (subject, precision) {
+              return +(+subject).toFixed(precision)
+          },
+      } */
+
+     /*  let len = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[0].value.replace(/[^0-9]/g, "")),
+                  1
+              ),
+          0
+      ) */
+
+      /* stepitems.properties.push({
+          property: "ob_len",
+          value: len,
+          text: "",
+          type: "textinput",
+      })
+      let shir = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[1].value.replace(/[^0-9]/g, "")),
+                  1
+              ),
+          0
+      ) */
+
+  /*     stepitems.properties.push({
+          property: "ob_shir",
+          value: shir,
+          text: "",
+          type: "textinput",
+      })
+      let h = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[2].value.replace(/[^0-9]/g, "")),
+                  1
+              ),
+          0
+      ) */
+
+    /*   stepitems.properties.push({
+          property: "ob_h",
+          value: h,
+          text: "",
+          type: "textinput",
+      }) */
+   /*    let w = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[3].value.replace(/[^0-9]/g, "")),
+                  1
+              ),
+          0
+      )
+ */
+      stepitems.properties.push({
+          property: "tot_weight",
+          value: $('[data-stepdata="tot_weight"]').val(),
+          text: "",
+          type: "textinput",
+      })
+  /*     let count = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[4].value.replace(/[^0-9]/g, "")),
+                  1
+              ),
+          0
+      ) */
+
+     /*  stepitems.properties.push({
+          property: "ob_count",
+          value: count,
+          text: "",
+          type: "textinput",
+      }) */
+
+ /*      let vol = stepitems.set.reduce(
+          (sum, item) =>
+              MathUtils.roundToPrecision(
+                  sum + parseFloat(item.values[5].value.replace(/[^0-9]\./g, "")),
+                  3
+              ),
+          0
+      ) */
+
+      stepitems.properties.push({
+          property: "tot_volume",
+          value: $('[data-stepdata="tot_volume"]').val(),
+          text: "",
+          type: "textinput",
+      })
+  }
+}
 
 const fillStepData = (step) => {
   if (step == 2) {
@@ -172,17 +335,13 @@ const getMailData = () => {
       .next("div")
       .text()
 
-  console.log("FROM")
-  console.log(from)
-  console.log("TO")
-  console.log(to)
+
 }
 
 function validateEmail() {
   let valid = true
   const email = []
   const $email = $("input[type=email]:visible")
-  console.log("$email: ", $email)
 
   $email.each(function () {
       const obj = {
@@ -193,7 +352,6 @@ function validateEmail() {
   })
 
   email.forEach(function (item) {
-      console.log("item: ", item)
 
       var emailReg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
 
@@ -240,9 +398,9 @@ function validateRequired() {
   if ($(".error").length) {
       $("html, body").animate(
           {
-              scrollTop: $(".error").offset().top - 50,
+              scrollTop: $(".error").offset().top - 140,
           },
-          500
+          300
       )
   }
 
@@ -279,7 +437,6 @@ function validateDepending() {
 }
 
 const checkConfirm = () => {
-  /*  console.log(123) */
   if ($('input[name="privacy"]').is(":checked")) {
       return true
   } else {
@@ -297,16 +454,15 @@ const validateStepData = (step) => {
 
   if (step == 2) {
       let isTerminal = true
-      document
-          .querySelectorAll(".dropdownJS__label .dropdownJS__text1")
-          .forEach((item) => {
-              if (item.textContent) {
-                  item.closest(".dropdownJS__label").classList.remove("error")
-              } else {
-                  item.closest(".dropdownJS__label").classList.add("error")
-                  isTerminal = false
-              }
-          })
+      $('[data-ternimalresult]').each(function() {
+        if ($(this).text().length > 0) {
+          $(this).closest(".calcselect__wrapper").removeClass("error")
+        } else {
+          $(this).closest(".calcselect__wrapper").addClass("error")
+          isTerminal = false
+        }
+      })
+     
 
       validation =
           /* validateDepending() && */
@@ -326,35 +482,37 @@ const validateStepData = (step) => {
 const stepForm = () => {
   $(document).on("click", '[data-entity="step-next"]', function (e) {
       e.preventDefault()
-      if (validateStepData(currentStep + 1)) {
+      console.log(stepitems)
+      let flag = validateStepData(currentStep + 1)
+      console.log(flag)
+      if (flag) {
           initData()
           $(".form-step").hide()
           ++currentStep
           fillStepData(currentStep)
           $('[data-entity="form-step-' + currentStep + '"]').show()
-          $([document.documentElement, document.body]).animate(
-              {
-                  scrollTop: $(
-                      '[data-entity="form-step-' + currentStep + '"]'
-                  ).offset().top,
-              },
-              1000
-          )
-          if (currentStep === 1) {
+         
+         /*  if (currentStep === 1) {
               $('.form-step .calcpage__nav [data-entity="step-next"]').show()
-              $('[data-entity="step-next"]').text("РћС„РѕСЂРјРёС‚СЊ Р·Р°СЏРІРєСѓ")
               $('[data-entity="step-prev"]').removeClass("active")
           }
           if (currentStep === 2) {
               $('.form-step .calcpage__nav [data-entity="step-next"]').show()
-              $('[data-entity="step-next"]').text("РџСЂРѕРґРѕР»Р¶РёС‚СЊ")
               $('[data-entity="step-prev"]').addClass("active")
           }
           if (currentStep === 3) {
-              $('[data-entity="step-next"]').text("РћС„РѕСЂРјРёС‚СЊ Р·Р°СЏРІРєСѓ")
               $('[data-entity="step-prev"]').addClass("active")
               $('.form-step .calcpage__nav [data-entity="step-next"]').hide()
           }
+ */
+          $("html, body").animate(
+            {
+                scrollTop: $(
+                  'main'
+                ).offset().top,
+            },
+            300
+        )
       }
   })
 
@@ -371,13 +529,13 @@ const stepForm = () => {
           fillStepData(currentStep)
           $(".form-step").hide()
           $('[data-entity="form-step-' + currentStep + '"]').show()
-          $([document.documentElement, document.body]).animate(
+          $("html, body").animate(
               {
                   scrollTop: $(
-                      '[data-entity="form-step-' + currentStep + '"]'
+                      'main'
                   ).offset().top,
               },
-              1000
+              300
           )
 
           if (currentStep === 1) {
@@ -431,8 +589,7 @@ function setData() {
       )
       if (
           input.length &&
-          input[0].type === "textinput" &&
-          input[0].value != ""
+          input[0].value != 0 &&  input[0].value != "" &&  input[0].value != "N"
       ) {
           $(this).show()
       } else {
@@ -470,7 +627,6 @@ const autoCalc = () => {
     
 
       let size = len + wid + hei
-      console.log(size/100)
       if (size/100 > sizeover) {
         isover = true
       }
@@ -606,6 +762,8 @@ const addSpot = () => {
 
 
     $(`.calcform__inputs-${(count)}`).addClass('active').siblings().removeClass('active');;
+
+  
 
     $(`[data-weight-format][data-new-${count}]`).inputmask('integer', {
       mask: "( 999){+|1}",
@@ -813,7 +971,7 @@ const fastBtn = () => {
     e.preventDefault()
     jQuery(this).closest('.calcform__item').find("[data-fast] a").removeClass('active')
     let target = jQuery(this).parent().data('fast')
-    jQuery(`input[name=${target}]`).val(jQuery(this).text())
+    jQuery(`input[name=${target}]`).val(jQuery(this).text()).removeClass('error')
     jQuery(this).addClass('active')
   })
 }
@@ -856,6 +1014,8 @@ const termSelect = () => {
     $wrapper.addClass('selected')
     $wrapper.find('[data-ternimalresult]').text(termname).attr('data-ternimalresult', termname)
     $wrapper.find('[data-ternimalresult_id]').text(termid).attr('data-ternimalresult_id', termid)
+    $wrapper.find('[terminalinput_name]').val(termname)
+    $wrapper.find('[terminalinput_id]').val(termid)
     $wrapper.find('.calcselect__list').removeClass('active')
     $wrapper.find('.calcselect__buttontext').text("Другой терминал")
 
@@ -863,8 +1023,10 @@ const termSelect = () => {
       jQuery('[data-calcselect="to"]').removeClass('disabled')
     }
 
+    $wrapper.find('')
+
     // что подставлять в инпут
-    $wrapper.find('[data-input="terminal"]').val(termid)
+    $wrapper.find('.calcselect__wrapper ').removeClass('error')
   })
 }
 

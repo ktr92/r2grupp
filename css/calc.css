@@ -1,5 +1,7 @@
 /* calc */
-
+html {
+  scroll-behavior: unset;
+}
 .calcpage {
   display: flex;
 /*   margin: 0 -9px; */
@@ -2078,11 +2080,7 @@ line-height: 100%;
 	fill: #F23F34;
 }
 
-.inputLocation.error input,
-input.error {
-	border: 1px solid #F23F34;
-	color: #F23F34;
-}
+
 
 .inputLocation input::-webkit-input-placeholder {
 	/* Chrome/Opera/Safari */
@@ -3031,6 +3029,33 @@ margin-right: -15px;
   margin-left: 0;margin-right: 0;
 }
 
+.inputLocation.error input,
+input.error {
+	border: 1px solid #F23F34 !important;
+	color: #F23F34 !important;
+}
+
+.inputLocation input {
+  padding-left: 47px !important;
+}
+.calcselect__wrapper.error {
+  border: 1px solid red;
+}
+
+.checkbox__box.error {
+  border-color: red !important;
+}
+.calctotal__value li span span {
+  display: block;
+}
+.calctotal__value li span {
+  display: inline-flex;
+  align-items: center;
+}
+.calctotal__value li span img {
+ display: block;
+ margin-right: 3px;
+}
 @media (min-width: 1024px) {
 	.calcpage__aside .sticky {
 		position: fixed;

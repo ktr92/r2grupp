@@ -317,7 +317,7 @@
         <div class="container">
           <div class="calcpage">
             <div class="calcpage__main delivery_auto">
-              <div class="form-step" data-entity="form-step-1" style="display:none;">
+              <div class="form-step" data-entity="form-step-1" >
                 <div class="calcpage__block calcitem">
                   <div class="calcitem__content">
                     <div class="calcform" data-stepvisible="anyway">
@@ -327,7 +327,7 @@
                             <div class="calcform__item">
                               <div class="calcitem__button">
                                 <label class="active" for="delivery_auto">
-                                  <input type="radio" value="" id="delivery_auto" data-overweight='500' data-oversize='4' name="delivery_type" checked="">
+                                  <input type="radio" value="" id="delivery_auto" data-overweight='500' data-oversize='4' name="delivery_type" checked="" data-steptype="source" data-stepdata='delivery_auto'>
                                   <div class='btncalc btncalc_type2'>
                                     <span class="btncalc__img btncalc__img_left">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -345,7 +345,7 @@
                             <div class="calcform__item">
                               <div class="calcitem__button">
                                 <label class="active" for="delivery_zhd">
-                                  <input type="radio" value="" id="delivery_zhd" data-overweight='1000' data-oversize='3.5' name="delivery_type" >
+                                  <input type="radio" value="" id="delivery_zhd" data-overweight='1000' data-oversize='3.5' name="delivery_type" data-steptype="source" data-stepdata='delivery_zhd'>
                                   <div class='btncalc btncalc_type2'>
                                     <span class="btncalc__img btncalc__img_left">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -374,7 +374,7 @@
                                   </a>
                                 </div>
                                 <img src="img/Tracking.svg">
-                                <input data-stepdata="f_otpravki" data-steptype="source" type="text" autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete" placeholder="" name="from_text" value="">
+                                <input data-required="required"  type="text" autocomplete="off" id="cityInput1" class="cityInput" data-entity="city-autocomplete" placeholder="" name="from_text" value="">
                                 <input type="hidden" name="from" value="" data-entity="city-kladr-id">
                               </div>
                               <div class="calcform__fastbtn" data-fast='from_text'>
@@ -388,7 +388,7 @@
                               <div class="calcform__title">Город назначения</div>
                               <div class="inputLocation">
                                 <img src="img/Tracking.svg">
-                                <input data-stepdata="f_dostavki" data-steptype="source" type="text" autocomplete="off" name="to_text" id="cityInput2" class="cityInput" placeholder="" data-entity="city-autocomplete" value="">
+                                <input data-required="required" type="text" autocomplete="off" name="to_text" id="cityInput2" class="cityInput" placeholder="" data-entity="city-autocomplete" value="">
                                 <input type="hidden" name="to" value="" data-entity="city-kladr-id">
                               </div>
                               <div class="calcform__fastbtn" data-fast='to_text'>
@@ -414,7 +414,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="calcitem__content">
+                  <div class="calcitem__content" data-stepvisible="anyway">
                     <div class="calcselect " >
                       <div class="calcselect__wrapper">
                         <div class="selectresult">
@@ -423,8 +423,8 @@
                           </div>
                           <!-- /.selectresult__icon -->
                           <div class="selectresult__content">
-                            <div class="selectresult__termname" data-ternimalresult="Москва, ул. Соколово-Мещерская, 29">Москва, ул. Соколово-Мещерская, 29</div>
-                            <div class="selectresult__termid" data-ternimalresult_id="Терминал MSK1438">Терминал MSK1438</div>
+                            <span class="selectresult__termname" data-ternimalresult="" data-stepdata="f_otpravki" data-steptype="source" ></span>
+                            <span class="selectresult__termid" data-ternimalresult_id="" data-stepdata="f_otpravki_id" data-steptype="source" ></span>
                           </div>
                           <!-- /.selectresult__content -->
                         </div>
@@ -485,7 +485,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="calcitem__content">
+                  <div class="calcitem__content" data-stepvisible="anyway">
                     <div class="calcselect " >
                       <div class="calcselect__wrapper">
                         <div class="selectresult">
@@ -494,8 +494,8 @@
                           </div>
                           <!-- /.selectresult__icon -->
                           <div class="selectresult__content">
-                            <div class="selectresult__termname" data-ternimalresult=""></div>
-                            <div class="selectresult__termid" data-ternimalresult_id=""></div>
+                            <span class="selectresult__termname" data-ternimalresult="" data-stepdata="f_dostavki" data-steptype="source" ></span>
+                            <span class="selectresult__termid" data-ternimalresult_id="" data-stepdata="f_dostavki_id" data-steptype="source" ></span>
                           </div>
                           <!-- /.selectresult__content -->
                         </div>
@@ -557,7 +557,7 @@
                     </div>
                     <div class="calctabs-js">
                       <ul>
-                        <label class="active" for="set_weight"><span class='calctabs__name'>Общие данные</span>  <input data-radiotab="tab" type="radio" value="Y" id="set_weight" name="infogruztab" checked="">
+                        <label class="active" for="set_weight"><span class='calctabs__name'>Общие данные</span>  <input data-radiotab="tab" checked type="radio" value="Y" id="set_weight" name="infogruztab" checked="">
                         </label>
                         <label class="" for="set_size">
                           <span class='calctabs__name'>Указать габариты</span>  <input data-radiotab="tab" type="radio" id="set_size" value="N" name="infogruztab">
@@ -578,7 +578,7 @@
                   <div class="calcitem__content">
                     <div class="calcform calcform-js  active" data-stepvisible="set_weight">
                       <div class="calcform__content">
-                        <div class="calcform__inputs">
+                        <div class="calcform__inputs" >
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">Общий вес</div>
@@ -646,7 +646,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="calcform__inputs calcform__inputs_spot">
+                        <div class="calcform__inputs calcform__inputs_spot" data-inputset='1'>
                           <div class="calcform__titlespot js-calcspot">1 место</div>
                           <div class="calcform__items calcform__items_four">
                             <div class="calcform__item">
@@ -718,7 +718,7 @@
                       <span>Добавить место</span>
                       </button>
                     </div>
-                    <div class="calcform__switches">
+                    <div class="calcform__switches" data-stepvisible="anyway">
                       <ol class="switches">
                         <li>
                           <span class="switches__name"> 
@@ -852,9 +852,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-step" data-entity="form-step-2">
+              <div class="form-step" data-entity="form-step-2" style="display:none;">
                 <div class="calcback">
-                  <a href="#" data-stepback='form-step-1' data-entity="step-next">
+                  <a href="#" data-stepback='form-step-1' data-entity="step-prev">
                   <img src="img/calcback.svg" alt="">
                   <span>Вернуться назад</span>
                   </a>
@@ -872,9 +872,26 @@
                     <div class="calctabs-js">
                       <ul>
                         <label class="active" for="send_fiz"><span class='calctabs__name'>Физ. лицо</span> 
-                        <input data-radiotab="tab" type="radio" value="Y" id="send_fiz" name="sendfizyur">
+                        <input 
+                          data-radiotab="tab" 
+                          checked="" 
+                          type="radio" 
+                          value="Y" 
+                          id="send_fiz" 
+                          data-steptype="source"
+                          data-stepdata="send_fiz"
+                          name="sendfizyur">
                         </label>
-                        <label class="" for="send_yur"><span class='calctabs__name'>Юр. лицо</span><input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="N" id="send_yur" checked="" name="sendfizyur"></label>
+                        <label class="" for="send_yur"><span class='calctabs__name'>Юр. лицо</span>
+                          <input 
+                          data-radiotab="tab" 
+                          type="radio" 
+                          data-isrequired="delivery-address" 
+                          value="N" 
+                          id="send_yur" 
+                          data-steptype="source"
+                          data-stepdata="send_yur"
+                          name="sendfizyur"></label>
                       </ul>
                     </div>
                     <div class="calcform__warn  calcform__warn_aside">
@@ -899,8 +916,8 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">Документ</div>
-                              <select name="F_DOCTYPE" id="" data-select=" $sendParams['INFO_TEXT']oc" data-stepdata="send_doc" data-steptype="source">
-                                <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
+                              <select name="F_DOCTYPE" id="" data-select="" data-stepdata="send_doc" data-steptype="source">
+                                <option value="Паспорт РФ" data-select="passport" selected>Паспорт РФ</option>
                                 <option value="Водительское удостоверение" data-select="doc">
                                   Водительское удостоверение
                                 </option>
@@ -970,7 +987,7 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">ИНН</div>
-                              <input type="text" name="U_INN" placeholder="" data-stepdata="send_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                              <input type="text" name="U_INN" placeholder="" data-stepdata="send_inn" data-steptype="source" data-required="required" data-min="10" data-max="10" data-mask='inn'>
                               <!-- /.calcform__addTel -->
                             </div>
                             <div class="calcform__item">
@@ -979,7 +996,7 @@
                                 <!-- /.notreq -->
                               </div>
                               <div class="calcform__multipleInput">
-                                <input type="text" name="U_KPP" placeholder="" data-stepdata="send_kpp" data-steptype="source" data-min="1" data-max="9">
+                                <input type="text" name="U_KPP" placeholder="" data-stepdata="send_kpp" data-steptype="source" data-min="1" data-max="9" data-mask="kpp">
                               </div>
                               <!-- /.calcform__multipleInput -->
                             </div>
@@ -1004,14 +1021,14 @@
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Email</div>
-                              <input type="email" name="U_EMAIL" placeholder="" data-stepdata="send_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                              <input type="email" name="U_EMAIL" placeholder="" data-stepdata="send_yuremail" data-steptype="source"  data-min="3" data-max="300">
                               <!-- /.calcform__addTel -->
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="calcform__switches">
+                    <div class="calcform__switches" data-stepvisible="anyway">
                       <ol class="switches">
                         <li>
                           <span class="switches__name"> 
@@ -1033,7 +1050,7 @@
                         </li>
                       </ol>
                     </div>
-                    <div class="calcform__items calcform__items_full" data-dependfrom='ZABOR_SEND'>
+                    <div class="calcform__items calcform__items_full" data-dependfrom='ZABOR_SEND' data-stepvisible="anyway">
                       <div class="calcform__item ">
                         <div class="calcform__title">Откуда забрать груз?</div>
                         <input type="text" name="FROM_PLACE" data-stepdata="send_tel" data-steptype="source">
@@ -1053,9 +1070,9 @@
                     <div class="calctabs-js">
                       <ul>
                         <label class="active" for="receive_fiz"><span class='calctabs__name'>Физ. лицо</span> 
-                        <input data-radiotab="tab" type="radio" value="Y" id="receive_fiz" name="receivefizyur">
+                        <input data-radiotab="tab" type="radio"  checked=""  value="Y" id="receive_fiz" name="receivefizyur">
                         </label>
-                        <label class="" for="receive_yur"><span class='calctabs__name'>Юр. лицо</span><input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="N" id="receive_yur" checked="" name="receivefizyur"></label>
+                        <label class="" for="receive_yur"><span class='calctabs__name'>Юр. лицо</span><input data-radiotab="tab" type="radio" data-isrequired="delivery-address" value="N" id="receive_yur" name="receivefizyur"></label>
                       </ul>
                     </div>
                     <div class="calcform__warn  calcform__warn_aside">
@@ -1080,8 +1097,8 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">Документ</div>
-                              <select name="R_F_DOCTYPE" id="" data-select=" $receiveParams['INFO_TEXT']oc" data-stepdata="receive_doc" data-steptype="source">
-                                <option value="Паспорт РФ" data-select="passport">Паспорт РФ</option>
+                              <select name="R_F_DOCTYPE" id="" data-select="" data-stepdata="receive_doc" data-steptype="source">
+                                <option value="Паспорт РФ" data-select="passport" selected="">Паспорт РФ</option>
                                 <option value="Водительское удостоверение" data-select="doc">
                                   Водительское удостоверение
                                 </option>
@@ -1151,7 +1168,7 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">ИНН</div>
-                              <input type="text" name="R_U_INN" placeholder="" data-stepdata="receive_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                              <input type="text" name="R_U_INN" placeholder="" data-stepdata="receive_yurinn" data-steptype="source" data-required="required" data-min="13" data-max="13" data-mask="inn">
                               <!-- /.calcform__addTel -->
                             </div>
                             <div class="calcform__item">
@@ -1160,7 +1177,7 @@
                                 <!-- /.notreq -->
                               </div>
                               <div class="calcform__multipleInput">
-                                <input type="text" name="R_U_KPP" placeholder="" data-stepdata="receive_kpp" data-steptype="source" data-min="1" data-max="9">
+                                <input type="text" name="R_U_KPP" placeholder="" data-stepdata="receive_yurkpp" data-steptype="source" data-min="1" data-max="9" data-mask="kpp">
                               </div>
                               <!-- /.calcform__multipleInput -->
                             </div>
@@ -1185,14 +1202,14 @@
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Email</div>
-                              <input type="email" name="R_U_EMAIL" placeholder="" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                              <input type="email" name="R_U_EMAIL" placeholder="" data-stepdata="receive_yuremail" data-steptype="source"  data-min="3" data-max="300">
                               <!-- /.calcform__addTel -->
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="calcform__switches">
+                    <div class="calcform__switches" data-stepvisible="anyway">
                       <ol class="switches">
                         <li>
                           <span class="switches__name"> 
@@ -1216,7 +1233,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="calcpage__block  calcitem  " >
+                <div class="calcpage__block  calcitem  " data-stepvisible="anyway">
                   <div class="calcitem__header">
                     <div class="calcheader">
                       <div class="calcheader__title">                      
@@ -1230,7 +1247,7 @@
                     <div class="calcselect customselect calcform">
                       <div class="customselect__wrapper">
                         <div class="customselect__select">
-                          <input type="hidden" name="PAYER" data-input="customselect" value="Получатель">
+                          <input type="hidden" name="PAYER" data-input="customselect" value="Получатель" data-steptype="source" data-stepdata="payeer">
                           <button type="button" class="customselect__button ">
                             <div class="customselect__buttonicon">
                               <img src="img/credit_score_FILL0_wght400_GRAD0_opsz24.svg" alt="">
@@ -1264,7 +1281,7 @@
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item calcform__item_small">
                               <div class="calcform__title">Правовая форма</div>
-                              <select name="R_U_FORM_THIRD" id="" data-stepdata="receive_yurform" data-steptype="source">
+                              <select name="R_U_FORM_THIRD" id="" data-stepdata="receive_otherform" data-steptype="source">
                                 <option value="ООО" selected="">ООО</option>
                                 <option value="ОАО">ОАО</option>
                                 <option value="ЗАО">ЗАО</option>
@@ -1274,13 +1291,13 @@
                             </div>
                             <div class="calcform__item ">
                               <div class="calcform__title">Название компании</div>
-                              <input type="text" name="R_U_COMPANY_THIRD" placeholder="" data-stepdata="receive_yurname" data-steptype="source" data-required="required" data-min="2" data-max="300">
+                              <input type="text" name="R_U_COMPANY_THIRD" placeholder="" data-stepdata="receive_othername" data-steptype="source" data-required="required" data-min="2" data-max="300">
                             </div>
                           </div>
                           <div class="calcform__items calcform__items_two">
                             <div class="calcform__item">
                               <div class="calcform__title">ИНН</div>
-                              <input type="text" name="R_U_INN_THIRD" placeholder="" data-stepdata="receive_inn" data-steptype="source" data-required="required" data-min="13" data-max="13">
+                              <input type="text" name="R_U_INN_THIRD" placeholder="" data-stepdata="receive_otherinn" data-steptype="source" data-required="required" data-min="10" data-max="10" data-mask="inn">
                               <!-- /.calcform__addTel -->
                             </div>
                             <div class="calcform__item">
@@ -1289,7 +1306,7 @@
                                 <!-- /.notreq -->
                               </div>
                               <div class="calcform__multipleInput">
-                                <input type="text" name="R_U_KPP_THIRD" placeholder="" data-stepdata="receive_kpp" data-steptype="source" data-min="1" data-max="9">
+                                <input type="text" name="R_U_KPP_THIRD" placeholder="" data-stepdata="receive_otherkpp" data-steptype="source" data-min="1" data-max="9" data-mask="kpp">
                               </div>
                               <!-- /.calcform__multipleInput -->
                             </div>
@@ -1297,7 +1314,7 @@
                           <div class="calcform__items calcform__items_full">
                             <div class="calcform__item ">
                               <div class="calcform__title">Контактное лицо</div>
-                              <input type="text" name="R_U_FIO_THIRD" placeholder="" data-stepdata="receive_yurfio" data-steptype="source" data-min="3" data-max="300">
+                              <input type="text" name="R_U_FIO_THIRD" placeholder="" data-stepdata="receive_otherfio" data-steptype="source" data-min="3" data-max="300">
                               <!-- /.calcform__addTel -->
                             </div>
                           </div>
@@ -1308,13 +1325,13 @@
                                 <!-- /.notreq -->
                               </div>
                               <div class="calcform__multipleInput">
-                                <input type="tel" name="R_U_PHONE_THIRD" placeholder="" data-stepdata="receive_yurtel" data-steptype="source" data-required="required" data-min="18" data-max="18">
+                                <input type="tel" name="R_U_PHONE_THIRD" placeholder="" data-stepdata="receive_othertel" data-steptype="source" data-required="required" data-min="18" data-max="18">
                               </div>
                               <!-- /.calcform__multipleInput -->
                             </div>
                             <div class="calcform__item">
                               <div class="calcform__title">Email</div>
-                              <input type="email" name="R_U_EMAIL_THIRD" placeholder="" data-stepdata="receive_email" data-steptype="source" data-required="required" data-min="3" data-max="300">
+                              <input type="email" name="R_U_EMAIL_THIRD" placeholder="" data-stepdata="receive_otheremail" data-steptype="source" data-min="3" data-max="300">
                               <!-- /.calcform__addTel -->
                             </div>
                           </div>
@@ -1325,9 +1342,9 @@
                   <!-- /.calcitem__content -->
                 </div>
               </div>
-              <div class="form-step" data-entity="form-step-3" >
+              <div class="form-step" data-entity="form-step-3" style="display:none;">
                 <div class="calcback">
-                  <a href="#" data-stepback='form-step-2' data-entity="step-next">
+                  <a href="#" data-stepback='form-step-2' data-entity="step-prev">
                   <img src="img/calcback.svg" alt="">
                   <span>Вернуться назад</span>
                   </a>
@@ -1354,8 +1371,8 @@
                                   </div>
                                   <!-- /.selectresult__icon -->
                                   <div class="selectresult__content">
-                                    <div class="selectresult__termname" data-ternimalresult="Москва, ул. Соколово-Мещерская, 23">Москва, ул. Соколово-Мещерская, 23</div>
-                                    <div class="selectresult__termid" data-ternimalresult_id="Терминал MSK1411">Терминал MSK1411</div>
+                                    <div class="selectresult__termname"  data-stepdata="f_otpravki" data-steptype="result"></div>
+                                    <div class="selectresult__termid" data-stepdata="f_otpravki_id" data-steptype="result"></div>
                                   </div>
                                 </div>
                               </div>
@@ -1369,8 +1386,8 @@
                                   </div>
                                   <!-- /.selectresult__icon -->
                                   <div class="selectresult__content">
-                                    <div class="selectresult__termname" data-ternimalresult="Москва, ул. Соколово-Мещерская, 23">Москва, ул. Соколово-Мещерская, 23</div>
-                                    <div class="selectresult__termid" data-ternimalresult_id="Терминал MSK1411">Терминал MSK1411</div>
+                                    <div class="selectresult__termname"data-stepdata="f_dostavki" data-steptype="result"></div>
+                                    <div class="selectresult__termid"  data-stepdata="f_dostavki_id" data-steptype="result"></div>
                                   </div>
                                 </div>
                               </div>
@@ -1385,13 +1402,12 @@
                           <div class="calctotal__title">Тариф отправки</div>
                           <div class="calctotal__value">
                             <ul>
-                             
                               <li data-type>
-                                <span class='calctotal__valueflex' data-steptype="result" data-if='delivery_auto' data-stepdata="delivery_type">
+                                <span data-if='delivery_auto' class='calctotal__valueflex'  >
                                     <img src="img/InTransit.svg" alt=""> 
                                     <span>Авто</span>
                                 </span>
-                                <span  class='calctotal__valueflex'data-steptype="result" data-if='delivery_zhd' data-stepdata="delivery_type">
+                                <span data-if='delivery_zhd' class='calctotal__valueflex' >
                                   <img src="img/Tracks.svg" alt=""> 
                                   <span>Ж/Д</span>
                               </span>
@@ -1407,24 +1423,35 @@
                 </div>
                 <div class="calcpage__block calcitem calcitem_total">
                   <div class="calcitem__content calcitem__totals_multiple">
-                    <div class="calctotal">
+                   
+                    <!-- <div class="calctotal" data-if='set_size'>
                       <div class="calctotal__title">Габариты груза</div>
                       <div class="calctotal__value">
-                        <span data-steptype="result" data-stepdata="ob_len">1,1</span> x
-                        <span data-steptype="result" data-stepdata="ob_shir">0,11</span> x
-                        <span data-steptype="result" data-stepdata="ob_h">1,5</span> м
+                        <span data-steptype="result" data-stepdata="tot_volume"></span> x
+                        <span data-steptype="result" data-stepdata="ob_shir"></span> x
+                        <span data-steptype="result" data-stepdata="ob_h"></span> м
                       </div>
-                    </div>
-                    <!-- /.calctotal -->
-                    <div class="calctotal">
+                    </div> -->
+                      <div class="calctotal" data-if='tot_weight'>
+                        <div class="calctotal__title">Вес груза</div>
+                        <div class="calctotal__value"><span data-steptype="result" data-stepdata="tot_weight"></span> кг</div>
+                      </div>
+                      <!-- /.calctotal -->
+                      
+                      <div class="calctotal" data-if='tot_volume'>
+                        <div class="calctotal__title">Обьем груза</div>
+                        <div class="calctotal__value"><span data-steptype="result" data-stepdata="tot_volume"></span> м<sup>2</sup></div>
+                      </div>
+                      <!-- /.calctotal -->
+                    <div class="calctotal" data-if='ob_weight'>
                       <div class="calctotal__title">Вес груза</div>
-                      <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_w">1</span> кг</div>
+                      <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_weight"></span> кг</div>
                     </div>
                     <!-- /.calctotal -->
                     
-                    <div class="calctotal">
+                    <div class="calctotal" data-if='ob_vol'>
                       <div class="calctotal__title">Обьем груза</div>
-                      <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_vol">0,13</span> м<sup>2</sup></div>
+                      <div class="calctotal__value"><span data-steptype="result" data-stepdata="ob_vol"></span> м<sup>2</sup></div>
                     </div>
                     <!-- /.calctotal -->
                   </div>
@@ -1437,14 +1464,14 @@
                     <div class="calctotal__title">Дополнительные услуги</div>
                     <div class="calctotal__value">
                       <ul>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="zabor">Забор груза</span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="dostavka">Доставка груза
+                        <li class='checkicon'><span data-steptype="result" data-if="zabor">Забор груза</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="dostavka">Доставка груза
                         </span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="obreshetka">Обрешетка</span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="dop_ftemperull">Температурный режим +2 ... +5</span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="teplo_1">Утепление в 1 слой</span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="teplo_2">Утепление в 2 слоя</span></li>
-                        <li class='checkicon'><span data-steptype="result" data-stepdata="teplo_3">Утепление в 3 слоя</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="obreshetka">Обрешетка</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="dop_ftemperull">Температурный режим +2 ... +5</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="teplo_1">Утепление в 1 слой</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="teplo_2">Утепление в 2 слоя</span></li>
+                        <li class='checkicon'><span data-steptype="result" data-if="teplo_3">Утепление в 3 слоя</span></li>
                       <!--   <li data-if="dop_floor">Этаж: <span data-steptype="result" data-stepdata="dop_floor"></span>
                           <span data-steptype="result" data-stepdata="dop_lift"></span>
                         </li>
@@ -1474,7 +1501,7 @@
                         
                           <li data-if="send_pasp1">
                             <span data-steptype="result" data-stepdata="send_doc"></span>:&nbsp;
-                            серия: <span data-steptype="result" data-stepdata="send_pasp1"></span>&nbsp;
+                            <span data-steptype="result" data-stepdata="send_pasp1"></span>&nbsp;
                             <span data-steptype="result" data-stepdata="send_pasp2"></span>
                           </li>
                           <li data-if="send_anotherdoc">
@@ -1494,6 +1521,8 @@
                         <ul>
                           <li>
                             <span data-steptype="result" data-stepdata="send_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="send_yurname"></span>
+                            <span class='light' >Юр. лицо</span>
+
                           </li>
                           <li data-if="send_inn">
                             ИНН: <span data-steptype="result" data-stepdata="send_inn"></span>
@@ -1506,6 +1535,9 @@
                           </li>
                           <li data-if="send_yurtel">
                             Телефон: <span data-steptype="result" data-stepdata="send_yurtel"></span>
+                          </li>
+                          <li data-if="send_yuremail">
+                            Email: <span data-steptype="result" data-stepdata="send_yuremail"></span>
                           </li>
                         </ul>
                       </div>
@@ -1530,8 +1562,8 @@
 
                           </li>
                           <li data-if="receive_pasp1">
-                            <span data-steptype="result" data-stepdata="receive_selectdoc"></span>:&nbsp;
-                            серия: <span data-steptype="result" data-stepdata="receive_pasp1"></span>&nbsp;
+                            <span data-steptype="result" data-stepdata="receive_doc"></span>:&nbsp;
+                            <span data-steptype="result" data-stepdata="receive_pasp1"></span>&nbsp;
                             <span data-steptype="result" data-stepdata="receive_pasp2"></span>
                           </li>
                           <li data-if="receive_anotherdoc">
@@ -1539,36 +1571,38 @@
                             <span data-steptype="result" data-stepdata="receive_anotherdoc"></span>&nbsp;
                           </li>
                           <li>
-                            <span data-steptype="result" data-stepdata="receive_tel"></span>
+                            Телефон: <span data-steptype="result" data-stepdata="receive_yurtel"></span>
                           </li>
                           <li data-if="receive_tel2">
                             <span data-steptype="result" data-stepdata="receive_tel2"></span>
                           </li>
-                          <li data-if="receive_email">
-                            <span data-steptype="result" data-stepdata="receive_email"></span>
+                          <li data-if="receive_yuremail">
+                            Email: <span data-steptype="result" data-stepdata="receive_email"></span>
                           </li>
                         </ul>
                       </div>
                       <div data-if="receive_yurname" data-stepdata="receive_yur" data-totaltype="fizyur">
                         <ul>
-                          <li>
-                            <span data-stepdata="receive_yur" data-totaltype="fizyur">Юридическое
-                            лицо</span>
-                          </li>
+                         
                           <li>
                             <span data-steptype="result" data-stepdata="receive_yurform"></span>&nbsp;<span data-steptype="result" data-stepdata="receive_yurname"></span>
+                            <span class='light' >Юр. лицо</span>
+
                           </li>
-                          <li data-if="receive_yurinn">
+                          <li >
                             ИНН: <span data-steptype="result" data-stepdata="receive_yurinn"></span>
                           </li>
-                          <li data-if="receive_yurkpp">
+                          <li >
                             КПП: <span data-steptype="result" data-stepdata="receive_yurkpp"></span>
                           </li>
-                          <li data-if="receive_yurfio">
+                          <li>
                             Контакное лицо: <span data-steptype="result" data-stepdata="receive_yurfio"></span>
                           </li>
                           <li data-if="receive_yurtel">
                             Телефон: <span data-steptype="result" data-stepdata="receive_yurtel"></span>
+                          </li>
+                          <li data-if="receive_yuremail">
+                            Email: <span data-steptype="result" data-stepdata="receive_yuremail"></span>
                           </li>
                         </ul>
                       </div>
@@ -1585,9 +1619,9 @@
                     <div class="calctotal__value">
                       <ul>
                         <li>
-                          <span data-steptype="result" data-stepdata="payeer">Получатель</span>
+                          <span data-steptype="result" data-stepdata="payeer"></span>
                         </li>
-                        <li data-if="payer_fio">
+                        <!-- <li data-if="payer_fio">
                           <span data-steptype="result" data-stepdata="payer_fio"></span>
                         </li>
                         <li data-if="payer_pasp1">
@@ -1607,7 +1641,31 @@
                         </li>
                         <li data-if="payer_check">
                           <span data-steptype="result" data-stepdata="payer_check"></span>
-                        </li>
+                        </li> -->
+                        <div data-if="receive_otherform" >
+                          <ul>
+                        
+                            <li>
+                              <span data-steptype="result" data-stepdata="receive_otherform"></span>&nbsp;<span data-steptype="result" data-stepdata="receive_othername"></span>
+  
+                            </li>
+                            <li >
+                              ИНН: <span data-steptype="result" data-stepdata="receive_otherinn"></span>
+                            </li>
+                            <li >
+                              КПП: <span data-steptype="result" data-stepdata="receive_otherkpp"></span>
+                            </li>
+                            <li>
+                              Контакное лицо: <span data-steptype="result" data-stepdata="receive_otherfio"></span>
+                            </li>
+                            <li data-if="receive_othertel">
+                              Телефон: <span data-steptype="result" data-stepdata="receive_othertel"></span>
+                            </li>
+                            <li data-if="receive_otheremail">
+                              Email: <span data-steptype="result" data-stepdata="receive_otheremail"></span>
+                            </li>
+                          </ul>
+                        </div>
                       </ul>
                     </div>
                   </div>
