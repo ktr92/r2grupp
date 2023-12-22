@@ -34,6 +34,7 @@
   <link rel='stylesheet' id='jq-ui-css' href='css/jquery-ui.css?ver=6.3.2' type='text/css' media='all' />
   <link rel='stylesheet' id='swiper-css' href='css/swiper-bundle.min.css?ver=6.3.2' type='text/css' media='all' />
   <link rel='stylesheet' id='style-css' href='css/quform.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='style-css' href='css/restyle.css' type='text/css' media='all' />
 
 
   <script type='text/javascript' src='js/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
@@ -74,6 +75,12 @@
             <img src="wp-content/uploads/2022/10/site_logo.webp" alt="">
           </a>
         </div>
+
+        <div class="header__search">
+          <div class="headersearch">
+            <input type="text" placeholder='Поиск'>
+          </div><!-- /.headersearch -->
+        </div><!-- /.header__search -->
         <div class="header-phone tel-mob">
           <a href="tel:+7 (495) 989-05-06">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,6 +95,71 @@
 
       </div>
       <div class="header-wrap-right">
+        
+        <div class="header-btn-box">
+          <div class="header__location">
+            <div class="headerlocation">
+              <div class="headerlocation__icon">
+                <img src="img/headerlocation.svg" alt="">
+              </div><!-- /.headerlocation__icon -->
+              <div class="headerlocation__wrapper">
+                <div class="headerlocation__title">Ваш город</div><!-- /.headerlocation__title -->
+                <div class="headerlocation__link">Москва</div><!-- /.headerlocation__link -->
+              </div><!-- /.headerlocation__wrapper -->
+            </div><!-- /.headerlocation -->
+          </div><!-- /.header__location -->
+          <div class="header-phone">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C10.3621 23 8.80776 22.642 7.41103 22"
+                stroke="#D41D12" stroke-width="2" />
+              <path
+                d="M14 11.5C13 14.5 11.7994 16.0768 10.3518 17.3538L8.01379 16.0502L4.5 20.5C5.56514 21.436 7.83591 22.2782 9.00021 22C14.2334 20.7496 18.2642 11.9578 17.7602 8.24416C17.4666 6.08006 14.5797 4.71365 12.9402 4.57595L11.9965 9.56659"
+                stroke="#D41D12" stroke-width="2" />
+            </svg>
+            <div class="headerphone">
+              <a href="tel:+7 (495) 989-05-06" class='headerphone__phone'>+7 (495) 989-05-06</a>
+              <a href='#' class='headerphone__scheme'>Схема проезда на склад</a>
+            </div><!-- /.headerphone -->
+            
+          </div>
+
+
+          <div>
+            <div class="form-pop" id="form-content" style="display: none; max-width: 500px">
+              <form id="add_feedback">
+                <input type="text" name="art_name" id="art_name" class="required art_name" placeholder="Имя" value="" />
+
+                <input type="tel" name="art_tel" id="art_tel" class="required art_tel" placeholder="Ваш телефон"
+                  value="" />
+
+                <input style="display: none" type="text" name="art_subject" id="art_subject" class="art_subject"
+                  placeholder="Тема" value="" />
+
+                <textarea name="art_comments" id="art_comments" placeholder="Введите ваше обращение" rows="10" cols="30"
+                  class="required art_comments"></textarea>
+
+                <input type="checkbox" name="art_anticheck" id="art_anticheck" class="art_anticheck"
+                  style="display: none !important;" value="true" checked="checked" />
+
+                <input type="text" name="art_submitted" id="art_submitted" value="" style="display: none !important;" />
+
+                <input type="submit" id="submit-feedback" class="input-btn" value="Отправить" />
+              </form>
+            </div>
+           <!--  <div data-fancybox="" data-src="#form-content" class="btn-form">
+              <button>
+                Заказать звонок </button>
+            </div> -->
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="haeader__nav">
+      <div class="header__menu">
         <div class="header-nav">
           <nav class="menu-items-container">
             <ul id="menu-desc" class="menu">
@@ -241,51 +313,17 @@
             </ul>
           </nav>
         </div>
-        <div class="header-btn-box">
-          <div class="header-phone">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C10.3621 23 8.80776 22.642 7.41103 22"
-                stroke="#D41D12" stroke-width="2" />
-              <path
-                d="M14 11.5C13 14.5 11.7994 16.0768 10.3518 17.3538L8.01379 16.0502L4.5 20.5C5.56514 21.436 7.83591 22.2782 9.00021 22C14.2334 20.7496 18.2642 11.9578 17.7602 8.24416C17.4666 6.08006 14.5797 4.71365 12.9402 4.57595L11.9965 9.56659"
-                stroke="#D41D12" stroke-width="2" />
-            </svg>
-            <a href="tel:+7 (495) 989-05-06">+7 (495) 989-05-06</a>
-          </div>
-          <div>
-            <div class="form-pop" id="form-content" style="display: none; max-width: 500px">
-              <form id="add_feedback">
-                <input type="text" name="art_name" id="art_name" class="required art_name" placeholder="Имя" value="" />
-
-                <input type="tel" name="art_tel" id="art_tel" class="required art_tel" placeholder="Ваш телефон"
-                  value="" />
-
-                <input style="display: none" type="text" name="art_subject" id="art_subject" class="art_subject"
-                  placeholder="Тема" value="" />
-
-                <textarea name="art_comments" id="art_comments" placeholder="Введите ваше обращение" rows="10" cols="30"
-                  class="required art_comments"></textarea>
-
-                <input type="checkbox" name="art_anticheck" id="art_anticheck" class="art_anticheck"
-                  style="display: none !important;" value="true" checked="checked" />
-
-                <input type="text" name="art_submitted" id="art_submitted" value="" style="display: none !important;" />
-
-                <input type="submit" id="submit-feedback" class="input-btn" value="Отправить" />
-              </form>
-            </div>
-            <div data-fancybox="" data-src="#form-content" class="btn-form">
-              <button>
-                Заказать звонок </button>
-            </div>
-
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+      </div><!-- /.header__menu -->
+      <div class="header__buttons">
+        <a href='#' class="btn btn__whiteicon">
+          <img src="img/trackbutton.svg" alt=""><span class='btn__text'>Отследить</span>
+        </a><!-- /.btn btn__whiteicon -->
+        <a href='#' class="btn btn__redicon">
+          <span class='btn__icon'><img src="img/Math.svg" alt=""></span>
+          <span class='btn__text'>Рассчитать</span>
+        </a><!-- /.btn btn__whiteicon -->
+      </div><!-- /.header__buttons -->
+    </div><!-- /.haeader__nav -->
   </div>
 </header>
 <div class="btn-up">
