@@ -1017,7 +1017,8 @@ main {
 
 #menu-desc li:hover a:not(.sub-menu a):after {
   position: absolute;
-  top: 74px;
+  top: 100%;
+  transform: translateY(-3px);
   display: inline-block;
   content: "";
   width: 100%;
@@ -1211,6 +1212,7 @@ main {
   animation: heiN 0.3s ease-in-out;
   animation-fill-mode: forwards;
 }
+
 
 @keyframes heiN {
   from {
