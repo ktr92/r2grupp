@@ -4,7 +4,7 @@
   font-style: normal;
   font-display: swap;
   src: local("Opel Sans"),
-    url("./fonts/OpelSans/Opel-Sans-Regular.woff") format("woff");
+    url("../fonts/Opel-Sans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-style: normal;
   font-display: swap;
   src: local("Opel Sans"),
-    url("./fonts/OpelSans/Opel-Sans-Bold.woff") format("woff");
+    url("../fonts/Opel-Sans-Bold.woff") format("woff");
 }
 
 .term:hover .sub-post {
