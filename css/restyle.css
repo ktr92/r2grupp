@@ -536,6 +536,77 @@ line-height: normal;
   min-width: 320px;
 }
 
+main {
+  margin-top: 180px;
+}
+
+.sect-head-swip {
+  position: relative;
+  height: 869px;
+}
+.swiper-big-info {
+  bottom: 305px;
+}
+
+.container__banner {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}
+
+.bannercalc {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+.bannercalc__wrapper {
+  background: #fff;
+  filter: drop-shadow(8px 8px 60px rgba(33, 53, 64, 0.15));
+  width: 648px;
+  padding: 29px 44px 58px 44px;
+
+
+}
+
+.bannercalc__wrapper .calcform__fastbtn a {
+  margin-right: 10px;
+}
+.bannercalc__header {
+  display: flex;
+  align-items: center;
+}
+.bannercalc__image {
+}
+.bannercalc__headertext {
+  margin-left: 16px;
+}
+.bannercalc__title {
+  color: #213540;
+
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; 
+}
+.bannercalc__text {
+  color: rgba(33, 53, 64, 0.4);
+
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; 
+margin-top: 6px;
+}
+.bannercalc__main {
+}
+.bannercalc__form {
+}
+
 
 @media (max-width: 1800px) {
 
