@@ -1,4 +1,18 @@
 jQuery(function ($) {
+  function changeCity(city) {
+    console.log('city', city)
+/* 
+    city.object_fil.forEach(el => {
+
+    }) */
+  }
+  function changeItemMap(item) {
+    console.log('item', item)
+  }
+  function changeRegion(region) {
+    console.log('region', region)
+  }
+
   if (document.querySelector("#map")) {
     ymaps.ready(init)
     function init() {
@@ -144,9 +158,13 @@ jQuery(function ($) {
 
         adressWrap.append(cardMapBtn)
 
-        const cardMapBtnSpan = document.createElement("span")
+        const cardMapRow = document.createElement("div")
+        cardMapRow.classList.add('card_map_row')
+        adressWrap.append(cardMapRow)
+
+        /* const cardMapBtnSpan = document.createElement("span")
         cardMapBtnSpan.innerText = "Показать на карте"
-        cardMapBtn.append(cardMapBtnSpan)
+        cardMapBtn.append(cardMapBtnSpan) */
 
         if (el[name + "_" + "tel_people"]) {
           const bossName = document.createElement("p")
@@ -157,8 +175,8 @@ jQuery(function ($) {
         const cardTel = document.createElement("a")
         cardTel.classList.add("card-tel")
         cardTel.href = `tel:${el[name + "_" + "tel"]}`
-        cardTel.innerText = `Тел: ${el[name + "_" + "tel"]}`
-        adressWrap.append(cardTel)
+        cardTel.innerText = `${el[name + "_" + "tel"]}`
+        cardMapRow.append(cardTel)
 
         if (el.boss_name) {
           const bossName = document.createElement("p")
@@ -168,7 +186,7 @@ jQuery(function ($) {
           const bossTel = document.createElement("a")
           bossTel.classList.add("card-tel")
           bossTel.href = `tel:${el.boss_tel}`
-          bossTel.innerText = `Тел: ${el.boss_tel}`
+          bossTel.innerText = `${el.boss_tel}`
           adressWrap.append(bossTel)
         }
 
@@ -180,17 +198,28 @@ jQuery(function ($) {
           const marketTel = document.createElement("a")
           marketTel.classList.add("card-tel")
           marketTel.href = `tel:${el.market_tel}`
-          marketTel.innerText = `Тел: ${el.market_tel}`
+          marketTel.innerText = ` ${el.market_tel}`
           adressWrap.append(marketTel)
         }
 
         const cardTime = document.createElement("p")
         cardTime.classList.add("card-time")
         cardTime.innerHTML = el[name + "_" + "time"]
-        adressWrap.append(cardTime)
+        cardMapRow.append(cardTime)
+
+        const cardTimeTitle = document.createElement("p")
+        cardTimeTitle.classList.add("card-time-title")
+        cardTimeTitle.innerText = "Время работы"
+        cardTime.prepend(cardTimeTitle)
+
+
+        const cardPdf = document.createElement("p")
+        cardPdf.classList.add("cardPdfButton")
+        cardPdf.innerHTML = el[name + "_" + "time"]
+        cardMapRow.append(cardPdf)
 
         if (name === "ofice") {
-          adressTitle.innerText = "Адрес офиса"
+          adressTitle.innerText = "Главный офис"
         } else if (name === "sklad") {
           adressTitle.innerText = "Адрес склада"
 
@@ -245,7 +274,6 @@ jQuery(function ($) {
             return each.object_type === "Склад"
           })
           let newArray = newArrayOne[newArrayOne.length - 1]
-          console.log(newArray)
           arrEl.elem.forEach((el) => {
             if (cityName !== el.city) {
               cityInd++
@@ -262,9 +290,9 @@ jQuery(function ($) {
               cardWrapHead.classList.add("card-wrap-head")
               contentCityWrapper.append(cardWrapHead)
 
-              const iconCity = document.createElement("img")
+             /*  const iconCity = document.createElement("img")
               iconCity.src = el.icon
-              cardWrapHead.append(iconCity)
+              cardWrapHead.append(iconCity) */
 
               const cardTitle = document.createElement("p")
               cardTitle.classList.add("card-title")
@@ -406,10 +434,12 @@ jQuery(function ($) {
         })
       })
 
+      // клик на карте
       window.myObjects = ymaps
         .geoQuery(myGeoObjects)
         .addEvents("click", function (e) {
           let target = e.get("target").options.get("big_ind")
+          changeItemMap(target)
           let newObjData = {
             elem: [],
           }
@@ -425,8 +455,10 @@ jQuery(function ($) {
         })
         .addToMap(myMap)
 
+      // клик на город слева
       regionElem.forEach((el, ind) => {
         el.addEventListener("click", () => {
+          
           regions.forEach((elem) => {
             if (elem.classList.contains("region-active")) {
               for (key of elem.children[1].children) {
@@ -442,6 +474,8 @@ jQuery(function ($) {
             "px"
           el.classList.add("elem-active")
           let elemData = JSON.parse(el.dataset.city)
+
+          changeCity(elemData)
           ymaps
             .geocode(elemData.object_fil[0].city, {
               results: 1,
@@ -492,6 +526,7 @@ jQuery(function ($) {
       const regionTitle = document.querySelectorAll(".region-title")
       regionTitle.forEach((el, ind) => {
         el.addEventListener("click", () => {
+       
           regionTitle.forEach((elem, index) => {
             if (
               elem.parentElement.classList.contains("region-active") &&
@@ -535,6 +570,10 @@ jQuery(function ($) {
           })
 
           filterIcon(regionActive, "region")
+
+          changeRegion(regionSendArr)
+
+          console.log('regionSendArr: ', regionSendArr)
 
           createCardContact(regionSendArr)
         })

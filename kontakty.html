@@ -34,14 +34,18 @@
   <link rel='stylesheet' id='jq-ui-css' href='css/jquery-ui.css?ver=6.3.2' type='text/css' media='all' />
   <link rel='stylesheet' id='swiper-css' href='css/swiper-bundle.min.css?ver=6.3.2' type='text/css' media='all' />
   <link rel='stylesheet' id='style-css' href='css/quform.css' type='text/css' media='all' />
-
+  <link rel="stylesheet" id="style-css" href="css/quform.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="style-css" href="css/calc.css" type="text/css" media="all" />
+  <link rel="stylesheet" id="style-css" href="css/restyle.css" type="text/css" media="all" />
 
   <script type='text/javascript' src='js/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
-  <script type='text/javascript' src='js/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
   <script type='text/javascript' src='js/script.js?ver=1696861625' id='script-js'></script>
   <script type='text/javascript' src='js/fancybox.umd.js?ver=6.3.2' id='fancy-js'></script>
   <script type='text/javascript' src='js/jquery-ui.js?ver=6.3.2' id='jq-ui-js'></script>
   <script type='text/javascript' src='js/swiper-bundle.min.js?ver=6.3.2' id='swiper-js'></script>
+  <script type='text/javascript' src='js/jQuery.inputSliderRange.min.js'></script>
+  <script type='text/javascript' src='js/nouislider.min.js'></script>
+  <script type='text/javascript' src='js/jquery.inputmask.min.js'></script>
   <script type="text/javascript"
     src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8600688b-718a-4bd6-ae7d-01965224534d&amp;ver=6.4.1"
     id="script-yandex-js"></script>
@@ -51,10 +55,12 @@
   <script type="text/javascript" src="/js/vfs_fonts.js?ver=6.4.1" id="vfs-js"></script>
 
   <!-- тут  старые формы не работают т.к. тянут что то с wp-admin.php и из-за этого ошибка с feedback_object, а скрипты ниже подключены для того чтобы работал datepicker и т.п.  -->
-  <script type='text/javascript' src='js/feedback.js'></script>
+ <!--  <script type='text/javascript' src='js/feedback.js'></script>
   <script type='text/javascript' src='js/formB.js'></script>
   <script type='text/javascript' src='js/form-cont.js'></script>
-  <script type='text/javascript' src='js/quform.js'></script>
+  <script type='text/javascript' src='js/quform.js'></script> -->
+  <script type="text/javascript" src="js/calc.js"></script>
+  <script type="text/javascript" src="js/restyle.js"></script>
 
   <link rel="icon" href="img/cropped-faviconV2-32x32.png" sizes="32x32" />
   <link rel="icon" href="img/cropped-faviconV2-192x192.png" sizes="192x192" />
@@ -308,13 +314,13 @@
 
 
 <main>
-  <div class="line-wrap container">
+  <!-- <div class="line-wrap container">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
-  </div>
+  </div> -->
   <div class="container">
     <div class="breadcrumb">
       <p id="breadcrumbs"><span><span><a href="https://r2grupp.ru/">Главная</a> <span class="razdl">|</span> <span
@@ -440,7 +446,17 @@
             </div>
           </div>
         </div>
+        <!-- <div class="contactstab">
+          <div class="contactstab__content active" data-big_ind='2'>
+            2
+          </div>
+          <div class="contactstab__content" data-big_ind="4">
+            4
+          </div>
+        </div> -->
         <div class="contacts-nav-content">
+          
+
           <!--                    <div class="contacts-box box-sklad-and-office"></div>-->
           <!--                    <div class="contacts-box box-office"></div>-->
           <!--                    <div class="contacts-box box-sklad"></div>-->
