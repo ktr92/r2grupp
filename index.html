@@ -39,11 +39,15 @@
     <script type="text/javascript" src="js/fancybox.umd.js?ver=6.3.2" id="fancy-js"></script>
     <script type="text/javascript" src="js/jquery-ui.js?ver=6.3.2" id="jq-ui-js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js?ver=6.3.2" id="swiper-js"></script>
+    <script type='text/javascript' src='js/jQuery.inputSliderRange.min.js'></script>
+    <script type='text/javascript' src='js/nouislider.min.js'></script>
+    <script type='text/javascript' src='js/jquery.inputmask.min.js'></script>
     <!-- тут  старые формы не работают т.к. тянут что то с wp-admin.php и из-за этого ошибка с feedback_object, а скрипты ниже подключены для того чтобы работал datepicker и т.п.  -->
 <!--     <script type="text/javascript" src="js/feedback.js"></script> -->
 <!--     <script type="text/javascript" src="js/formB.js"></script> -->
     <script type="text/javascript" src="js/form-cont.js"></script>
 <!--     <script type="text/javascript" src="js/quform.js"></script> -->
+    <script type="text/javascript" src="js/calc.js"></script>
     <script type="text/javascript" src="js/restyle.js"></script>
 
     <link rel="icon" href="img/cropped-faviconV2-32x32.png" sizes="32x32" />
@@ -531,7 +535,7 @@
       <div class="line"></div>
     </div>
     <section class="sect-head-swip">
-     
+      <div class='mainslider'>
       <div class="slider-box">
         <img class="img-right" src="img/slide1.jpg" alt="" />
        <!--  <img class="img-left animation-left" src="img/slide1.jpg" alt="" /> -->
@@ -546,12 +550,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="https://r2grupp.ru/news/osushhestvlyaem-otpravki-na-dalnij-vostok/">подробнее</a>
                 </div>
-                <div>
+                <!-- <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -571,12 +575,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="/news/prinimaem-sbornyj-gruz-na-otpravku-iz-novosibirska-vo-vladivostok-po-zhd/">подробнее</a>
                 </div>
-                <div>
+              <!--   <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -596,12 +600,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="/news/priem-i-otpravka-gruza-s-rynka-ljublino-sadovod-juzhnye-vorota/">подробнее</a>
                 </div>
-                <div>
+               <!--  <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -621,17 +625,16 @@
                 <div class="swiper-big-info-btn">
                   <a href="/news/nachinaem-priem-i-otpravku-gruza-s-rynka-ljublino/">подробнее</a>
                 </div>
-                <div>
+               <!--  <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       <div class="slider-box">
         <!-- <img class="img-left animation-left" src="img/slide1.jpg" alt="" /> -->
         <img class="img-right" src="img/slide1.jpg" alt="" />
@@ -649,12 +652,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="https://r2grupp.ru/news/gruppa-kompanij-ooo-r2-ooo-tk-logisticheskie-resheniya-rady-soobshhit-ob-otkrytii-novyh-napravlenij/">подробнее</a>
                 </div>
-                <div>
+                <!-- <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -674,12 +677,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="https://r2grupp.ru/news/priem-sbornogo-gruza-iz-moskvy-v-g-ekaterinburg/">подробнее</a>
                 </div>
-                <div>
+                <!-- <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -701,12 +704,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="https://r2grupp.ru/news/priem-sbornogo-gruza-iz-moskvy-v-g-sankt-peterburg/">подробнее</a>
                 </div>
-                <div>
+                <!-- <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -728,12 +731,12 @@
                 <div class="swiper-big-info-btn">
                   <a href="https://r2grupp.ru/news/s-18-ijulya-priem-sbornogo-gruza-iz-g-sankt-peterburg/">подробнее</a>
                 </div>
-                <div>
+                <!-- <div>
                   <div class="show_video">
                     <span class="play_video_icon"></span>
                     <p>Видео о компании</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -768,6 +771,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <div class="container container__banner">
@@ -890,11 +894,37 @@
           </div><!-- /.bannercalc__wrapper -->
         </div><!-- /.bannercalc -->
       </div><!-- /.container -->
-
+    </div>
     <!--   <div class="slider-mask"></div> -->
     </section>
+
+
+    <section class='sect-videoblock'>
+      <div class="videoblock">
+        <div class="container">
+          <div class="videoblock__wrapper">
+            <div class="videoblock__video">
+              <video controls="" class="video_presentation" poster="img/poster.jpg">
+                <source src="wp-content/uploads/2023/10/R2_CC-1.mp4" type="video/mp4">
+              </video>
+            </div><!-- /.videoblock__video -->
+            <div class="videoblock__content">
+              <div class="little-slide-head-info">
+                <p class="little-slide-head-info-title mid-title">
+                  Перевозка <br>
+                  сборных грузов
+                </p>
+                <a href="https://r2grupp.ru/uslugi-part/perevozka-sbornyh-gruzov/">подробнее</a>
+              </div>
+            </div><!-- /.videoblock__content -->
+          </div><!-- /.videoblock__wrapper -->
+        </div><!-- /.container -->
+      
+      </div><!-- /.videoblock -->
+    </section>
+
     <section class="sect-head-little-slider">
-      <div class="little-slide-head">
+     <!--  <div class="little-slide-head">
         <img class="img" src="img/fura.webp" alt="" />
         <div class="container">
           <div class="little-slide-head-info">
@@ -905,7 +935,7 @@
             <a href="https://r2grupp.ru/uslugi-part/perevozka-sbornyh-gruzov/">подробнее</a>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="head-little-slider-wrap">
         <div class="little-slider-back"></div>
         <div class="little-slider-back"></div>
