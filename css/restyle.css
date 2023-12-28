@@ -766,6 +766,8 @@ transform: translateY(-50%);
 
 .card-adress-wrap {
  border-bottom: 2px solid rgba(33, 53, 64, 0.1);
+ margin-bottom: 26px;
+
 }
 .card-wrap-head {
   padding-top: 41px;
@@ -774,7 +776,10 @@ transform: translateY(-50%);
   padding-bottom: 0;
 }
 .card-wrap {
-  padding-left: 46px;
+  padding-left: 58px;
+  padding-right: 62px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .card-title {
@@ -810,7 +815,16 @@ line-height: 100%;
 .card_map_row {
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+/*   justify-content: space-between; */
+}
+.card_map_row > * {
+  margin-right: 80px;
+ 
+}
+
+.card_map_row > *:last-child {
+  margin-right: 0;
 }
 .cardPdfButton {
   
@@ -823,6 +837,7 @@ line-height: 100%;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; 
+
 }
 .card-time p {
   color: #213540;
@@ -836,6 +851,9 @@ opacity: 0.4;
 .card-time p:first-child {
   opacity: 1;
 }
+.card-time p:nth-child(2) {
+  opacity: 1;
+}
 
 .card-time-title {
   color: #213540;
@@ -845,6 +863,62 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 100%;
+}
+.card-btn-doc {
+  height: unset;
+  padding: 18px 23px;
+  border-radius: 6px;
+border: 1px solid #E80000;
+white-space: nowrap;
+padding-left: 66px;
+background-image: url(../img/PDFdoc.svg);
+background-position: left 23px center;
+background-repeat: no-repeat;
+width: unset;
+color: #213540;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%
+}
+.card-btn-doc:hover {
+  background-color: #fff;
+  color: #E80000;
+}
+.card-time p.card-time-title {
+  margin-bottom: 22px;
+  font-weight: 400;
+
+}
+/* .city-wrapper:last-child .card-adress-wrap {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+} */
+.card-wrap:last-child .card-adress-wrap:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+/* .card-wrap:last-child .card-adress-wrap {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+} */
+.contacts-nav-wrapper{
+  background: #fff;
+}
+.contacts-nav-column {
+  background-color: #f8f8f8;
+  box-shadow: 10px 5px 10px rgb(0 0 0 / 10%);
+}
+.contacts-nav-content {
+  row-gap: 0;
+}
+
+.city-wrapper {
+  box-shadow: none;
+  border-bottom: 2px solid rgba(33, 53, 64, 0.1);
 }
 
 @media (max-width: 1800px) {

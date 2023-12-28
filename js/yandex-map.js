@@ -128,12 +128,7 @@ jQuery(function ($) {
         adressTitle.classList.add("card-adress-title")
         adressWrap.append(adressTitle)
 
-        if (el.sklad_ps) {
-          const adressPs = document.createElement("p")
-          adressPs.classList.add("card-adress-ps")
-          adressWrap.append(adressPs)
-          adressPs.innerText = el.sklad_ps
-        }
+       
 
         const adressLink = document.createElement("a")
         adressLink.classList.add("card-adress-link")
@@ -147,6 +142,13 @@ jQuery(function ($) {
         adressLink.innerText = el[name + "_" + "adress"]
         adressLink.target = "_blank"
         adressWrap.append(adressLink)
+
+        if (el.sklad_ps) {
+          const adressPs = document.createElement("p")
+          adressPs.classList.add("card-adress-ps")
+          adressWrap.append(adressPs)
+          adressPs.innerText = el.sklad_ps
+        }
 
         const cardMapBtn = document.createElement("button")
         cardMapBtn.classList.add("card-map-btn")
@@ -213,10 +215,7 @@ jQuery(function ($) {
         cardTime.prepend(cardTimeTitle)
 
 
-        const cardPdf = document.createElement("p")
-        cardPdf.classList.add("cardPdfButton")
-        cardPdf.innerHTML = el[name + "_" + "time"]
-        cardMapRow.append(cardPdf)
+       
 
         if (name === "ofice") {
           adressTitle.innerText = "Главный офис"
@@ -228,22 +227,22 @@ jQuery(function ($) {
           if (!multi) {
             skladWrap.classList.add("disabled")
           }
-          adressWrap.append(skladWrap)
+          /* adressWrap.append(skladWrap) */
 
-          const skladTitle = document.createElement("p")
+      /*     const skladTitle = document.createElement("p")
           skladTitle.classList.add("card-sklad-title")
           skladTitle.innerText = "Прием груза:"
-          skladWrap.append(skladTitle)
+          skladWrap.append(skladTitle) */
 
           const skladBtnWrap = document.createElement("div")
           skladBtnWrap.classList.add("card-sklad-btn-wrap")
           skladWrap.append(skladBtnWrap)
 
-          const iconDocument = document.createElement("img")
+        /*   const iconDocument = document.createElement("img")
           iconDocument.src =
-            "/wp-content/themes/intentionally-blank/assets/img/svg/icon-doc.svg"
+            "/img/PDFdoc.svg"
           skladBtnWrap.append(iconDocument)
-
+ */
           const btnDocument = document.createElement("p")
           btnDocument.classList.add("card-btn-doc")
           btnDocument.classList.add("generate-pdf")
@@ -256,8 +255,15 @@ jQuery(function ($) {
           btnDocument.addEventListener("click", (ev) => {
             createPDF(ev.target, cInd)
           })
-          btnDocument.innerText = `Схема проезда`
+          btnDocument.innerText = `Открыть в формате PDF`
+          btnDocument.append = `Открыть в формате PDF`
           skladBtnWrap.append(btnDocument)
+
+
+          /* const cardPdf = document.createElement("p")
+          cardPdf.classList.add("cardPdfButton")
+          cardPdf.innerHTML = el[name + "_" + "time"] */
+          cardMapRow.append(btnDocument)
         }
         return adressWrap
       }
@@ -352,7 +358,7 @@ jQuery(function ($) {
             }
           })
 
-          if (arrEl.img) {
+          /* if (arrEl.img) {
             let dataImg = arrEl.img
             let cityActWrap = document.querySelector(
               `.city-${cityInd} .wrap-wrap`
@@ -377,7 +383,7 @@ jQuery(function ($) {
 
               imgWrap.append(imgEl)
             })
-          }
+          } */
         })
       }
 
