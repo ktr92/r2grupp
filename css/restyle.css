@@ -921,8 +921,49 @@ line-height: 100%
   border-bottom: 2px solid rgba(33, 53, 64, 0.1);
 }
 
-@media (max-width: 1800px) {
+.card-adress-ps {
+  color: #FFF;
+  border-radius: 2px;
+  background: #E80000;
+  padding: 3px 8px 4px 6px;
+  display: inline-block;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; 
+}
+.card-tel {
+  white-space: nowrap;
+}
 
+@media (max-width: 1800px) {
+  .card-btn-doc {
+    padding-left: 40px;
+    padding-right: 16px;
+    background-position: left 8px center;
+  }
+  .card-wrap-head {
+    padding-left: 30px;
+  }
+ /*  .card-tel {
+    font-size: 18px;
+  } */
+  .card-adress-ps {
+    font-size: 16px;
+  }
+  .card-wrap {
+    padding-left: 30px;
+    padding-right: 30px;  
+  }
+  .card-time p {
+    font-size: 14px;
+  }
+  .card-btn-doc {
+    font-size: 14px;
+  }
+  .card_map_row > * {
+    margin-right: 30px;
+  }
   .headerphone__popup {
     left: unset;
     right: 0;
@@ -1314,5 +1355,126 @@ font-style: normal;
 margin-bottom: 37px;
 order:-1;
   }
-  
+
+  .contacts-nav-column {
+    position: absolute;
+    z-index: 9;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 70px;
+    width: calc(100% + 36px);
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+  .contacts-nav-wrapper {
+    margin-top: 0;
+  }
+  #map {
+    height: 206px;
+  }
+  .contactselect {
+    width: 100%;
+  }
+  .contacts-nav-wrapper {
+    display: block;
+  }
+  .contacts-nav-content {
+    width: 100%;
+  }
+  .contactselect__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 18px;
+    background: #F7F8F8;
+    width: calc(100% + 36px);
+    margin-left: -18px;
+    margin-right: -18px;
+
+  }
+  .contactselect__title {
+    color: rgba(33, 53, 64, 0.4);
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; 
+  }
+  .contactselect__value {
+    color: #213540;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; 
+  }
+  .region:hover .region-title, .region-active .region-title, .region-title {
+    padding-left: 18px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+  }
+  .region-elem {
+    padding-left: 18px;
+  }
+  .region-elem:before {
+    display: none;
+  }
+  .contacts-nav-column {
+    padding-top: 19px;
+    border-top: 3px solid #fff;
+  }
+  .region-elem-wrap {
+    padding-bottom: 20px;
+  }
+  .card-wrap-head {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 21px;
+    margin-bottom: 21px;
+  }
+  .card-title {
+    font-size: 22px;
+font-style: normal;
+font-weight: 700;
+  }
+  .card-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card_map_row {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .card_map_row > * {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+  .card-time p.card-time-title {
+    margin-bottom: 20px;
+  }
+  .card-tel {
+    margin: 0 0 0 0;
+    font-size: 14px;
+  }
+  .card-adress-title {
+    font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+margin-bottom: 15px;
+  }
+  .card-wrap-head {
+    padding-top: 11px;
+  }
+  .card-adress-link {
+    font-weight: 600;
+  }
+  p.card-btn-doc.generate-pdf {
+    margin: 0 0 13px 0;
+  }
+  .contacts-nav {
+    padding-bottom: 0;
+  }
 }

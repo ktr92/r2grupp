@@ -1,17 +1,9 @@
 jQuery(function ($) {
-  function changeCity(city) {
-    console.log('city', city)
-/* 
-    city.object_fil.forEach(el => {
+  function changeSelect(title) {
+    $('.contactselect__value').text(title)
+    $('.contacts-nav-column').hide()
+  }
 
-    }) */
-  }
-  function changeItemMap(item) {
-    console.log('item', item)
-  }
-  function changeRegion(region) {
-    console.log('region', region)
-  }
 
   if (document.querySelector("#map")) {
     ymaps.ready(init)
@@ -432,8 +424,8 @@ jQuery(function ($) {
               arrFiltr.push(newObjData)
             }
           })
+        /*   changeSelect(arrFiltr[0].elem[0].region) */
           console.log(arrFiltr)
-
           createCardContact(arrFiltr)
           filterIcon(filContent, "keyType")
           ymaps
@@ -445,7 +437,7 @@ jQuery(function ($) {
         .geoQuery(myGeoObjects)
         .addEvents("click", function (e) {
           let target = e.get("target").options.get("big_ind")
-          changeItemMap(target)
+        
           let newObjData = {
             elem: [],
           }
@@ -481,7 +473,8 @@ jQuery(function ($) {
           el.classList.add("elem-active")
           let elemData = JSON.parse(el.dataset.city)
 
-          changeCity(elemData)
+          changeSelect(elemData.object_fil[0].city)
+          console.log(elemData)
           ymaps
             .geocode(elemData.object_fil[0].city, {
               results: 1,
@@ -577,9 +570,8 @@ jQuery(function ($) {
 
           filterIcon(regionActive, "region")
 
-          changeRegion(regionSendArr)
+          changeSelect(regionSendArr[0].elem[0].region)
 
-          console.log('regionSendArr: ', regionSendArr)
 
           createCardContact(regionSendArr)
         })
